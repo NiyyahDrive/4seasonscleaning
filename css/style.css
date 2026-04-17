@@ -1613,8 +1613,8 @@ img {
 
 .whatsapp-button {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
     width: 60px;
     height: 60px;
     background-color: #25d366;
@@ -1623,11 +1623,13 @@ img {
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-    z-index: 999;
+    z-index: 9999;
     text-decoration: none;
     color: white;
     transition: all 0.3s ease;
     border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
 .whatsapp-button:hover {
@@ -1641,23 +1643,24 @@ img {
 }
 
 .whatsapp-button svg {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     fill: white;
 }
 
 .whatsapp-tooltip {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     color: white;
-    padding: 0.5rem 0.75rem;
+    padding: 0.75rem 1rem;
     border-radius: 4px;
-    font-size: 12px;
+    font-size: 13px;
     white-space: nowrap;
-    right: 70px;
+    right: 75px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+    font-weight: 500;
 }
 
 .whatsapp-button:hover .whatsapp-tooltip {
@@ -1667,10 +1670,31 @@ img {
 /* Mobile Adjustments for WhatsApp Button */
 @media (max-width: 768px) {
     .whatsapp-button {
+        width: 56px;
+        height: 56px;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 9999;
+    }
+    
+    .whatsapp-button svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .whatsapp-tooltip {
+        display: none;
+    }
+}
+
+/* Small Mobile: 480px */
+@media (max-width: 480px) {
+    .whatsapp-button {
         width: 50px;
         height: 50px;
-        bottom: 1.5rem;
-        right: 1.5rem;
+        bottom: 0.75rem;
+        right: 0.75rem;
+        padding-bottom: env(safe-area-inset-bottom, 0px);
     }
     
     .whatsapp-button svg {

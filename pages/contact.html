@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact 4 Seasons: vraag gratis offerte aan of bel direct. Professionele reiniging in Vlaanderen.">
+    <title>Contact - 4 Seasons</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo"><a href="../index.html">4 SEASONS</a></div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle"><span></span><span></span><span></span></button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../index.html" class="nav-link">HOME</a></li>
+                    <li><a href="../index.html#diensten" class="nav-link">DIENSTEN</a></li>
+                    <li><a href="over-ons.html" class="nav-link">OVER ONS</a></li>
+                    <li><a href="contact.html" class="nav-link active">CONTACT</a></li>
+                    <li><a href="contact.html" class="nav-link cta-button">Vraag offerte aan</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumb"><div class="container"><a href="../index.html">Home</a> / <span>Contact</span></div></div>
+
+    <!-- CONTACT HERO -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Contact</h1>
+            <p>Laten we in touch gaan</p>
+        </div>
+    </section>
+
+    <!-- CONTACT CONTENT -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- FORM -->
+                <div class="contact-form-wrapper">
+                    <h2>Offerte Aanvragen</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Voornaam & Achternaam *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefoonnummer</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Kies een dienst *</label>
+                            <select id="service" name="service" required>
+                                <option value="">-- Selecteer --</option>
+                                <option value="glasbewassing">Glasbewassing</option>
+                                <option value="dakgoten">Dakgoten reinigen</option>
+                                <option value="zonnepanelen">Zonnepanelen</option>
+                                <option value="corniche">Corniche</option>
+                                <option value="koepels">Koepels/veranda's</option>
+                                <option value="rolluiken">Rolluiken</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Bericht *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Vertel ons wat je nodig hebt..." required></textarea>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">Ik ga akkoord met het <a href="privacy.html">privacybeleid</a> *</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Verstuur Aanvraag</button>
+                        <p class="form-note">* Verplichte velden</p>
+                    </form>
+                </div>
+
+                <!-- INFO -->
+                <div class="contact-info-wrapper">
+                    <h2>Directe Info</h2>
+
+                    <div class="info-box">
+                        <h3>📞 Bel Ons</h3>
+                        <p><a href="tel:+3233320063">+32 3 332 00 63</a></p>
+                        <p class="small">Graag bereikbaar voor direct advies!</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>📧 E-mail</h3>
+                        <p><a href="mailto:info@4seasonscleaning.be">info@4seasonscleaning.be</a></p>
+                        <p class="small">Respons binnen 24 uur!</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>📍 Locatie</h3>
+                        <p>Vlaanderen</p>
+                        <p class="small">We werken in heel Vlaanderen</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>⏱ Openingstijden</h3>
+                        <p>Ma - Za: 8 tot 20 uur</p>
+                        <p>Zondag: Gesloten</p>
+                    </div>
+
+                    <div class="info-highlight">
+                        <h3>💡 Snelle Offerte?</h3>
+                        <p>Bel ons direct! Voor veel klussen kunnen we ter plaatse een vrijblijvend advies geven.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-contact">
+        <div class="container">
+            <h2 class="section-title">Veelgestelde Vragen</h2>
+
+            <div class="faq-grid">
+                <div class="faq-box">
+                    <h3>❓ Hoe snel krijg ik een offerte?</h3>
+                    <p>Binnen 48 uur na aanvraag krijg je van ons bericht. Voor dringende zaken: bel direct!</p>
+                </div>
+
+                <div class="faq-box">
+                    <h3>❓ Wat zijn jullie tariefen?</h3>
+                    <p>Afhankelijk van service, omvang en complexiteit. Daarom geven wij altijd een gratis offerte!</p>
+                </div>
+
+                <div class="faq-box">
+                    <h3>❓ Werken jullie ook in mijn buurt?</h3>
+                    <p>Ja! Heel Vlaanderen. Voor enkele buurlanden: op afspraak mogelijk.</p>
+                </div>
+
+                <div class="faq-box">
+                    <h3>❓ Zijn jullie verzekerd?</h3>
+                    <p>Volledig! Alles is verzekerd tegen schade. Je bent altijd beschermd.</p>
+                </div>
+
+                <div class="faq-box">
+                    <h3>❓ Kan ik online een afspraak inboeken?</h3>
+                    <p>Offerte aanvragen via het formulier → wij nemen contact op met je.</p>
+                </div>
+
+                <div class="faq-box">
+                    <h3>❓ Wat als ik niet tevreden ben?</h3>
+                    <p>We stellen het altijd recht! Klanttevredenheid is onze prioriteit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOLLOW SECTION -->
+    <section class="follow">
+        <div class="container">
+            <h2>Volg Ons Op Sociale Media</h2>
+            <p>Zie onze werkfoto's en updates!</p>
+
+            <div class="social-buttons">
+                <a href="#" class="social-button">Facebook</a>
+                <a href="#" class="social-button">Instagram</a>
+                <a href="#" class="social-button">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>4 SEASONS</h4>
+                    <p>Professionele reiniging en onderhoud in Vlaanderen.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Diensten</h4>
+                    <ul>
+                        <li><a href="contact.html?service=glasbewassing">Glasbewassing</a></li>
+                        <li><a href="contact.html?service=dakgoten">Dakgoten reinigen</a></li>
+                        <li><a href="contact.html?service=zonnepanelen">Zonnepanelen</a></li>
+                        <li><a href="contact.html?service=corniche">Corniche</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Meer</h4>
+                    <ul>
+                        <li><a href="over-ons.html">Over Ons</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacybeleid</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <p>📞 +32 3 332 00 63</p>
+                    <p>📧 info@4seasonscleaning.be</p>
+                    <p>📍 Vlaanderen</p>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 4 Seasons. Alle rechten voorbehouden.</p></div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

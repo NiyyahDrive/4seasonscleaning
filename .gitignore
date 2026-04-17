@@ -17,11 +17,10 @@ dist/
 build/
 *.log
 
-# Assets
-assets/images/*.jpg
-assets/images/*.png
-assets/images/*.gif
-!assets/images/placeholder.jpg
+# Assets - Ignore large media files but allow placeholders during development
+# assets/images/*.jpg
+# assets/images/*.png
+# assets/images/*.gif
 
 # Environment
 .env

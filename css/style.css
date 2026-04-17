@@ -1608,6 +1608,294 @@ img {
 }
 
 /* ================================================
+   ABOUT TEAM SECTION - IMPROVED
+   ================================================ */
+
+.about-team {
+    padding: var(--space-2xl) var(--space-md);
+    background-color: var(--neutral-light);
+}
+
+.about-team h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--neutral-dark);
+    margin-bottom: var(--space-md);
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--neutral-gray);
+    margin-bottom: var(--space-2xl);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+.team-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.highlight-card {
+    background-color: white;
+    padding: var(--space-lg);
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.highlight-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-6px);
+    border-color: var(--primary-color);
+}
+
+.highlight-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+    display: inline-block;
+}
+
+.highlight-card h3 {
+    font-size: 1.2rem;
+    color: var(--neutral-dark);
+    margin-bottom: var(--space-sm);
+    font-weight: 600;
+}
+
+.highlight-card p {
+    color: var(--neutral-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ================================================
+   ABOUT VALUES SECTION
+   ================================================ */
+
+.about-values {
+    padding: var(--space-2xl) var(--space-md);
+    background-color: white;
+}
+
+.about-values h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--neutral-dark);
+    margin-bottom: var(--space-2xl);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-lg);
+}
+
+.value-card {
+    background-color: var(--neutral-light);
+    padding: var(--space-lg);
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.value-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+    border-left-color: var(--primary-color);
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-md);
+}
+
+.value-card h3 {
+    font-size: 1.1rem;
+    color: var(--neutral-dark);
+    margin-bottom: var(--space-sm);
+    font-weight: 600;
+}
+
+.value-card p {
+    color: var(--neutral-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ================================================
+   ABOUT STORY SECTION
+   ================================================ */
+
+.about-story {
+    padding: var(--space-2xl) var(--space-md);
+    background-color: white;
+}
+
+.about-story .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 900px;
+}
+
+.story-content h2 {
+    font-size: 1.8rem;
+    color: var(--neutral-dark);
+    margin-bottom: var(--space-lg);
+}
+
+.story-content p {
+    color: var(--neutral-gray);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+}
+
+/* ================================================
+   TESTIMONIALS ABOUT PAGE
+   ================================================ */
+
+.testimonials-about {
+    padding: var(--space-2xl) var(--space-md);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    color: white;
+}
+
+.testimonials-about h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: var(--space-xl);
+}
+
+.testimonial-item {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: var(--space-xl);
+    border-radius: 0.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-lg);
+    font-style: italic;
+    font-weight: 300;
+}
+
+.testimonial-author p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+    opacity: 0.95;
+}
+
+.testimonial-author p:first-child {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* ================================================
+   ABOUT VISION SECTION
+   ================================================ */
+
+.about-vision {
+    padding: var(--space-2xl) var(--space-md);
+    background-color: var(--neutral-light);
+}
+
+.about-vision h2 {
+    font-size: 1.8rem;
+    color: var(--neutral-dark);
+    margin-bottom: var(--space-lg);
+}
+
+.about-vision p {
+    color: var(--neutral-gray);
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+    max-width: 900px;
+}
+
+/* ================================================
+   ABOUT PAGE - MOBILE RESPONSIVE
+   ================================================ */
+
+@media (max-width: 768px) {
+    .about-story .container {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .team-highlights {
+        grid-template-columns: 1fr;
+    }
+    
+    .highlight-card {
+        padding: var(--space-md);
+    }
+    
+    .highlight-icon {
+        font-size: 2.5rem;
+    }
+    
+    .highlight-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-item {
+        padding: var(--space-lg);
+    }
+    
+    .testimonial-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-team h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section-intro {
+        font-size: 0.95rem;
+    }
+    
+    .team-highlights {
+        gap: var(--space-md);
+    }
+    
+    .highlight-card {
+        padding: var(--space-md);
+    }
+    
+    .highlight-icon {
+        font-size: 2rem;
+    }
+    
+    .highlight-card h3 {
+        font-size: 1rem;
+    }
+    
+    .highlight-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ================================================
    WHATSAPP FLOATING BUTTON
    ================================================ */
 

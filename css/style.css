@@ -2268,3 +2268,99 @@ img {
         height: 24px;
     }
 }
+
+/* ================================================
+   PORTFOLIO GALLERY
+   ================================================ */
+
+.portfolio {
+    padding: var(--space-2xl) 0;
+    background-color: var(--neutral-light);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-md);
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.portfolio-item .overlay span {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: var(--space-sm);
+}
+
+.portfolio-item:hover .overlay span {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: var(--space-sm);
+    }
+    
+    .portfolio-item img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: var(--space-xs);
+    }
+    
+    .portfolio-item img {
+        height: 120px;
+    }
+}

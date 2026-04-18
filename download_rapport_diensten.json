@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-04-18T08:24:57.246747",
+  "target_directory": "/Users/msabri/Documents/AI_Projects/MojoWebdesign/Projects/4Seasons/assets/images/diensten",
+  "downloads_success": [
+    {
+      "service": "glasbewassing",
+      "filepath": "/Users/msabri/Documents/AI_Projects/MojoWebdesign/Projects/4Seasons/assets/images/diensten/glasbewassing-original.jpg",
+      "size_kb": 175.9765625,
+      "url": "https://4seasonscleaning.be/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-06-at-11.37.49-768x1024.jpeg"
+    },
+    {
+      "service": "dakgoten",
+      "filepath": "/Users/msabri/Documents/AI_Projects/MojoWebdesign/Projects/4Seasons/assets/images/diensten/dakgoten-original.jpg",
+      "size_kb": 93.1533203125,
+      "url": "https://4seasonscleaning.be/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-06-at-11.37.52-768x576.jpeg"
+    },
+    {
+      "service": "zonnepanelen",
+      "filepath": "/Users/msabri/Documents/AI_Projects/MojoWebdesign/Projects/4Seasons/assets/images/diensten/zonnepanelen-original.jpg",
+      "size_kb": 158.912109375,
+      "url": "https://4seasonscleaning.be/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-06-at-11.37.53-768x768.jpeg"
+    },
+    {
+      "service": "corniche",
+      "filepath": "/Users/msabri/Documents/AI_Projects/MojoWebdesign/Projects/4Seasons/assets/images/diensten/corniche-original.jpg",
+      "size_kb": 614.41796875,
+      "url": "https://4seasonscleaning.be/wp-content/uploads/2024/05/Scherm­afbeelding-2024-05-17-om-10.54.10.png"
+    }
+  ],
+  "downloads_failed": [],
+  "total_success": 4,
+  "total_failed": 0
+}

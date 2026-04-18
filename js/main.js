@@ -4,11 +4,61 @@
    ================================================ */
 
 document.addEventListener('DOMContentLoaded', function() {
+    setSeasonalTheme();
     initMobileMenu();
     initContactForm();
     initSmoothScroll();
     initScrollAnimations();
 });
+
+/* ================================================
+   SEASONAL THEME
+   ================================================ */
+
+function setSeasonalTheme() {
+    const month = new Date().getMonth();
+    let season, seasonColor, seasonalMessage;
+    
+    if (month >= 2 && month <= 4) {
+        season = 'lente';
+        seasonColor = 'var(--season-spring)';
+        seasonalMessage = 'Maak uw zonnepanelen klaar voor de zon. Vraag nu een voorjaarsreiniging aan.';
+    } else if (month >= 5 && month <= 7) {
+        season = 'zomer';
+        seasonColor = 'var(--season-summer)';
+        seasonalMessage = 'Schoon glas = koelere woning. Blijf fris en zuinig.';
+    } else if (month >= 8 && month <= 10) {
+        season = 'herfst';
+        seasonColor = 'var(--season-autumn)';
+        seasonalMessage = 'Bladvrije dakgoten = geen wateroverlast. Bescherm uw huis.';
+    } else {
+        season = 'winter';
+        seasonColor = 'var(--season-winter)';
+        seasonalMessage = 'Helder glas beschermt tegen kou en vocht. Winterkwaliteit.';
+    }
+    
+    // Set data attribute on body
+    document.body.setAttribute('data-season', season);
+    
+    // Update seasonal banner
+    const banner = document.getElementById('seasonalBanner');
+    const bannerText = document.getElementById('seasonalText');
+    if (banner) {
+        banner.setAttribute('data-season', season);
+        if (bannerText) {
+            bannerText.textContent = seasonalMessage;
+        }
+    }
+    
+    // Update CSS variable
+    const seasonMap = {
+        'lente': '#4ade80',
+        'zomer': '#fbbf24',
+        'herfst': '#f97316',
+        'winter': '#0ea5e9'
+    };
+    document.documentElement.style.setProperty('--current-season', seasonMap[season]);
+}
 
 /* ================================================
    MOBILE MENU

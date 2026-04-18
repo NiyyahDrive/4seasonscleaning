@@ -47,7 +47,7 @@ Professionele raamschoonmaak en reiniging website voor 4 Seasons in Vlaanderen.
 ├── pages/
 │   ├── contact.html        # Contact & offerte form
 │   ├── over-ons.html       # Over ons & brand story
-│   ├── portfolio.html      # Portfolio galerij
+│   ├── realisaties.html    # Realisaties galerij
 │   ├── privacy.html        # Privacybeleid
 │   └── terms.html          # Algemene voorwaarden
 ├── css/

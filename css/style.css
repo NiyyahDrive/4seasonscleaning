@@ -15,6 +15,13 @@
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15);
     
+    /* Seasonal Colors */
+    --season-spring: #4ade80;
+    --season-summer: #fbbf24;
+    --season-autumn: #f97316;
+    --season-winter: #0ea5e9;
+    --current-season: var(--season-spring);
+    
     /* Spacing */
     --space-xs: 0.5rem;
     --space-sm: 1rem;
@@ -167,13 +174,74 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo a {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.logo a:hover {
+    transform: scale(1.05);
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+/* ================================================
+   SEASONAL BANNER
+   ================================================ */
+
+.seasonal-banner {
+    background: linear-gradient(
+        135deg,
+        rgba(74, 222, 128, 0.08) 0%,
+        rgba(243, 244, 246, 1) 100%
+    );
+    padding: var(--space-md);
+    border-bottom: 2px solid rgba(74, 222, 128, 0.2);
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--neutral-dark);
+    font-weight: 500;
+    transition: all 0.5s ease;
+}
+
+.seasonal-banner[data-season="zomer"] {
+    background: linear-gradient(
+        135deg,
+        rgba(251, 191, 36, 0.08) 0%,
+        rgba(243, 244, 246, 1) 100%
+    );
+    border-bottom-color: rgba(251, 191, 36, 0.2);
+}
+
+.seasonal-banner[data-season="herfst"] {
+    background: linear-gradient(
+        135deg,
+        rgba(249, 115, 22, 0.08) 0%,
+        rgba(243, 244, 246, 1) 100%
+    );
+    border-bottom-color: rgba(249, 115, 22, 0.2);
+}
+
+.seasonal-banner[data-season="winter"] {
+    background: linear-gradient(
+        135deg,
+        rgba(14, 165, 233, 0.08) 0%,
+        rgba(243, 244, 246, 1) 100%
+    );
+    border-bottom-color: rgba(14, 165, 233, 0.2);
 }
 
 .nav-menu {
@@ -247,10 +315,7 @@ img {
    ================================================ */
 
 .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: var(--space-2xl);
+    display: block;
     padding: var(--space-2xl) var(--space-md);
     background-color: var(--neutral-light);
 }
@@ -359,6 +424,7 @@ img {
 .service-card {
     background-color: white;
     border: 1px solid var(--border-color);
+    border-left: 4px solid rgba(74, 222, 128, 0.3);
     border-radius: 0.5rem;
     padding: var(--space-lg);
     text-align: center;
@@ -366,9 +432,16 @@ img {
     box-shadow: var(--shadow);
 }
 
+.service-card:nth-child(1) { border-left-color: var(--season-spring); }
+.service-card:nth-child(2) { border-left-color: var(--season-summer); }
+.service-card:nth-child(3) { border-left-color: var(--season-autumn); }
+.service-card:nth-child(4) { border-left-color: var(--season-winter); }
+
 .service-card:hover {
     box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
+    transform: translateY(-8px);
+    border-color: var(--primary-color);
+    border-left-color: var(--primary-color);
 }
 
 .service-icon {
@@ -543,6 +616,8 @@ img {
     color: white;
     padding: var(--space-2xl) var(--space-md);
     margin-top: var(--space-2xl);
+    border-top: 3px solid var(--current-season);
+    transition: border-color 0.5s ease;
 }
 
 .footer-content {

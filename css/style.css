@@ -2394,13 +2394,39 @@ img {
     height: 48px;
     background-size: 32px 32px;
     background-position: center;
-    opacity: 0.6;
+    background-repeat: no-repeat;
+    opacity: 0.7;
     transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.lb-nav a.lb-prev::before,
+.lb-nav a.lb-next::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    opacity: 1;
+}
+
+.lb-nav a.lb-prev::before {
+    border-width: 8px 12px 8px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.lb-nav a.lb-next::before {
+    border-width: 8px 0 8px 12px;
+    border-color: transparent transparent transparent white;
 }
 
 .lb-nav a.lb-prev:hover,
 .lb-nav a.lb-next:hover {
     opacity: 1;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .lb-nav a.lb-prev {

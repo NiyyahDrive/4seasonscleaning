@@ -1,0 +1,42 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Seasonal Prism Background -->
+  <defs>
+    <style>
+      .season-quad { opacity: 0.9; transition: opacity 0.3s ease; }
+      .prism-border { stroke: #1f2937; stroke-width: 1.5; }
+    </style>
+  </defs>
+  
+  <!-- Spring (Top-Left) - Green -->
+  <polygon points="100,100 100,30 30,100" class="season-quad" fill="#4ade80"/>
+  
+  <!-- Summer (Top-Right) - Yellow -->
+  <polygon points="100,100 170,100 100,30" class="season-quad" fill="#fbbf24"/>
+  
+  <!-- Autumn (Bottom-Right) - Orange -->
+  <polygon points="100,100 170,100 100,170" class="season-quad" fill="#f97316"/>
+  
+  <!-- Winter (Bottom-Left) - Blue -->
+  <polygon points="100,100 30,100 100,170" class="season-quad" fill="#0ea5e9"/>
+  
+  <!-- Central Professional Scraper Icon (White) -->
+  <g transform="translate(100, 100)">
+    <!-- Scraper Handle (elegant, thin) -->
+    <rect x="-2" y="-45" width="4" height="35" fill="white" rx="2"/>
+    
+    <!-- Scraper Blade (rectangular, precise) -->
+    <rect x="-18" y="-15" width="36" height="12" fill="white" rx="1"/>
+    
+    <!-- Blade Detail Lines (motion effect) -->
+    <line x1="-14" y1="-12" x2="-10" y2="-10" stroke="#e5e7eb" stroke-width="0.5" opacity="0.7"/>
+    <line x1="-2" y1="-9" x2="2" y2="-7" stroke="#e5e7eb" stroke-width="0.5" opacity="0.7"/>
+    <line x1="10" y1="-8" x2="14" y2="-12" stroke="#e5e7eb" stroke-width="0.5" opacity="0.7"/>
+    
+    <!-- Water Droplets (around blade) -->
+    <circle cx="-22" cy="-8" r="2" fill="white" opacity="0.6"/>
+    <circle cx="24" cy="-6" r="1.5" fill="white" opacity="0.5"/>
+  </g>
+  
+  <!-- Subtle Border Around Prism -->
+  <polygon points="100,30 170,100 100,170 30,100" class="prism-border" fill="none"/>
+</svg>

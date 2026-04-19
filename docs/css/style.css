@@ -708,112 +708,60 @@ nav .logo img {
    FOOTER
    ================================================ */
 
-.footer {
-    background-color: var(--neutral-dark);
+footer {
+    background: #1a1a1a;
     color: white;
-    padding: var(--space-2xl) var(--space-md);
-    margin-top: var(--space-2xl);
-    border-top: 3px solid var(--current-season);
-    transition: border-color 0.5s ease;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 2rem;
 }
 
 .footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--space-lg);
-    margin-bottom: var(--space-lg);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.footer-column h4 {
-    margin-bottom: var(--space-md);
-    font-size: 1.1rem;
+.footer-content p {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
 }
 
-.footer-column p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    margin-bottom: var(--space-sm);
+footer a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.footer-column a {
+footer a:hover {
     color: white;
-    font-size: 0.9rem;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-
-.footer-column a:hover {
-    opacity: 1;
-    color: white;
-}
-
-.footer-column ul {
-    list-style: none;
-}
-
-.footer-column li {
-    margin-bottom: var(--space-sm);
-}
-
-.social-links {
-    display: flex;
-    gap: var(--space-md);
-    margin-top: var(--space-md);
-}
-
-.social-link {
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    color: white;
-    transition: background-color 0.3s ease;
-}
-
-.social-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: var(--space-lg);
-    text-align: center;
-    font-size: 0.9rem;
-    opacity: 0.8;
+    text-decoration: underline;
 }
 
 .footer-brand {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .footer-brand h3 {
     color: white;
     font-weight: 700;
-    font-size: 1.5rem;
-    margin: 0 0 0.5rem 0;
-    letter-spacing: -0.02em;
+    font-size: 1.2rem;
+    margin: 0 0 0.25rem 0;
 }
 
 .footer-brand .tagline {
-    color: #60a5fa;
-    font-size: 0.8rem;
-    letter-spacing: 0.15em;
+    color: #aaa;
+    font-size: 0.85rem;
     text-transform: uppercase;
     font-weight: 600;
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.5rem 0;
 }
 
 .footer-brand p {
-    color: #94a3b8;
-    font-size: 0.9rem;
+    color: #888;
+    font-size: 0.85rem;
     margin: 0;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* ================================================

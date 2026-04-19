@@ -44,200 +44,210 @@
     <section class="portfolio">
         <div class="container">
             <p style="text-align: center; font-size: 0.95rem; color: var(--neutral-gray); margin-bottom: 1.5rem;">💡 Tip: Klik op een foto om uit te vergroten, gebruik pijlen of toetsenbord om te navigeren</p>
+            
+            <!-- Filter tabs -->
+            <div style="text-align: center; margin-bottom: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <button class="filter-tab active" data-filter="all" style="padding: 0.6rem 1.5rem; border: 2px solid #1a73e8; background: #1a73e8; color: white; border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Alle</button>
+                <button class="filter-tab" data-filter="zonnepanelen" style="padding: 0.6rem 1.5rem; border: 2px solid #1a73e8; background: white; color: #1a73e8; border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.3s;">☀️ Zonnepanelen</button>
+                <button class="filter-tab" data-filter="dakgoten" style="padding: 0.6rem 1.5rem; border: 2px solid #1a73e8; background: white; color: #1a73e8; border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.3s;">🌧️ Dakgoten</button>
+                <button class="filter-tab" data-filter="gevels" style="padding: 0.6rem 1.5rem; border: 2px solid #1a73e8; background: white; color: #1a73e8; border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.3s;">🏗️ Gevels</button>
+                <button class="filter-tab" data-filter="glasbewassing" style="padding: 0.6rem 1.5rem; border: 2px solid #1a73e8; background: white; color: #1a73e8; border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.3s;">🪟 Glasbewassing</button>
+            </div>
+            
             <div class="portfolio-grid">
-                <a href="../assets/images/Dakgoten-2.jpg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Dakgoten 2">
+                <a href="../assets/images/Dakgoten-2.jpg?v=3" class="portfolio-item" data-category="dakgoten" data-lightbox="portfolio" data-title="Dakgoten 2">
                     <img src="../assets/images/Dakgoten-2.jpg?v=3" alt="Dakgoten 2">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/Dakgoten.jpg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Dakgoten">
+                <a href="../assets/images/Dakgoten.jpg?v=3" class="portfolio-item" data-category="dakgoten" data-lightbox="portfolio" data-title="Dakgoten">
                     <img src="../assets/images/Dakgoten.jpg?v=3" alt="Dakgoten">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/Gevels-1.jpg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Gevels 1">
+                <a href="../assets/images/Gevels-1.jpg?v=3" class="portfolio-item" data-category="gevels" data-lightbox="portfolio" data-title="Gevels 1">
                     <img src="../assets/images/Gevels-1.jpg?v=3" alt="Gevels 1">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/Gevels-2.jpg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Gevels 2">
+                <a href="../assets/images/Gevels-2.jpg?v=3" class="portfolio-item" data-category="gevels" data-lightbox="portfolio" data-title="Gevels 2">
                     <img src="../assets/images/Gevels-2.jpg?v=3" alt="Gevels 2">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/Gevels-Voetpaden.jpg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Gevels Voetpaden">
+                <a href="../assets/images/Gevels-Voetpaden.jpg?v=3" class="portfolio-item" data-category="gevels" data-lightbox="portfolio" data-title="Gevels Voetpaden">
                     <img src="../assets/images/Gevels-Voetpaden.jpg?v=3" alt="Gevels Voetpaden">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/Gevels.jpg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Gevels">
+                <a href="../assets/images/Gevels.jpg?v=3" class="portfolio-item" data-category="gevels" data-lightbox="portfolio" data-title="Gevels">
                     <img src="../assets/images/Gevels.jpg?v=3" alt="Gevels">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.50.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 1">
+                <a href="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.50.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 1">
                     <img src="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.50.jpeg?v=3" alt="Project 1">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.51-3.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 2">
+                <a href="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.51-3.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 2">
                     <img src="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.51-3.jpeg?v=3" alt="Project 2">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.51.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 3">
+                <a href="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.51.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 3">
                     <img src="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.51.jpeg?v=3" alt="Project 3">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.52-1.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 4">
+                <a href="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.52-1.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 4">
                     <img src="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.52-1.jpeg?v=3" alt="Project 4">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM10.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 5">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM10.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 5">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM10.jpeg?v=3" alt="Project 5">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM12.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 6">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM12.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 6">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM12.jpeg?v=3" alt="Project 6">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM13.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 7">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM13.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 7">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM13.jpeg?v=3" alt="Project 7">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM14.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 8">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM14.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 8">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM14.jpeg?v=3" alt="Project 8">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM15.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 9">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM15.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 9">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM15.jpeg?v=3" alt="Project 9">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM16.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 10">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM16.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 10">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM16.jpeg?v=3" alt="Project 10">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM2.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 11">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM2.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 11">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM2.jpeg?v=3" alt="Project 11">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM4.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 12">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM4.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 12">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM4.jpeg?v=3" alt="Project 12">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM5.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 13">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM5.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 13">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM5.jpeg?v=3" alt="Project 13">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM6.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 14">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM6.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 14">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM6.jpeg?v=3" alt="Project 14">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM7.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 15">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM7.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 15">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM7.jpeg?v=3" alt="Project 15">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM8.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 16">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM8.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 16">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM8.jpeg?v=3" alt="Project 16">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM9.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 17">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM9.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 17">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM9.jpeg?v=3" alt="Project 17">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 18">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 18">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM.jpeg?v=3" alt="Project 18">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1).jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 19">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1).jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 19">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1).jpeg?v=3" alt="Project 19">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM1.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 20">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM1.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 20">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM1.jpeg?v=3" alt="Project 20">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM2.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 21">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM2.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 21">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM2.jpeg?v=3" alt="Project 21">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM3.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 22">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM3.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 22">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM3.jpeg?v=3" alt="Project 22">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM4.jpeg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Project 23">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM4.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 23">
                     <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM4.jpeg?v=3" alt="Project 23">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/Zonnepanelen-2.jpg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Zonnepanelen 2">
+                <a href="../assets/images/Zonnepanelen-2.jpg?v=3" class="portfolio-item" data-category="zonnepanelen" data-lightbox="portfolio" data-title="Zonnepanelen 2">
                     <img src="../assets/images/Zonnepanelen-2.jpg?v=3" alt="Zonnepanelen 2">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/Zonnepanelen-3.jpg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Zonnepanelen 3">
+                <a href="../assets/images/Zonnepanelen-3.jpg?v=3" class="portfolio-item" data-category="zonnepanelen" data-lightbox="portfolio" data-title="Zonnepanelen 3">
                     <img src="../assets/images/Zonnepanelen-3.jpg?v=3" alt="Zonnepanelen 3">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/Zonnepanelen-4.jpg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Zonnepanelen 4">
+                <a href="../assets/images/Zonnepanelen-4.jpg?v=3" class="portfolio-item" data-category="zonnepanelen" data-lightbox="portfolio" data-title="Zonnepanelen 4">
                     <img src="../assets/images/Zonnepanelen-4.jpg?v=3" alt="Zonnepanelen 4">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/Zonnepanelen.jpg?v=3" class="portfolio-item" data-lightbox="portfolio" data-title="Zonnepanelen">
+                <a href="../assets/images/Zonnepanelen.jpg?v=3" class="portfolio-item" data-category="zonnepanelen" data-lightbox="portfolio" data-title="Zonnepanelen">
                     <img src="../assets/images/Zonnepanelen.jpg?v=3" alt="Zonnepanelen">
                     <div class="overlay">
                         <span>🔍 Bekijk</span>
@@ -302,5 +312,32 @@
 
     <script src="../js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    
+    <!-- Portfolio Filter Script -->
+    <script>
+        document.querySelectorAll('.filter-tab').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filter = this.dataset.filter;
+                const items = document.querySelectorAll('.portfolio-item');
+                
+                // Update active button
+                document.querySelectorAll('.filter-tab').forEach(b => {
+                    b.style.background = b === this ? '#1a73e8' : 'white';
+                    b.style.color = b === this ? 'white' : '#1a73e8';
+                });
+                
+                // Filter items
+                items.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 50);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

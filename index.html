@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4 Seasons Glazenwasser | Raamschoonmaak Vlaanderen</title>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        // Replace G-XXXXXXXXXX with your actual measurement ID
+        // gtag('config', 'G-XXXXXXXXXX');
+    </script>
     <style>
         * {
             margin: 0;
@@ -536,10 +545,12 @@
 
         /* Promotional Banner */
         .promo-banner {
-            background: #FF6B35;
-            color: white;
+            background: #FFF5E6;
+            color: #FF6B35;
             padding: 2rem;
+            padding-left: 2.5rem;
             text-align: center;
+            border-left: 5px solid #FF6B35;
         }
 
         .promo-banner h2 {
@@ -547,6 +558,7 @@
             font-weight: 700;
             margin-bottom: 1.5rem;
             line-height: 1.3;
+            color: #FF6B35;
         }
 
         .promo-content {
@@ -561,20 +573,23 @@
         .promo-pricing {
             font-size: 1.1rem;
             line-height: 1.8;
+            color: #333;
         }
 
         .promo-pricing strong {
             display: block;
             font-size: 1.3rem;
+            color: #FF6B35;
         }
 
         .promo-contact {
             font-size: 1.2rem;
             font-weight: 600;
+            color: #333;
         }
 
         .promo-contact a {
-            color: white;
+            color: #FF6B35;
             text-decoration: none;
             font-weight: 700;
             display: inline-block;
@@ -586,8 +601,8 @@
         }
 
         .btn-promo {
-            background: white;
-            color: #FF6B35;
+            background: #FF6B35;
+            color: white;
             padding: 1rem 2.5rem;
             border: none;
             border-radius: 6px;
@@ -600,13 +615,14 @@
         }
 
         .btn-promo:hover {
-            background: #f0f0f0;
+            background: #E55A25;
             transform: translateY(-2px);
         }
 
         @media (max-width: 768px) {
             .promo-banner h2 {
                 font-size: 1.3rem;
+                color: #FF6B35;
             }
             .promo-content {
                 grid-template-columns: 1fr;
@@ -635,7 +651,7 @@
         <h1>Schone ramen. Meer opbrengst. Vandaag nog starten.</h1>
         <div class="subheader">Glas dat glanst. Zonnepanelen die efficiënt staan.</div>
         <div class="benefit">
-            ☀️ Schone zonnepanelen geven tot 30% meer opbrengst. Laat niet op tabel liggen.
+            ☀️ Schone zonnepanelen geven tot 30% meer opbrengst. Laat niet op tafel liggen.
         </div>
         <div class="cta-group">
             <a href="tel:+3233200063" class="btn-primary">📞 Bel nu</a>
@@ -760,7 +776,7 @@
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-image">🪟</div>
+                <div class="service-image">🏛️</div>
                 <div class="service-content">
                     <h3>Koepels</h3>
                     <p>Dak- en wandkoepels schoon en zonnig. We reinigen voorzichtig met de juiste techniek zodat uw koepels blijven glanzen.</p>
@@ -768,7 +784,7 @@
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-image">🪟</div>
+                <div class="service-image">🎚️</div>
                 <div class="service-content">
                     <h3>Rolluiken</h3>
                     <p>Vuile rolluiken verstoppen het daglicht. We maken ze grondig schoon en controleren op goede werking. Gaat gemakkelijk op en neer!</p>
@@ -776,7 +792,7 @@
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-image">🪣</div>
+                <div class="service-image">🍀</div>
                 <div class="service-content">
                     <h3>Dak Ontmossen</h3>
                     <p>Mos en algen op het dak? Dit beschadigt dakpannen op lange termijn. We verwijderen alles voorzichtig en preventief.</p>
@@ -794,8 +810,9 @@
                 <div class="team-photo"><img src="assets/images/Nabil-2.jpg?v=3" alt="Nabil foto"></div>
                 <div class="team-info">
                     <h3>Nabil</h3>
-                    <div class="team-role">Eigenaar & Specialist</div>
-                    <p>Professioneel reiniging expert. Gespecialiseerd in osmose-technologie en zonnepaneelreiniging. Altijd resultaat gericht.</p>
+                    <div class="team-role">Oprichter & Specialist sinds 2020</div>
+                    <p><strong>Gespecialiseerd in:</strong> Osmose-technologie, zonnepanelen reinigen, gevel- en dakherstel. Volledig verzekerd, alle certificaten.</p>
+                    <p style="margin-top: 1rem; font-style: italic; color: #FF6B35;">\"Ik zie elk pand als mijn eigen. Kwaliteit en eerlijkheid, altijd.\"</p>
                 </div>
             </div>
         </div>
@@ -804,140 +821,62 @@
     <!-- Gallery - Realisaties -->
     <section class="gallery-section" id="gallery">
         <h2>Onze Realisaties</h2>
-        <p>Kijk wat we voor andere klanten hebben bereikt</p>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="assets/images/Dakgoten-2.jpg?v=3" alt="Dakgoten 2">
-                <div class="gallery-overlay">🔍</div>
+        <p>Geselecteerde projecten van onze tevreden klanten</p>
+        
+        <!-- Gallery grouped by service category -->
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #1a73e8; font-size: 1.1rem;">☀️ Zonnepanelen</h3>
+            <div class="gallery-grid" style="margin-bottom: 2rem;">
+                <div class="gallery-item">
+                    <img src="assets/images/Zonnepanelen.jpg?v=3" alt="Zonnepanelen project 1">
+                    <div class="gallery-overlay">🔍</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/Zonnepanelen-2.jpg?v=3" alt="Zonnepanelen project 2">
+                    <div class="gallery-overlay">🔍</div>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="assets/images/Dakgoten.jpg?v=3" alt="Dakgoten">
-                <div class="gallery-overlay">🔍</div>
+            
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #1a73e8; font-size: 1.1rem;">🌧️ Dakgoten & Corniche</h3>
+            <div class="gallery-grid" style="margin-bottom: 2rem;">
+                <div class="gallery-item">
+                    <img src="assets/images/Dakgoten.jpg?v=3" alt="Dakgoten project 1">
+                    <div class="gallery-overlay">🔍</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/Dakgoten-2.jpg?v=3" alt="Dakgoten project 2">
+                    <div class="gallery-overlay">🔍</div>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="assets/images/Gevels-1.jpg?v=3" alt="Gevels 1">
-                <div class="gallery-overlay">🔍</div>
+            
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #1a73e8; font-size: 1.1rem;">🏗️ Gevels & Voetpaden</h3>
+            <div class="gallery-grid" style="margin-bottom: 2rem;">
+                <div class="gallery-item">
+                    <img src="assets/images/Gevels.jpg?v=3" alt="Gevels project 1">
+                    <div class="gallery-overlay">🔍</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/Gevels-1.jpg?v=3" alt="Gevels project 2">
+                    <div class="gallery-overlay">🔍</div>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="assets/images/Gevels-2.jpg?v=3" alt="Gevels 2">
-                <div class="gallery-overlay">🔍</div>
+            
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #1a73e8; font-size: 1.1rem;">🪟 Glasbewassing</h3>
+            <div class="gallery-grid" style="margin-bottom: 2rem;">
+                <div class="gallery-item">
+                    <img src="assets/images/WhatsApp-Image-2024-05-06-at-11.37.50.jpeg?v=3" alt="Glasbewassing project 1">
+                    <div class="gallery-overlay">🔍</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/WhatsApp-Image-2024-05-06-at-11.37.51.jpeg?v=3" alt="Glasbewassing project 2">
+                    <div class="gallery-overlay">🔍</div>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="assets/images/Gevels-Voetpaden.jpg?v=3" alt="Gevels Voetpaden">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/Gevels.jpg?v=3" alt="Gevels">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2024-05-06-at-11.37.50.jpeg?v=3" alt="WhatsApp Image 2024 05 06 at 11.37.50">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2024-05-06-at-11.37.51-3.jpeg?v=3" alt="WhatsApp Image 2024 05 06 at 11.37.51 3">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2024-05-06-at-11.37.51.jpeg?v=3" alt="WhatsApp Image 2024 05 06 at 11.37.51">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2024-05-06-at-11.37.52-1.jpeg?v=3" alt="WhatsApp Image 2024 05 06 at 11.37.52 1">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM10.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.17 PM10">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM12.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.17 PM12">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM13.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.17 PM13">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM14.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.17 PM14">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM15.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.17 PM15">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM16.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.17 PM16">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM2.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.17 PM2">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM4.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.17 PM4">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM5.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.17 PM5">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM6.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.17 PM6">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM7.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.17 PM7">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM8.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.17 PM8">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM9.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.17 PM9">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.18 PM">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1).jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.18 PM1 (1)">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM1.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.18 PM1">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM2.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.18 PM2">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM3.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.18 PM3">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM4.jpeg?v=3" alt="WhatsApp Image 2025 07 25 at 4.51.18 PM4">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/Zonnepanelen-2.jpg?v=3" alt="Zonnepanelen 2">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/Zonnepanelen-3.jpg?v=3" alt="Zonnepanelen 3">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/Zonnepanelen-4.jpg?v=3" alt="Zonnepanelen 4">
-                <div class="gallery-overlay">🔍</div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/images/Zonnepanelen.jpg?v=3" alt="Zonnepanelen">
-                <div class="gallery-overlay">🔍</div>
-            </div>
+        </div>
+        
+        <!-- View all button -->
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="pages/realisaties.html" class="btn-primary" style="display: inline-block; padding: 0.9rem 2rem; background: #1a73e8; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; transition: all 0.3s;">Bekijk alle realisaties →</a>
         </div>
     </section>
 

@@ -2291,8 +2291,9 @@ img {
     cursor: pointer;
     background-color: white;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, opacity 0.3s ease;
     display: block;
+    opacity: 1;
 }
 
 .portfolio-item:hover {

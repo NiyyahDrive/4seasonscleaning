@@ -321,6 +321,173 @@
             text-decoration: underline;
         }
 
+        /* Team Section */
+        .team-section {
+            padding: 3rem 2rem;
+            background: #f9f9f9;
+        }
+
+        .team-section h2 {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-4px);
+        }
+
+        .team-photo {
+            width: 100%;
+            height: 250px;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            font-size: 3rem;
+        }
+
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-info {
+            padding: 1.5rem;
+        }
+
+        .team-info h3 {
+            font-size: 1.1rem;
+            color: #1a73e8;
+            margin-bottom: 0.3rem;
+        }
+
+        .team-role {
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 1rem;
+        }
+
+        .team-info p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 3rem 2rem;
+            background: white;
+        }
+
+        .gallery-section h2 {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-section > p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(26, 115, 232, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Review with photo */
+        .review-with-photo {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .review-photo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            flex-shrink: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .review-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .review-content {
+            flex: 1;
+        }
+
         /* CTA Final Section */
         .final-cta {
             background: #0d47a1;
@@ -416,6 +583,16 @@
                 <div class="review-author">Frank Maes</div>
                 <div class="review-role">Bedrijfsleider, Gent</div>
             </div>
+            <div class="review">
+                <div class="review-text">"Mijn zonnepanelen leveren nu 28% meer op sinds ze ze schoonmaken. Echt indrukwekkend verschil!"</div>
+                <div class="review-author">Sofie Claes</div>
+                <div class="review-role">Huiseigenaar, Antwerpen</div>
+            </div>
+            <div class="review">
+                <div class="review-text">"Perfecte dakgotenreiniging. Ze waren echt zorgvuldig en hebben ook een paar kleine problemen opgemerkt voordat ze groot zouden worden."</div>
+                <div class="review-author">Pieter Verhulst</div>
+                <div class="review-role">Manager, Mechelen</div>
+            </div>
         </div>
     </section>
 
@@ -454,33 +631,112 @@
                 <div class="service-image">🪟</div>
                 <div class="service-content">
                     <h3>Glasbewassing</h3>
-                    <p>Ramen binnen en buiten. Frames, dorpels, alles. Met moderne osmose-technologie voor vlekloze glans.</p>
-                    <a href="#contact" class="service-link">Offerte aanvragen →</a>
+                    <p><strong>Osmose-technologie:</strong> We gebruiken demineraal water dat alle mineralen verwijdert. Dit voorkomt kalkplekken permanent. Ramen binnen en buiten, frames, dorpels, alles.</p>
+                    <a href="pages/contact.html" class="service-link">Offerte aanvragen →</a>
                 </div>
             </div>
             <div class="service-card">
                 <div class="service-image">🏚️</div>
                 <div class="service-content">
                     <h3>Dakgoten & Corniche</h3>
-                    <p>Proper afgestemd en onderhouden. Water loopt weg waar het hoort. Geen overlast, geen roest.</p>
-                    <a href="#contact" class="service-link">Offerte aanvragen →</a>
+                    <p>Proper afgestemd en onderhouden. Water loopt weg waar het hoort. Geen overlast, geen roest. Preventief onderhoud bespaart grote herstellingskosten.</p>
+                    <a href="pages/contact.html" class="service-link">Offerte aanvragen →</a>
                 </div>
             </div>
             <div class="service-card">
                 <div class="service-image">☀️</div>
                 <div class="service-content">
                     <h3>Zonnepanelen</h3>
-                    <p>Schone panelen = meer opbrengst. We reinigen voorzichtig, grondig. Uw rendement omhoog.</p>
-                    <a href="#contact" class="service-link">Offerte aanvragen →</a>
+                    <p><strong>Effect:</strong> Schone panelen geven tot 30% meer opbrengst! We reinigen voorzichtig, grondig. Uw energieopbrengst omhoog, investering beschermd.</p>
+                    <a href="pages/contact.html" class="service-link">Offerte aanvragen →</a>
                 </div>
             </div>
             <div class="service-card">
                 <div class="service-image">🏗️</div>
                 <div class="service-content">
                     <h3>Gevels & Voetpaden</h3>
-                    <p>Groene aanslag weg. Gevels weer als nieuw. Ook voor grotere oppervlaktes. Proper onderhoud.</p>
-                    <a href="#contact" class="service-link">Offerte aanvragen →</a>
+                    <p>Groene aanslag en schimmel verdwijnen spoorloos. Gevels weer als nieuw. Ook voor grotere oppervlaktes en commerciële panden.</p>
+                    <a href="pages/contact.html" class="service-link">Offerte aanvragen →</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <h2>Ons Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="team-photo">👨‍💼</div>
+                <div class="team-info">
+                    <h3>Jan De Vries</h3>
+                    <div class="team-role">Eigenaar & Specialist</div>
+                    <p>15+ jaar ervaring in professionele reiniging. Expert in osmose-technologie en zonnepaneelreiniging.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="team-photo">👨‍🔧</div>
+                <div class="team-info">
+                    <h3>Marc Vandenberghe</h3>
+                    <div class="team-role">Vakman & Monteur</div>
+                    <p>Specialist in dakgoten en gevels. Vakkundig, stipt, en zeer zorgvuldig met uw woning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery - Realisaties -->
+    <section class="gallery-section" id="gallery">
+        <h2>Onze Realisaties</h2>
+        <p>Kijk wat we voor andere klanten hebben bereikt</p>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div style="width: 100%; height: 200px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999;">Foto 1</div>
+                <div class="gallery-overlay">🔍</div>
+            </div>
+            <div class="gallery-item">
+                <div style="width: 100%; height: 200px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999;">Foto 2</div>
+                <div class="gallery-overlay">🔍</div>
+            </div>
+            <div class="gallery-item">
+                <div style="width: 100%; height: 200px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999;">Foto 3</div>
+                <div class="gallery-overlay">🔍</div>
+            </div>
+            <div class="gallery-item">
+                <div style="width: 100%; height: 200px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999;">Foto 4</div>
+                <div class="gallery-overlay">🔍</div>
+            </div>
+            <div class="gallery-item">
+                <div style="width: 100%; height: 200px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999;">Foto 5</div>
+                <div class="gallery-overlay">🔍</div>
+            </div>
+            <div class="gallery-item">
+                <div style="width: 100%; height: 200px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999;">Foto 6</div>
+                <div class="gallery-overlay">🔍</div>
+            </div>
+            <div class="gallery-item">
+                <div style="width: 100%; height: 200px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999;">Foto 7</div>
+                <div class="gallery-overlay">🔍</div>
+            </div>
+            <div class="gallery-item">
+                <div style="width: 100%; height: 200px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999;">Foto 8</div>
+                <div class="gallery-overlay">🔍</div>
+            </div>
+            <div class="gallery-item">
+                <div style="width: 100%; height: 200px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999;">Foto 9</div>
+                <div class="gallery-overlay">🔍</div>
+            </div>
+            <div class="gallery-item">
+                <div style="width: 100%; height: 200px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999;">Foto 10</div>
+                <div class="gallery-overlay">🔍</div>
+            </div>
+            <div class="gallery-item">
+                <div style="width: 100%; height: 200px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999;">Foto 11</div>
+                <div class="gallery-overlay">🔍</div>
+            </div>
+            <div class="gallery-item">
+                <div style="width: 100%; height: 200px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999;">Foto 12</div>
+                <div class="gallery-overlay">🔍</div>
             </div>
         </div>
     </section>

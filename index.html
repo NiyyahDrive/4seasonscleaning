@@ -321,6 +321,77 @@
             text-decoration: underline;
         }
 
+        /* Before-After Gallery */
+        .before-after-gallery {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+
+        .gallery-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1a73e8;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            align-items: start;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 6px;
+            background: #f5f5f5;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .gallery-label.before {
+            background: rgba(26, 115, 232, 0.8);
+        }
+
+        .gallery-label.after {
+            background: rgba(76, 175, 80, 0.8);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .gallery-item img {
+                aspect-ratio: 16/9;
+            }
+        }
+
         /* CTA Final Section */
         .final-cta {
             background: #0d47a1;
@@ -502,6 +573,19 @@
                     <h3>Glasbewassing</h3>
                     <p>Ramen binnen en buiten. Frames, dorpels, alles. Met moderne osmose-technologie voor vlekloze glans.</p>
                     <a href="#contact" class="service-link">Offerte aanvragen →</a>
+                    <div class="before-after-gallery">
+                        <div class="gallery-title">Voor & Na</div>
+                        <div class="gallery-container">
+                            <div class="gallery-item">
+                                <img src="assets/images/before-after/glasbewassing/before.jpg" alt="Glasbewassing voor">
+                                <div class="gallery-label before">Voor</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/images/before-after/glasbewassing/after.png" alt="Glasbewassing na">
+                                <div class="gallery-label after">Na</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="service-card">
@@ -510,6 +594,19 @@
                     <h3>Dakgoten & Corniche</h3>
                     <p>Proper afgestemd en onderhouden. Water loopt weg waar het hoort. Geen overlast, geen roest.</p>
                     <a href="#contact" class="service-link">Offerte aanvragen →</a>
+                    <div class="before-after-gallery">
+                        <div class="gallery-title">Voor & Na</div>
+                        <div class="gallery-container">
+                            <div class="gallery-item">
+                                <img src="assets/images/before-after/dakgoten/before.jpg" alt="Dakgoten voor">
+                                <div class="gallery-label before">Voor</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/images/before-after/dakgoten/after.jpg" alt="Dakgoten na">
+                                <div class="gallery-label after">Na</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="service-card">
@@ -518,6 +615,19 @@
                     <h3>Zonnepanelen</h3>
                     <p>Schone panelen = meer opbrengst. We reinigen voorzichtig, grondig. Uw rendement omhoog.</p>
                     <a href="#contact" class="service-link">Offerte aanvragen →</a>
+                    <div class="before-after-gallery">
+                        <div class="gallery-title">Voor & Na</div>
+                        <div class="gallery-container">
+                            <div class="gallery-item">
+                                <img src="assets/images/before-after/zonnepanelen/before.jpg" alt="Zonnepanelen voor">
+                                <div class="gallery-label before">Voor</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/images/before-after/zonnepanelen/after.png" alt="Zonnepanelen na">
+                                <div class="gallery-label after">Na</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="service-card">
@@ -526,6 +636,19 @@
                     <h3>Gevels & Voetpaden</h3>
                     <p>Groene aanslag weg. Gevels weer als nieuw. Ook voor grotere oppervlaktes. Proper onderhoud.</p>
                     <a href="#contact" class="service-link">Offerte aanvragen →</a>
+                    <div class="before-after-gallery">
+                        <div class="gallery-title">Voor & Na</div>
+                        <div class="gallery-container">
+                            <div class="gallery-item">
+                                <img src="assets/images/before-after/gevels/before.png" alt="Gevels voor">
+                                <div class="gallery-label before">Voor</div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/images/before-after/gevels/after.png" alt="Gevels na">
+                                <div class="gallery-label after">Na</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

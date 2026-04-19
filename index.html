@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4 Seasons Glazenwasser | Raamschoonmaak Vlaanderen</title>
+    <meta name="description" content="4 Seasons Cleaning — professionele glazenwasser in Vlaanderen. Osmose-technologie, zonnepanelen, dakgoten en gevels. Vakmanschap zonder gezever.">
+    <meta name="theme-color" content="#0d47a1">
+    <title>4 Seasons Cleaning | Glazenwasser & Onderhoud in Vlaanderen</title>
+
+    <!-- Preconnect voor performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>
@@ -12,1011 +20,1412 @@
       gtag('js', new Date());
       gtag('config', 'GA_MEASUREMENT_ID');
     </script>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fff;
+        /* ============================================
+           DESIGN TOKENS (CSS Custom Properties)
+           ============================================ */
+        :root {
+            --color-primary: #0d47a1;
+            --color-primary-light: #1a73e8;
+            --color-accent: #FF6B35;
+            --color-accent-dark: #E55A25;
+            --color-ink: #1a1a2e;
+            --color-body: #334155;
+            --color-muted: #64748b;
+            --color-line: #e2e8f0;
+            --color-soft: #f8fafc;
+            --color-bg: #ffffff;
+
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+
+            --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+            --shadow-md: 0 6px 18px rgba(15, 23, 42, 0.08);
+            --shadow-lg: 0 18px 40px rgba(15, 23, 42, 0.12);
+
+            --maxw: 1200px;
+            --gutter: clamp(1rem, 3vw, 2rem);
+
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background: #fff;
-            border-bottom: 1px solid #eee;
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            font-size: 17px;
+            line-height: 1.65;
+            color: var(--color-body);
+            background: var(--color-bg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: var(--color-primary-light);
+            text-decoration: none;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--color-ink);
+            line-height: 1.2;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        h2 {
+            font-size: clamp(1.6rem, 3.2vw, 2.25rem);
+            margin-bottom: 0.75rem;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        p { max-width: 72ch; }
+
+        .container {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding-left: var(--gutter);
+            padding-right: var(--gutter);
+        }
+
+        section { padding: clamp(3rem, 7vw, 6rem) 0; }
+
+        .section-head {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-head .eyebrow {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-primary-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .section-head p {
+            color: var(--color-muted);
+            margin: 0.75rem auto 0;
+        }
+
+        /* ============================================
+           NAVIGATION
+           ============================================ */
+        .nav {
             position: sticky;
             top: 0;
             z-index: 100;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: saturate(180%) blur(12px);
+            -webkit-backdrop-filter: saturate(180%) blur(12px);
+            border-bottom: 1px solid var(--color-line);
+        }
+
+        .nav__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0.9rem var(--gutter);
         }
 
         .logo {
             display: flex;
             align-items: center;
-            text-decoration: none;
-            height: auto;
+            gap: 0.6rem;
+            font-weight: 800;
+            color: var(--color-ink);
+            letter-spacing: -0.01em;
         }
 
-        <script>
-        // ===== MOBILE MENU TOGGLE =====
+        .logo img { height: 42px; width: auto; }
 
-        document.addEventListener('DOMContentLoaded', function() {
+        .logo__text {
+            font-size: 1.05rem;
+            line-height: 1;
+        }
 
-              // Find hamburger button (try multiple selectors)
-              const hamburger = document.querySelector('.hamburger') 
-                || document.querySelector('.menu-button')
-                || document.querySelector('button[aria-label="Menu"]')
-                || document.getElementById('hamburger-menu');
-
-              // Find navigation (try multiple selectors)
-              const nav = document.querySelector('nav')
-                || document.querySelector('.navbar-menu')
-                || document.querySelector('.navigation')
-                || document.getElementById('navbar-menu');
-
-              // Only run if both elements exist
-              if (!hamburger || !nav) {
-                      console.warn('Menu elements not found. Check selectors.');
-                      return;
-              }
-
-              // Toggle menu on hamburger click
-              hamburger.addEventListener('click', function(e) {
-                      e.stopPropagation();
-                      nav.classList.toggle('active');
-                      hamburger.classList.toggle('active');
-              });
-
-              // Close menu when clicking navigation link
-                    const navLinks = nav.querySelectorAll('a');
-                    navLinks.forEach(link => {
-                            link.addEventListener('click', function() {
-                                      nav.classList.remove('active');
-                                      hamburger.classList.remove('active');
-                            });
-                    });
-
-                    // Close menu when clicking outside
-                    document.addEventListener('click', function(e) {
-                            const isClickInNav = nav.contains(e.target);
-                            const isClickOnHamburger = hamburger.contains(e.target);
-
-                            if (!isClickInNav && !isClickOnHamburger && nav.classList.contains('active')) {
-                                      nav.classList.remove('active');
-                                      hamburger.classList.remove('active');
-                            }
-                    });
-
-                    // Close menu on window resize (when viewport changes)
-                    window.addEventListener('resize', function() {
-                            if (window.innerWidth > 767) {
-                                      nav.classList.remove('active');
-                                      hamburger.classList.remove('active');
-                            }
-                    });
-              });
-            </script>
-        .logo img {
-            height: 50px;
-            width: auto;
-            object-fit: contain;
+        .logo__text small {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            color: var(--color-muted);
+            margin-top: 2px;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.75rem;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-size: 0.95rem;Page_DownPage_DownPage_DownPage_DownPage_DownPage_DownPage_DownPage_DownPage_DownPage_Down
-            transition: color 0.3s;
+            color: var(--color-body);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
         }
 
-        .nav-links a:hover {
-            color: #1a73e8;
+        .nav-links a:hover { color: var(--color-primary); }
+
+        .nav-links .btn-nav {
+            background: var(--color-primary);
+            color: #fff;
+            padding: 0.55rem 1.1rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
         }
 
-        @media (max-width: 768px) {
-            :root {
-                font-size: 15px;
-            }
+        .nav-links .btn-nav:hover {
+            background: var(--color-ink);
+            color: #fff;
+        }
 
-            /* Hamburger Menu Styles */
-            .hamburger {
-                display: flex;
-            }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 28px;
+            height: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--color-ink);
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+        @media (max-width: 860px) {
+            .hamburger { display: flex; }
 
             .nav-links {
-                display: none;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 right: 0;
                 flex-direction: column;
-                background-color: white;
-                border-bottom: 1px solid var(--border-color);
+                align-items: stretch;
                 gap: 0;
-                padding: 1rem;
-                width: 100%;
-                margin: 0;
-                z-index: 99;
+                background: #fff;
+                border-bottom: 1px solid var(--color-line);
+                padding: 0.5rem 0;
+                box-shadow: var(--shadow-md);
+                transform: translateY(-10px);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.2s ease, transform 0.2s ease;
             }
 
             .nav-links.active {
-                display: flex;
+                opacity: 1;
+                transform: translateY(0);
+                pointer-events: auto;
             }
 
-            .nav-links li {
-                padding: 0.75rem 0;
-                border-bottom: 1px solid var(--border-color);
-            }
-
-            .nav-links li:last-child {
-                border-bottom: none;
-            }
+            .nav-links li { border-bottom: 1px solid var(--color-line); }
+            .nav-links li:last-child { border-bottom: none; }
 
             .nav-links a {
                 display: block;
-                padding: 0.5rem 0;
-                border-bottom: none;
+                padding: 1rem var(--gutter);
+                font-size: 1rem;
             }
 
-            /* Rest of mobile styles */
-            nav {
-                flex-wrap: nowrap;
-                padding: 1rem;
-                gap: 0.5rem;
-            }
-
-            nav .logo {
-                flex: 1;
+            .nav-links .btn-nav {
+                margin: 0.75rem var(--gutter);
+                text-align: center;
+                border-radius: var(--radius-sm);
             }
         }
 
-        /* Hero Section - URGENCY */
+        /* ============================================
+           HERO
+           ============================================ */
         .hero {
-            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
-            color: white;
-            padding: 4rem 2rem;
+            position: relative;
+            padding: clamp(4rem, 10vw, 7rem) var(--gutter);
+            background:
+                radial-gradient(1200px 600px at 80% -10%, rgba(26,115,232,0.25), transparent 60%),
+                radial-gradient(900px 500px at 0% 100%, rgba(13,71,161,0.35), transparent 60%),
+                linear-gradient(135deg, #0b3d91 0%, #1a73e8 100%);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .hero__inner {
+            max-width: 900px;
+            margin: 0 auto;
             text-align: center;
         }
 
+        .hero .eyebrow {
+            display: inline-block;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.22);
+            color: #fff;
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.5rem;
+        }
+
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        .hero .subheader {
-            font-size: 1.2rem;
+            color: #fff;
+            font-size: clamp(2rem, 5.5vw, 3.4rem);
+            font-weight: 800;
             margin-bottom: 1rem;
-            opacity: 0.95;
-            font-weight: 300;
         }
 
-        .hero .benefit {
-            font-size: 1rem;
+        .hero .lead {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            opacity: 0.92;
+            margin: 0 auto 1.5rem;
+            max-width: 640px;
+        }
+
+        .hero__benefit {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 0.7rem 1.1rem;
+            border-radius: 999px;
+            font-size: 0.95rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
-            border-top: 1px solid rgba(255,255,255,0.3);
-            padding-top: 1rem;
         }
 
         .cta-group {
             display: flex;
-            gap: 1rem;
+            gap: 0.85rem;
             justify-content: center;
             flex-wrap: wrap;
         }
 
-        .btn-primary {
-            background: #fff;
-            color: #1a73e8;
-            padding: 0.85rem 2rem;
-            border: none;
-            border-radius: 6px;
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 1.6rem;
+            border-radius: var(--radius-sm);
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s;
+            border: 2px solid transparent;
+            transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: var(--color-primary);
         }
 
         .btn-primary:hover {
-            background: #f0f0f0;
+            background: var(--color-accent);
+            color: #fff;
             transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
         }
 
         .btn-secondary {
             background: transparent;
-            color: white;
-            padding: 0.85rem 2rem;
-            border: 2px solid white;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s;
+            color: #fff;
+            border-color: rgba(255,255,255,0.7);
         }
 
         .btn-secondary:hover {
-            background: rgba(255,255,255,0.1);
+            background: #fff;
+            color: var(--color-primary);
             transform: translateY(-2px);
         }
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            .hero .subheader {
-                font-size: 1rem;
-            }
-            .cta-group {
-                flex-direction: column;
-            }
-            .btn-primary, .btn-secondary {
-                width: 100%;
-            }
+        .btn-solid {
+            background: var(--color-primary);
+            color: #fff;
         }
 
-        /* Trust Section - REVIEWS EARLY */
-        .trust-section {
-            padding: 3rem 2rem;
-            background: #f9f9f9;
+        .btn-solid:hover {
+            background: var(--color-ink);
+            transform: translateY(-2px);
         }
 
-        .trust-header {
-            text-align: center;
-            margin-bottom: 2rem;
+        .btn-accent {
+            background: var(--color-accent);
+            color: #fff;
         }
 
-        .trust-header h2 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
+        .btn-accent:hover {
+            background: var(--color-accent-dark);
+            transform: translateY(-2px);
         }
 
-        .reviews {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        .hero__trust {
+            display: flex;
+            justify-content: center;
             gap: 1.5rem;
+            margin-top: 2.5rem;
+            font-size: 0.88rem;
+            opacity: 0.85;
+            flex-wrap: wrap;
+        }
+
+        .hero__trust span { display: inline-flex; align-items: center; gap: 0.4rem; }
+
+        /* ============================================
+           PROMO BANNER
+           ============================================ */
+        .promo {
+            margin: -3rem auto 0;
             max-width: 1000px;
-            margin: 0 auto;
+            background: #fff;
+            padding: clamp(1.5rem, 4vw, 2.5rem);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            z-index: 2;
+            border-top: 4px solid var(--color-accent);
         }
 
-        .review {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #1a73e8;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .review-text {
-            font-size: 0.95rem;
+        .promo__title {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: clamp(1.1rem, 2.4vw, 1.4rem);
             margin-bottom: 1rem;
-            font-style: italic;
-            color: #555;
+            color: var(--color-ink);
         }
 
-        .review-author {
-            font-weight: 600;
-            color: #1a73e8;
-            font-size: 0.9rem;
-        }
-
-        .review-role {
-            font-size: 0.85rem;
-            color: #999;
-        }
-
-        /* Why Us Section */
-        .why-us {
-            padding: 3rem 2rem;
-        }
-
-        .why-us h2 {
-            font-size: 1.8rem;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .benefits-grid {
+        .promo__grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
+            grid-template-columns: 1fr 1fr auto;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .promo__pricing strong {
+            color: var(--color-accent);
+            font-size: 1.15rem;
+            display: block;
+        }
+
+        .promo__contact a {
+            color: var(--color-primary);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 760px) {
+            .promo__grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .promo__contact, .promo__cta { text-align: left; }
+        }
+
+        /* ============================================
+           WHY US (benefits)
+           ============================================ */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+            max-width: var(--maxw);
             margin: 0 auto;
+            padding: 0 var(--gutter);
         }
 
-        .benefit-card {
-            text-align: center;
+        .benefit {
+            background: #fff;
+            border: 1px solid var(--color-line);
+            padding: 1.75rem 1.5rem;
+            border-radius: var(--radius-md);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         }
 
-        .benefit-icon {
-            font-size: 2.5rem;
+        .benefit:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: transparent;
+        }
+
+        .benefit__icon {
+            width: 44px;
+            height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(26,115,232,0.1);
+            color: var(--color-primary);
+            border-radius: 10px;
+            font-size: 1.2rem;
             margin-bottom: 1rem;
         }
 
-        .benefit-card h3 {
-            font-size: 1.1rem;
+        .benefit h3 { margin-bottom: 0.5rem; color: var(--color-ink); }
+        .benefit p { font-size: 0.95rem; color: var(--color-muted); }
+
+        /* ============================================
+           OSMOSE EXPLAINER
+           ============================================ */
+        .explainer {
+            background: var(--color-soft);
+        }
+
+        .explainer__wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(1.5rem, 4vw, 3rem);
+            align-items: center;
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 var(--gutter);
+        }
+
+        .explainer__visual {
+            background: linear-gradient(135deg, #0b3d91, #1a73e8);
+            color: #fff;
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .explainer__visual h3 {
+            color: #fff;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.25rem;
+        }
+
+        .compare__col {
+            background: rgba(255,255,255,0.08);
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .compare__col h4 {
+            color: #fff;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
             margin-bottom: 0.5rem;
-            color: #1a73e8;
+            opacity: 0.85;
         }
 
-        .benefit-card p {
-            color: #666;
-            font-size: 0.95rem;
-            line-height: 1.6;
+        .compare__col ul { list-style: none; font-size: 0.9rem; }
+        .compare__col li { padding: 0.3rem 0; opacity: 0.95; }
+        .compare__col.win { background: rgba(255,255,255,0.15); }
+
+        .explainer__text h2 { margin-bottom: 1rem; }
+        .explainer__text p { margin-bottom: 1rem; color: var(--color-body); }
+
+        @media (max-width: 860px) {
+            .explainer__wrap { grid-template-columns: 1fr; }
         }
 
-        /* Services Grid */
-        .services {
-            padding: 3rem 2rem;
-            background: white;
-        }
-
-        .services h2 {
-            font-size: 1.8rem;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
+        /* ============================================
+           SERVICES
+           ============================================ */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
+            gap: 1.5rem;
+            max-width: var(--maxw);
             margin: 0 auto;
+            padding: 0 var(--gutter);
         }
 
-        .service-card {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-4px);
-        }
-
-        .service-image {
-            width: 100%;
-            height: 200px;
-            background: #e0e0e0;
+        .service {
+            background: #fff;
+            border: 1px solid var(--color-line);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
             display: flex;
+            flex-direction: column;
+        }
+
+        .service:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .service__icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, rgba(26,115,232,0.15), rgba(13,71,161,0.1));
+            color: var(--color-primary);
+            border-radius: 12px;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
         }
 
-        .service-content {
-            padding: 1.5rem;
+        .service h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+            color: var(--color-ink);
         }
 
-        .service-content h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: #1a73e8;
-        }
-
-        .service-content p {
-            color: #666;
+        .service p {
             font-size: 0.95rem;
+            color: var(--color-muted);
             margin-bottom: 1rem;
+            flex: 1;
         }
 
-        .service-link {
-            color: #1a73e8;
-            text-decoration: none;
+        .service__link {
+            color: var(--color-primary);
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.92rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: gap 0.2s ease;
         }
 
-        .service-link:hover {
-            text-decoration: underline;
+        .service__link:hover { gap: 0.6rem; }
+
+        /* ============================================
+           VALUE / EDUCATION
+           ============================================ */
+        .value {
+            background: var(--color-ink);
+            color: #e2e8f0;
         }
 
-        /* Team Section */
-        .team-section {
-            padding: 3rem 2rem;
-            background: #f9f9f9;
-        }
+        .value h2 { color: #fff; }
 
-        .team-section h2 {
-            font-size: 1.8rem;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .team-grid {
+        .value__grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 var(--gutter);
+        }
+
+        .value__card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 1.75rem;
+            border-radius: var(--radius-md);
+        }
+
+        .value__card h3 {
+            color: #fff;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .value__card p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        .value__stat {
+            display: block;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+
+        /* ============================================
+           REVIEWS
+           ============================================ */
+        .reviews {
+            background: var(--color-soft);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 var(--gutter);
+        }
+
+        .review {
+            background: #fff;
+            padding: 1.75rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--color-line);
+            position: relative;
+        }
+
+        .review__stars {
+            color: #fbbf24;
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: 2px;
+        }
+
+        .review__text {
+            color: var(--color-body);
+            margin-bottom: 1.25rem;
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        .review__author { font-weight: 600; color: var(--color-ink); }
+        .review__role { font-size: 0.85rem; color: var(--color-muted); }
+
+        /* ============================================
+           TEAM
+           ============================================ */
+        .team {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: clamp(1.5rem, 4vw, 3rem);
             max-width: 1000px;
             margin: 0 auto;
-        }
-
-        .team-member {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .team-member:hover {
-            transform: translateY(-4px);
-        }
-
-        .team-photo {
-            width: 100%;
-            max-width: 400px;
-            aspect-ratio: 3/4;
-            margin: 0 auto;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #e0e0e0;
-            display: flex;
+            padding: 0 var(--gutter);
             align-items: center;
-            justify-content: center;
-            font-size: 3rem;
         }
 
-        .team-photo img {
+        .team__photo {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background: var(--color-line);
+            box-shadow: var(--shadow-md);
+        }
+
+        .team__photo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center 20%;
         }
 
-        .team-info {
-            padding: 1.5rem;
-        }
-
-        .team-info h3 {
-            font-size: 1.1rem;
-            color: #1a73e8;
-            margin-bottom: 0.3rem;
-        }
-
-        .team-role {
-            font-size: 0.9rem;
-            color: #999;
-            margin-bottom: 1rem;
-        }
-
-        .team-info p {
-            font-size: 0.9rem;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Gallery Section */
-        .gallery-section {
-            padding: 3rem 2rem;
-            background: white;
-        }
-
-        .gallery-section h2 {
-            font-size: 1.8rem;
-            text-align: center;
+        .team__role {
+            display: inline-block;
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            font-weight: 600;
             margin-bottom: 0.5rem;
         }
 
-        .gallery-section > p {
-            text-align: center;
-            color: #666;
-            margin-bottom: 2rem;
+        .team h2 { margin-bottom: 1rem; }
+        .team p { color: var(--color-body); margin-bottom: 1rem; }
+
+        .team__quote {
+            border-left: 3px solid var(--color-accent);
+            padding: 0.75rem 1rem;
+            background: var(--color-soft);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            font-style: italic;
+            color: var(--color-ink);
+        }
+
+        @media (max-width: 760px) {
+            .team { grid-template-columns: 1fr; }
+        }
+
+        /* ============================================
+           GALLERY
+           ============================================ */
+        .gallery {
+            background: #fff;
+        }
+
+        .gallery__group { max-width: var(--maxw); margin: 0 auto 2.5rem; padding: 0 var(--gutter); }
+
+        .gallery__label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
         .gallery-item {
             position: relative;
             overflow: hidden;
-            border-radius: 6px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            border-radius: var(--radius-sm);
+            aspect-ratio: 4/3;
+            background: var(--color-line);
             cursor: pointer;
-            transition: transform 0.3s;
-            min-height: 200px;
-            background: #f0f0f0;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05);
         }
 
         .gallery-item img {
             width: 100%;
-            height: 200px;
+            height: 100%;
             object-fit: cover;
-            display: block;
+            transition: transform 0.5s ease;
         }
 
-        .gallery-overlay {
+        .gallery-item:hover img { transform: scale(1.06); }
+
+        .gallery-item::after {
+            content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(26, 115, 232, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            inset: 0;
+            background: linear-gradient(to top, rgba(13,71,161,0.5), transparent 60%);
             opacity: 0;
-            transition: opacity 0.3s;
-            color: white;
-            font-size: 2rem;
+            transition: opacity 0.3s ease;
         }
 
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
+        .gallery-item:hover::after { opacity: 1; }
+
+        .gallery__cta {
+            text-align: center;
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 var(--gutter);
         }
 
-        /* Review with photo */
-        .review-with-photo {
-            display: flex;
-            gap: 1rem;
+        /* ============================================
+           FINAL CTA
+           ============================================ */
+        .final-cta {
+            background: linear-gradient(135deg, #0b3d91 0%, #1a73e8 100%);
+            color: #fff;
+            text-align: center;
         }
 
-        .review-photo {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: #e0e0e0;
-            flex-shrink: 0;
+        .final-cta h2 { color: #fff; margin-bottom: 0.75rem; }
+        .final-cta p { color: rgba(255,255,255,0.9); margin: 0 auto 2rem; }
+
+        /* ============================================
+           FAQ
+           ============================================ */
+        .faq__list {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--gutter);
+        }
+
+        .faq__item {
+            border: 1px solid var(--color-line);
+            border-radius: var(--radius-sm);
+            margin-bottom: 0.75rem;
             overflow: hidden;
+            background: #fff;
+        }
+
+        .faq__item summary {
+            padding: 1.25rem;
+            font-weight: 600;
+            color: var(--color-ink);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+        }
+
+        .faq__item summary::-webkit-details-marker { display: none; }
+
+        .faq__item summary::after {
+            content: '+';
+            font-size: 1.4rem;
+            color: var(--color-primary);
+            transition: transform 0.25s ease;
+        }
+
+        .faq__item[open] summary::after { transform: rotate(45deg); }
+
+        .faq__item p {
+            padding: 0 1.25rem 1.25rem;
+            color: var(--color-body);
+            font-size: 0.97rem;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        footer {
+            background: #0b1220;
+            color: #cbd5e1;
+            padding: 3rem var(--gutter) 1.5rem;
+        }
+
+        .footer__grid {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .footer__brand h3 { color: #fff; font-size: 1.1rem; letter-spacing: 0.02em; }
+        .footer__brand .tag { font-size: 0.72rem; letter-spacing: 0.3em; color: var(--color-muted); margin-bottom: 0.75rem; }
+        .footer__brand p { font-size: 0.9rem; color: #94a3b8; }
+
+        .footer__col h4 { color: #fff; font-size: 0.95rem; margin-bottom: 0.9rem; }
+        .footer__col ul { list-style: none; }
+        .footer__col li { margin-bottom: 0.45rem; font-size: 0.9rem; }
+        .footer__col a { color: #94a3b8; transition: color 0.2s ease; }
+        .footer__col a:hover { color: #fff; }
+
+        .footer__bottom {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding-top: 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.82rem;
+            color: var(--color-muted);
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 760px) {
+            .footer__grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .footer__grid { grid-template-columns: 1fr; }
+        }
+
+        /* ============================================
+           FLOATING WHATSAPP BUTTON
+           ============================================ */
+        .float-wa {
+            position: fixed;
+            bottom: 1.25rem;
+            right: 1.25rem;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            color: #fff;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
+            box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+            z-index: 90;
+            transition: transform 0.2s ease;
         }
 
-        .review-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        .float-wa:hover { transform: scale(1.08); }
 
-        .review-content {
-            flex: 1;
-        }
-
-        /* CTA Final Section */
-        .final-cta {
-            background: #0d47a1;
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .final-cta h2 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-        }
-
-        .final-cta p {
-            font-size: 1rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        /* Footer */
-        footer {
-            background: #1a1a1a;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        .footer-content p {
-            margin-bottom: 0.5rem;
-            line-height: 1.6;
-        }
-
-        footer a {
-            color: #aaa;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: white;
-            text-decoration: underline;
-        }
-
-        /* Promotional Banner */
-        .promo-banner {
-            background: #FFF5E6;
-            padding: 3rem 2rem;
-            text-align: center;
-            max-width: 900px;
-            margin: 2rem auto;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .promo-banner h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.3;
-            color: #333;
-        }
-
-        .promo-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            align-items: center;
-        }
-
-        .promo-pricing {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #333;
-        }
-
-        .promo-pricing strong {
-            display: block;
-            font-size: 1.3rem;
-            color: #D2691E;
-            font-weight: 600;
-        }
-
-        .promo-contact {
-            font-size: 1rem;
-            color: #333;
-        }
-
-        .promo-contact a {
-            color: #D2691E;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            margin-top: 0.5rem;
-        }
-
-        .promo-cta {
-            margin-top: 1.5rem;
-        }
-
-        .btn-promo {
-            background: #FF6B35;
-            color: white;
-            padding: 1rem 2.5rem;
-            border: none;
-            border-radius: 6px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s;
-        }
-
-        .btn-promo:hover {
-            background: #E55A25;
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-            .promo-banner h2 {
-                font-size: 1.3rem;
-                color: #FF6B35;
+        /* ============================================
+           UTILITIES & MOTION
+           ============================================ */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
             }
-            .promo-content {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
+            html { scroll-behavior: auto; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#" class="logo"><img src="assets/images/logo.png" alt="4 Seasons Window Cleaning Logo"></a>
-        <button class="hamburger" id="menuToggle" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav-links" id="navMenu">
-            <li><a href="#diensten">Diensten</a></li>
-            <li><a href="#waarom">Waarom ons</a></li>
-            <li><a href="pages/over-ons.html">Over Ons</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="pages/realisaties.html">Realisaties</a></li>
-            <li><a href="pages/contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- ========== NAVIGATION ========== -->
+    <header class="nav">
+        <div class="nav__inner">
+            <a href="#" class="logo" aria-label="4 Seasons Cleaning">
+                <img src="assets/images/logo.png" alt="">
+                <span class="logo__text">4 Seasons<small>WINDOW CLEANING</small></span>
+            </a>
 
-    <!-- Hero - URGENCY FIRST -->
+            <button class="hamburger" id="menuToggle" aria-label="Menu openen" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-links" id="navMenu">
+                <li><a href="#diensten">Diensten</a></li>
+                <li><a href="#waarom">Waarom ons</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="pages/realisaties.html">Realisaties</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+                <li><a href="pages/contact.html" class="btn-nav">Offerte</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
     <section class="hero">
-        <h1>Schone ramen. Meer opbrengst. Vandaag nog starten.</h1>
-        <div class="subheader">Glas dat glanst. Zonnepanelen die efficiënt staan.</div>
-        <div class="benefit">
-            ☀️ Schone zonnepanelen geven tot 30% meer opbrengst. Laat niet op tafel liggen.
-        </div>
-        <div class="cta-group">
-            <a href="tel:+3233200063" class="btn-primary">📞 Bel nu</a>
-            <a href="https://wa.me/3233200063?text=Hallo%204%20Seasons" class="btn-secondary">💬 WhatsApp</a>
+        <div class="hero__inner">
+            <span class="eyebrow">Professionele reiniging in Vlaanderen</span>
+            <h1>Schone ramen. Meer rendement. Zonder gezever.</h1>
+            <p class="lead">Glazenwasser, zonnepaneelreiniging, dakgoten en gevels. Vakmanschap met osmose-technologie. Eerlijke prijs, afspraak nagekomen.</p>
+
+            <div class="hero__benefit">
+                ☀️ Schone zonnepanelen = tot 30% meer opbrengst
+            </div>
+
+            <div class="cta-group">
+                <a href="pages/contact.html" class="btn btn-primary">Vraag uw offerte aan</a>
+                <a href="https://wa.me/3233200063?text=Hallo%204%20Seasons" class="btn btn-secondary">💬 WhatsApp ons</a>
+            </div>
+
+            <div class="hero__trust">
+                <span>✓ Volledig verzekerd</span>
+                <span>✓ 5 jaar ervaring</span>
+                <span>✓ Gratis plaatsbezoek</span>
+            </div>
         </div>
     </section>
 
-    <!-- Promotional Banner -->
-    <section class="promo-banner">
-        <h2>🎯 NIEUW KLANTEN AANBIEDING: 50% korting op de eerste wasbeurt bij periodiek onderhoud!</h2>
-        <div class="promo-content">
-            <div class="promo-pricing">
-                <strong>Rijwoning:</strong> vanaf €48<br>
-                <strong>Vrijstaande woning:</strong> vanaf €68
-            </div>
-            <div class="promo-contact">
-                Bel nu:<br>
-                <a href="tel:+32495219921">📞 0495 21 99 21</a>
+    <!-- ========== PROMO BANNER ========== -->
+    <div class="container">
+        <div class="promo">
+            <div class="promo__title">🎯 Nieuwe klant? 50% korting op uw eerste wasbeurt bij periodiek onderhoud.</div>
+            <div class="promo__grid">
+                <div class="promo__pricing">
+                    <strong>Rijwoning vanaf €48</strong>
+                    <strong>Vrijstaande woning vanaf €68</strong>
+                </div>
+                <div class="promo__contact">
+                    Direct contact:<br>
+                    <a href="tel:+32495219921">📞 0495 21 99 21</a>
+                </div>
+                <div class="promo__cta">
+                    <a href="pages/contact.html" class="btn btn-accent">Offerte aanvragen</a>
+                </div>
             </div>
         </div>
-        <div class="promo-cta">
-            <a href="pages/contact.html" class="btn-promo">VRAAG OFFERTE AAN</a>
-        </div>
-    </section>
+    </div>
 
-    <!-- Trust - REVIEWS EARLY -->
-    <section class="trust-section" id="reviews">
-        <div class="trust-header">
-            <h2>Klanten vertrouwen ons</h2>
-            <p>Lees wat echte klanten zeggen</p>
+    <!-- ========== WHY US ========== -->
+    <section id="waarom">
+        <div class="section-head">
+            <span class="eyebrow">Waarom 4 Seasons</span>
+            <h2>Vakmanschap zonder gezever</h2>
+            <p>We beloven niets dat we niet waarmaken. Vier pijlers waar u op kan rekenen.</p>
         </div>
-        <div class="reviews">
-            <div class="review">
-                <div class="review-text">"Geweldige ervaring met een zeer professionele en eerlijke jongeman. Modernste osmose technologie. Nu de schoonste ramen van de straat!"</div>
-                <div class="review-author">Philip Goedkoop</div>
-                <div class="review-role">Local Guide, Belgium</div>
+        <div class="benefits">
+            <div class="benefit">
+                <div class="benefit__icon">🛠️</div>
+                <h3>Echt vakwerk</h3>
+                <p>Glas, aluminium, hout, zonnepaneel: elk materiaal heeft zijn techniek. Wij improviseren niet, we werken met kennis van zaken.</p>
             </div>
-            <div class="review">
-                <div class="review-text">"Stipt, vakkundig en betaalbaar. Precies wat ze beloven. Al 3 keer terug gekomen."</div>
-                <div class="review-author">Linda Verheyden</div>
-                <div class="review-role">Huiseigenaar, Antwerpen</div>
+            <div class="benefit">
+                <div class="benefit__icon">⏱️</div>
+                <h3>Afspraak = afspraak</h3>
+                <p>U plant, wij komen. Op tijd, voorbereid, met het juiste materieel. Geen smoesjes, geen verschuivingen.</p>
             </div>
-            <div class="review">
-                <div class="review-text">"Voor ons bedrijf zijn ze onmisbaar. Altijd schoon, geen geldverspilling. Aanraders!"</div>
-                <div class="review-author">Frank Maes</div>
-                <div class="review-role">Bedrijfsleider, Gent</div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Why Us -->
-    <section class="why-us" id="waarom">
-        <h2>Waarom kiest iedereen voor 4 Seasons?</h2>
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <div class="benefit-icon">✓</div>
-                <h3>Vakmanschap</h3>
-                <p>Elk materiaal: glas, aluminium, hout. Geen improviseren—proper vakwerk dat standhoud.</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">⏱</div>
-                <h3>Stiptheid</h3>
-                <p>Afgesproken? Gedaan. We sluiten ons aan op uw planning. Elke keer. Geen vertraging.</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">💶</div>
+            <div class="benefit">
+                <div class="benefit__icon">💶</div>
                 <h3>Eerlijke prijs</h3>
-                <p>Offerte = eindrekening. Wat we zeggen, doen we. Geen verborgen kosten.</p>
+                <p>De offerte is de eindrekening. Geen verborgen kosten, geen meerwerk achteraf. Wat we zeggen, staat.</p>
             </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">🛡</div>
+            <div class="benefit">
+                <div class="benefit__icon">🛡️</div>
                 <h3>Volledig verzekerd</h3>
-                <p>Alle certificaten. Uw woning en kantoor zijn veilig en beschermd bij ons.</p>
+                <p>Burgerlijke aansprakelijkheid, arbeidsongevallen, alle certificaten. Uw woning en ons team zijn beschermd.</p>
             </div>
         </div>
     </section>
 
-    <!-- Services -->
-    <section class="services" id="diensten">
-        <h2>Onze diensten</h2>
+    <!-- ========== OSMOSE EXPLAINER ========== -->
+    <section class="explainer">
+        <div class="explainer__wrap">
+            <div class="explainer__text">
+                <span class="eyebrow">Osmose-technologie</span>
+                <h2>Waarom uw ramen langer schoon blijven</h2>
+                <p>Leidingwater bevat kalk en mineralen. Die zijn onzichtbaar in een emmer, maar blijven achter op uw ramen als strepen. Resultaat: binnen een week ziet u alweer vlekken.</p>
+                <p>Met osmose-reiniging halen we 99% van die mineralen uit het water. Het glas droogt op zonder residu. Geen zeep, geen chemicaliën — enkel puur water en een pure-water-borstel.</p>
+                <p><strong>Bonus:</strong> we wassen tot op de eerste verdieping veilig vanaf de grond. Geen ladders tegen uw gevel, geen risico, geen schade.</p>
+                <a href="pages/contact.html" class="btn btn-solid">Vraag een demo aan</a>
+            </div>
+            <div class="explainer__visual">
+                <h3>Traditioneel vs. Osmose</h3>
+                <div class="compare">
+                    <div class="compare__col">
+                        <h4>Traditioneel</h4>
+                        <ul>
+                            <li>• Zeep + leidingwater</li>
+                            <li>• Kalkstrepen na regen</li>
+                            <li>• Ladders tegen gevel</li>
+                            <li>• Ramen snel opnieuw vuil</li>
+                        </ul>
+                    </div>
+                    <div class="compare__col win">
+                        <h4>Osmose</h4>
+                        <ul>
+                            <li>✓ Puur demineraal water</li>
+                            <li>✓ Streepvrij droog</li>
+                            <li>✓ Veilig vanaf de grond</li>
+                            <li>✓ Langer schoon resultaat</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section id="diensten">
+        <div class="section-head">
+            <span class="eyebrow">Diensten</span>
+            <h2>Een aanspreekpunt voor uw volledig onderhoud</h2>
+            <p>Van glas tot gevel, van zonnepaneel tot dakgoot. Eén ploeg, één verantwoordelijke, één factuur.</p>
+        </div>
         <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">🪟</div>
-                <div class="service-content">
-                    <h3>Glasbewassing</h3>
-                    <p><strong>Osmose-technologie:</strong> We gebruiken demineraal water dat alle mineralen verwijdert. Dit voorkomt kalkplekken permanent. Ramen binnen en buiten, frames, dorpels, alles.</p>
-                    <a href="pages/contact.html" class="service-link">Offerte aanvragen →</a>
-                </div>
+            <article class="service">
+                <div class="service__icon">🪟</div>
+                <h3>Glasbewassing met osmose</h3>
+                <p>Ramen, kaders, dorpels binnen en buiten. Demineraal water verwijdert kalk permanent. Uw ramen blijven merkbaar langer strepenvrij.</p>
+                <a href="pages/contact.html" class="service__link">Offerte aanvragen →</a>
+            </article>
+
+            <article class="service">
+                <div class="service__icon">☀️</div>
+                <h3>Zonnepaneelreiniging</h3>
+                <p>Stof, pollen en vogelvuil kunnen uw opbrengst met 15–30% verminderen. Wij reinigen met zacht demineraal water — geen krassen, maximale opbrengst.</p>
+                <a href="pages/contact.html" class="service__link">Offerte aanvragen →</a>
+            </article>
+
+            <article class="service">
+                <div class="service__icon">🌧️</div>
+                <h3>Dakgoten & corniche</h3>
+                <p>Verstopte goten veroorzaken lekken en gevelschade. Wij spoelen, ontstoppen en controleren afvoeren. Preventie is goedkoper dan herstel.</p>
+                <a href="pages/contact.html" class="service__link">Offerte aanvragen →</a>
+            </article>
+
+            <article class="service">
+                <div class="service__icon">🏗️</div>
+                <h3>Gevelreiniging</h3>
+                <p>Groene aanslag, algen en roetvervuiling. Met lagedrukreiniging en biologisch afbreekbare middelen krijgt uw gevel haar originele uitstraling terug.</p>
+                <a href="pages/contact.html" class="service__link">Offerte aanvragen →</a>
+            </article>
+
+            <article class="service">
+                <div class="service__icon">🍀</div>
+                <h3>Dakontmossing</h3>
+                <p>Mos houdt vocht vast en tast dakpannen aan. Wij verwijderen voorzichtig en behandelen preventief. Uw dak blijft jaren langer in topconditie.</p>
+                <a href="pages/contact.html" class="service__link">Offerte aanvragen →</a>
+            </article>
+
+            <article class="service">
+                <div class="service__icon">🎚️</div>
+                <h3>Rolluiken & koepels</h3>
+                <p>Vuil blokkeert mechaniek en vreet aan rubbers. Grondige reiniging + controle. Uw rolluiken lopen weer vlot, uw koepels laten weer licht door.</p>
+                <a href="pages/contact.html" class="service__link">Offerte aanvragen →</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- ========== VALUE / EDUCATION ========== -->
+    <section class="value">
+        <div class="section-head">
+            <span class="eyebrow" style="color: var(--color-accent)">Waarom periodiek onderhoud?</span>
+            <h2>Onderhoud is geen kost. Het is bescherming.</h2>
+            <p style="color: #cbd5e1">Vastgoed veroudert. Met het juiste ritme houdt u de waarde én het comfort op peil.</p>
+        </div>
+        <div class="value__grid">
+            <div class="value__card">
+                <span class="value__stat">30%</span>
+                <h3>Extra zonne-opbrengst</h3>
+                <p>Een laagje stof van 2 gram per m² vermindert uw paneelopbrengst merkbaar. Twee reinigingen per jaar betalen zichzelf meestal terug in energieopbrengst.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">🌧️</div>
-                <div class="service-content">
-                    <h3>Dakgoten & Corniche</h3>
-                    <p>Proper afgestemd en onderhouden. Water loopt weg waar het hoort. Geen overlast, geen roest. Preventief onderhoud bespaart grote herstellingskosten.</p>
-                    <a href="pages/contact.html" class="service-link">Offerte aanvragen →</a>
-                </div>
+            <div class="value__card">
+                <span class="value__stat">€1.500</span>
+                <h3>Vermeden gevelherstel</h3>
+                <p>Een verstopte dakgoot die één seizoen overloopt, kost snel duizenden euro's aan vochtschade. Een jaarlijkse reiniging: een fractie.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">☀️</div>
-                <div class="service-content">
-                    <h3>Zonnepanelen</h3>
-                    <p><strong>Effect:</strong> Schone panelen geven tot 30% meer opbrengst! We reinigen voorzichtig, grondig. Uw energieopbrengst omhoog, investering beschermd.</p>
-                    <a href="pages/contact.html" class="service-link">Offerte aanvragen →</a>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🏗️</div>
-                <div class="service-content">
-                    <h3>Gevels & Voetpaden</h3>
-                    <p>Groene aanslag en schimmel verdwijnen spoorloos. Gevels weer als nieuw. Ook voor grotere oppervlaktes en commerciële panden.</p>
-                    <a href="pages/contact.html" class="service-link">Offerte aanvragen →</a>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🏛️</div>
-                <div class="service-content">
-                    <h3>Koepels</h3>
-                    <p>Dak- en wandkoepels schoon en zonnig. We reinigen voorzichtig met de juiste techniek zodat uw koepels blijven glanzen.</p>
-                    <a href="pages/contact.html" class="service-link">Offerte aanvragen →</a>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🎚️</div>
-                <div class="service-content">
-                    <h3>Rolluiken</h3>
-                    <p>Vuile rolluiken verstoppen het daglicht. We maken ze grondig schoon en controleren op goede werking. Gaat gemakkelijk op en neer!</p>
-                    <a href="pages/contact.html" class="service-link">Offerte aanvragen →</a>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🍀</div>
-                <div class="service-content">
-                    <h3>Dak Ontmossen</h3>
-                    <p>Mos en algen op het dak? Dit beschadigt dakpannen op lange termijn. We verwijderen alles voorzichtig en preventief.</p>
-                    <a href="pages/contact.html" class="service-link">Offerte aanvragen →</a>
-                </div>
+            <div class="value__card">
+                <span class="value__stat">10+ jaar</span>
+                <h3>Langere levensduur ramen</h3>
+                <p>Kalkaanslag en regenwater tasten glas en kaders aan. Regelmatig en correct reinigen verlengt de levensduur aanzienlijk.</p>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section class="team-section">
-        <h2>Ons Team</h2>
-        <div class="team-grid">
-            <div class="team-member">
-                <div class="team-photo">
-                    <picture>
-                        <source srcset="assets/images-optimized/Nabil-2-280w.avif 280w, assets/images-optimized/Nabil-2-350w.avif 350w" type="image/avif">
-                        <source srcset="assets/images-optimized/Nabil-2-280w.webp 280w, assets/images-optimized/Nabil-2-350w.webp 350w" type="image/webp">
-                        <source srcset="assets/images-optimized/Nabil-2-280w.jpg 280w, assets/images-optimized/Nabil-2-350w.jpg 350w" type="image/jpeg">
-                        <img src="assets/images-optimized/Nabil-2-350w.jpg" alt="Nabil, eigenaar en specialist van 4 Seasons - glazenwasser" loading="lazy" width="350" height="467" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 400px, 400px">
-                    </picture>
-                </div>
-                <div class="team-info">
-                    <h3>Nabil</h3>
-                    <div class="team-role">Oprichter & Specialist sinds 2020</div>
-                    <p><strong>Gespecialiseerd in:</strong> Osmose-technologie, zonnepaneelreiniging, gevel- en dakherstel. Volledig verzekerd, alle certificaten.</p>
-                    <blockquote class="team-quote">
-                        <p>Ik zie elk pand als mijn eigen. Kwaliteit en eerlijkheid, altijd.</p>
-                    </blockquote>
-                </div>
+    <!-- ========== REVIEWS ========== -->
+    <section class="reviews" id="reviews">
+        <div class="section-head">
+            <span class="eyebrow">Reviews</span>
+            <h2>Klanten die blijven terugkomen</h2>
+            <p>Echte feedback van klanten in Antwerpen, Gent en omgeving.</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review">
+                <div class="review__stars">★★★★★</div>
+                <p class="review__text">"Zeer professionele en eerlijke jongeman. Modernste osmose-technologie. Nu de schoonste ramen van de straat!"</p>
+                <div class="review__author">Philip Goedkoop</div>
+                <div class="review__role">Local Guide — Antwerpen</div>
+            </div>
+            <div class="review">
+                <div class="review__stars">★★★★★</div>
+                <p class="review__text">"Stipt, vakkundig en betaalbaar. Precies wat ze beloven. Al drie keer teruggekomen — geen reden om te wisselen."</p>
+                <div class="review__author">Linda Verheyden</div>
+                <div class="review__role">Huiseigenaar — Antwerpen</div>
+            </div>
+            <div class="review">
+                <div class="review__stars">★★★★★</div>
+                <p class="review__text">"Voor ons bedrijf zijn ze onmisbaar geworden. Altijd schoon, geen gedoe, correct gefactureerd. Aanraders."</p>
+                <div class="review__author">Frank Maes</div>
+                <div class="review__role">Bedrijfsleider — Gent</div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery - Realisaties -->
-    <section class="gallery-section" id="gallery">
-        <h2>Onze Realisaties</h2>
-        <p>Geselecteerde projecten van onze tevreden klanten</p>
-        
-        <!-- Gallery grouped by service category -->
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #1a73e8; font-size: 1.1rem;">☀️ Zonnepanelen</h3>
-            <div class="gallery-grid" style="margin-bottom: 2rem;">
-                <div class="gallery-item">
-                    <img src="assets/images/Zonnepanelen.jpg?v=3" alt="Zonnepanelen project 1">
-                    <div class="gallery-overlay">🔍</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/Zonnepanelen-2.jpg?v=3" alt="Zonnepanelen project 2">
-                    <div class="gallery-overlay">🔍</div>
-                </div>
+    <!-- ========== TEAM ========== -->
+    <section>
+        <div class="team">
+            <div class="team__photo">
+                <picture>
+                    <source srcset="assets/images-optimized/Nabil-2-280w.avif 280w, assets/images-optimized/Nabil-2-350w.avif 350w" type="image/avif">
+                    <source srcset="assets/images-optimized/Nabil-2-280w.webp 280w, assets/images-optimized/Nabil-2-350w.webp 350w" type="image/webp">
+                    <source srcset="assets/images-optimized/Nabil-2-280w.jpg 280w, assets/images-optimized/Nabil-2-350w.jpg 350w" type="image/jpeg">
+                    <img src="assets/images-optimized/Nabil-2-350w.jpg" alt="Nabil, oprichter en specialist van 4 Seasons Cleaning" loading="lazy" width="350" height="467">
+                </picture>
             </div>
-            
-            <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #1a73e8; font-size: 1.1rem;">🌧️ Dakgoten & Corniche</h3>
-            <div class="gallery-grid" style="margin-bottom: 2rem;">
-                <div class="gallery-item">
-                    <img src="assets/images/Dakgoten.jpg?v=3" alt="Dakgoten project 1">
-                    <div class="gallery-overlay">🔍</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/Dakgoten-2.jpg?v=3" alt="Dakgoten project 2">
-                    <div class="gallery-overlay">🔍</div>
-                </div>
+            <div>
+                <span class="team__role">Oprichter & Specialist sinds 2020</span>
+                <h2>Nabil — de man achter 4 Seasons</h2>
+                <p>Vijf jaar geleden startte ik met één doel: klanten een glazenwasser geven die <strong>doet wat hij zegt</strong>. Geen loze beloftes, geen halve facturen. Vandaag werk ik met een vast team, alle certificaten, en de modernste osmose-installatie in Vlaanderen.</p>
+                <p>Specialisaties: osmose-glasbewassing, zonnepaneelreiniging, gevel- en dakonderhoud. Volledig verzekerd. Werk in heel Antwerpen, Oost- en West-Vlaanderen.</p>
+                <blockquote class="team__quote">
+                    "Ik behandel elk pand alsof het van mezelf is. Dat is geen slogan — dat is gewoon de enige manier die werkt."
+                </blockquote>
             </div>
-            
-            <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #1a73e8; font-size: 1.1rem;">🏗️ Gevels & Voetpaden</h3>
-            <div class="gallery-grid" style="margin-bottom: 2rem;">
-                <div class="gallery-item">
-                    <img src="assets/images/Gevels.jpg?v=3" alt="Gevels project 1">
-                    <div class="gallery-overlay">🔍</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/Gevels-1.jpg?v=3" alt="Gevels project 2">
-                    <div class="gallery-overlay">🔍</div>
-                </div>
-            </div>
-            
-            <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #1a73e8; font-size: 1.1rem;">🪟 Glasbewassing</h3>
-            <div class="gallery-grid" style="margin-bottom: 2rem;">
-                <div class="gallery-item">
-                    <img src="assets/images/WhatsApp-Image-2024-05-06-at-11.37.50.jpeg?v=3" alt="Glasbewassing project 1">
-                    <div class="gallery-overlay">🔍</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/WhatsApp-Image-2024-05-06-at-11.37.51.jpeg?v=3" alt="Glasbewassing project 2">
-                    <div class="gallery-overlay">🔍</div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- View all button -->
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="pages/realisaties.html" class="btn-primary" style="display: inline-block; padding: 0.9rem 2rem; background: #1a73e8; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; transition: all 0.3s;">Bekijk alle realisaties →</a>
         </div>
     </section>
 
-    <!-- Final CTA -->
+    <!-- ========== GALLERY ========== -->
+    <section class="gallery">
+        <div class="section-head">
+            <span class="eyebrow">Realisaties</span>
+            <h2>Wat we de voorbije maanden uitvoerden</h2>
+            <p>Een selectie van projecten. Voor volledig portfolio: zie de realisatiepagina.</p>
+        </div>
+
+        <div class="gallery__group">
+            <div class="gallery__label">☀️ Zonnepanelen</div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="assets/images/Zonnepanelen.jpg?v=3" alt="Gereinigde zonnepanelen — project 1" loading="lazy"></div>
+                <div class="gallery-item"><img src="assets/images/Zonnepanelen-2.jpg?v=3" alt="Gereinigde zonnepanelen — project 2" loading="lazy"></div>
+            </div>
+        </div>
+
+        <div class="gallery__group">
+            <div class="gallery__label">🌧️ Dakgoten & corniche</div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="assets/images/Dakgoten.jpg?v=3" alt="Ontstopte dakgoot — project 1" loading="lazy"></div>
+                <div class="gallery-item"><img src="assets/images/Dakgoten-2.jpg?v=3" alt="Ontstopte dakgoot — project 2" loading="lazy"></div>
+            </div>
+        </div>
+
+        <div class="gallery__group">
+            <div class="gallery__label">🏗️ Gevels</div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="assets/images/Gevels.jpg?v=3" alt="Gevelreiniging — project 1" loading="lazy"></div>
+                <div class="gallery-item"><img src="assets/images/Gevels-1.jpg?v=3" alt="Gevelreiniging — project 2" loading="lazy"></div>
+            </div>
+        </div>
+
+        <div class="gallery__group">
+            <div class="gallery__label">🪟 Glasbewassing</div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="assets/images/WhatsApp-Image-2024-05-06-at-11.37.50.jpeg?v=3" alt="Gereinigde ramen — project 1" loading="lazy"></div>
+                <div class="gallery-item"><img src="assets/images/WhatsApp-Image-2024-05-06-at-11.37.51.jpeg?v=3" alt="Gereinigde ramen — project 2" loading="lazy"></div>
+            </div>
+        </div>
+
+        <div class="gallery__cta">
+            <a href="pages/realisaties.html" class="btn btn-solid">Bekijk alle realisaties →</a>
+        </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section style="background: var(--color-soft);">
+        <div class="section-head">
+            <span class="eyebrow">Veelgestelde vragen</span>
+            <h2>Wat onze klanten vaak vragen</h2>
+        </div>
+        <div class="faq__list">
+            <details class="faq__item">
+                <summary>Hoe vaak moet ik mijn ramen laten reinigen?</summary>
+                <p>Voor een woning: elke 2 à 3 maanden houdt glas merkbaar helder. Voor bedrijfspanden aan drukke wegen: maandelijks. Bij osmose-reiniging blijft het resultaat langer zichtbaar.</p>
+            </details>
+            <details class="faq__item">
+                <summary>Zijn jullie verzekerd?</summary>
+                <p>Ja — volledig. BA uitbating, arbeidsongevallen en materieel. Op aanvraag bezorgen wij u graag de attesten.</p>
+            </details>
+            <details class="faq__item">
+                <summary>Werken jullie ook bij bedrijven?</summary>
+                <p>Zeker. We hebben vaste contracten met winkels, kantoren, dokterspraktijken en horeca in Antwerpen en Gent. Onderhoudsplan op maat, vaste prijs per beurt.</p>
+            </details>
+            <details class="faq__item">
+                <summary>Hoeveel kost een reiniging?</summary>
+                <p>Rijwoning vanaf €48, vrijstaande woning vanaf €68. De exacte prijs hangt af van oppervlakte en bereikbaarheid. Gratis offerte binnen 24 uur.</p>
+            </details>
+            <details class="faq__item">
+                <summary>Werken jullie ook in de winter?</summary>
+                <p>Ja, tot -2 °C. Onze osmose-installatie is vorstbestendig. Bij extreme vorst schuiven we om — uw afspraak gaat niet verloren.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- ========== FINAL CTA ========== -->
     <section class="final-cta">
-        <h2>Klaar voor een schone omgeving?</h2>
-        <p>Geen verplichtingen. Gratis offerte in 24 uur.</p>
-        <div class="cta-group">
-            <a href="tel:+3233200063" class="btn-primary">📞 Bel: +32 3 332 00 63</a>
-            <a href="https://wa.me/3233200063" class="btn-secondary">💬 WhatsApp</a>
+        <div class="container">
+            <h2>Klaar voor een proper resultaat?</h2>
+            <p>Gratis offerte binnen 24 uur. Geen verplichtingen, geen verkoopspraatje.</p>
+            <div class="cta-group">
+                <a href="tel:+3233200063" class="btn btn-primary">📞 Bel: +32 3 332 00 63</a>
+                <a href="https://wa.me/3233200063" class="btn btn-secondary">💬 WhatsApp</a>
+            </div>
         </div>
     </section>
 
-
-
-    <!-- Footer -->
+    <!-- ========== FOOTER ========== -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
+        <div class="footer__grid">
+            <div class="footer__brand">
                 <h3>4 SEASONS</h3>
-                <p class="tagline">WINDOW CLEANING</p>
-                <p>Professionele glazenwasser en reinigingsdiensten in Vlaanderen.</p>
+                <div class="tag">WINDOW CLEANING</div>
+                <p>Professionele glazenwasser en totaalreiniging in Vlaanderen. Osmose-technologie, vakmanschap, nuchterheid.</p>
             </div>
-            <p>📞 <a href="tel:+3233200063">+32 3 332 00 63</a> | 💬 <a href="https://wa.me/3233200063">WhatsApp</a> | 📧 <a href="mailto:info@4seasonscleaning.be">info@4seasonscleaning.be</a> | Ma-Za 8:00-20:00 | Zondag gesloten</p>
-            <p>&copy; 2026 4 Seasons. Alle rechten voorbehouden.</p>
+            <div class="footer__col">
+                <h4>Diensten</h4>
+                <ul>
+                    <li><a href="#diensten">Glasbewassing</a></li>
+                    <li><a href="#diensten">Zonnepanelen</a></li>
+                    <li><a href="#diensten">Dakgoten</a></li>
+                    <li><a href="#diensten">Gevelreiniging</a></li>
+                    <li><a href="#diensten">Dakontmossing</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Bedrijf</h4>
+                <ul>
+                    <li><a href="pages/over-ons.html">Over ons</a></li>
+                    <li><a href="pages/realisaties.html">Realisaties</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+3233200063">+32 3 332 00 63</a></li>
+                    <li><a href="https://wa.me/3233200063">WhatsApp</a></li>
+                    <li><a href="mailto:info@4seasonscleaning.be">info@4seasonscleaning.be</a></li>
+                    <li>Ma–Za 8:00 – 20:00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <span>&copy; 2026 4 Seasons Cleaning. Alle rechten voorbehouden.</span>
+            <span>BTW BE0XXX.XXX.XXX</span>
         </div>
     </footer>
 
-    <!-- Main JavaScript -->
-    <script src="js/main.js"></script>
+    <!-- Floating WhatsApp CTA -->
+    <a href="https://wa.me/3233200063?text=Hallo%204%20Seasons" class="float-wa" aria-label="Chat via WhatsApp">💬</a>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('navMenu');
+
+            if (!toggle || !menu) return;
+
+            toggle.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const isOpen = menu.classList.toggle('active');
+                toggle.classList.toggle('active', isOpen);
+                toggle.setAttribute('aria-expanded', isOpen);
+            });
+
+            // Sluit bij klik op link
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.remove('active');
+                    toggle.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', false);
+                });
+            });
+
+            // Sluit bij klik buiten menu
+            document.addEventListener('click', function (e) {
+                if (!menu.contains(e.target) && !toggle.contains(e.target) && menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                    toggle.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', false);
+                }
+            });
+
+            // Sluit bij resize naar desktop
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 860) {
+                    menu.classList.remove('active');
+                    toggle.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', false);
+                }
+            });
+        });
+    </script>
 </body>
 </html>

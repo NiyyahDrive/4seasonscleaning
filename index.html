@@ -340,48 +340,6 @@
             opacity: 0.95;
         }
 
-        /* Contact Methods */
-        .contact-methods {
-            background: white;
-            color: #333;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .contact-methods h3 {
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .methods {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .method {
-            display: inline-block;
-        }
-
-        .method a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            border: 2px solid #1a73e8;
-            border-radius: 6px;
-            text-decoration: none;
-            color: #1a73e8;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .method a:hover {
-            background: #1a73e8;
-            color: white;
-        }
-
         /* Footer */
         footer {
             background: #1a1a1a;
@@ -391,26 +349,20 @@
             font-size: 0.9rem;
         }
 
-        footer p {
+        .footer-content p {
             margin-bottom: 0.5rem;
+            line-height: 1.6;
         }
 
-        .footer-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-
-        .footer-links a {
+        footer a {
             color: #aaa;
             text-decoration: none;
-            font-size: 0.9rem;
+            transition: color 0.3s;
         }
 
-        .footer-links a:hover {
+        footer a:hover {
             color: white;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -541,35 +493,13 @@
         </div>
     </section>
 
-    <!-- Contact Methods -->
-    <section class="contact-methods" id="contact">
-        <h3>Hoe kunnen we je bereiken?</h3>
-        <div class="methods">
-            <div class="method">
-                <a href="tel:+3233200063">📞 Bel ons</a>
-            </div>
-            <div class="method">
-                <a href="https://wa.me/3233200063?text=Hallo%204%20Seasons%21%20Ik%20ben%20geïnteresseerd%20in%20jullie%20diensten.">💬 WhatsApp</a>
-            </div>
-            <div class="method">
-                <a href="mailto:info@4seasonscleaning.be">📧 Email</a>
-            </div>
-        </div>
-        <p style="margin-top: 1.5rem; color: #999; font-size: 0.9rem;">
-            📞 +32 3 332 00 63 | info@4seasonscleaning.be<br>
-            Ma-Za: 8:00 - 20:00 | Zondag: Gesloten
-        </p>
-    </section>
+
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 4 Seasons. Alle rechten voorbehouden.</p>
-        <div class="footer-links">
-            <a href="#privacy">Privacybeleid</a>
-            <a href="#">Over Ons</a>
-            <a href="#">Realisaties</a>
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
+        <div class="footer-content">
+            <p>📞 <a href="tel:+3233200063">+32 3 332 00 63</a> | 💬 <a href="https://wa.me/3233200063">WhatsApp</a> | 📧 <a href="mailto:info@4seasonscleaning.be">info@4seasonscleaning.be</a> | Ma-Za 8:00-20:00 | Zondag gesloten</p>
+            <p>&copy; 2026 4 Seasons. Alle rechten voorbehouden.</p>
         </div>
     </footer>
 

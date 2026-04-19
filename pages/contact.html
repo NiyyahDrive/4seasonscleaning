@@ -43,43 +43,10 @@
     <section class="contact-section">
         <div class="container">
             <div class="contact-grid">
-                <!-- INFO -->
-                <div class="contact-info-wrapper">
-                    <h2>Directe Info</h2>
-
-                    <div class="info-box">
-                        <h3>📞 Bel Ons</h3>
-                        <p><a href="tel:+3233320063">+32 3 332 00 63</a></p>
-                        <p class="small">Graag bereikbaar voor direct advies!</p>
-                    </div>
-
-                    <div class="info-box">
-                        <h3>📧 E-mail</h3>
-                        <p><a href="mailto:info@4seasonscleaning.be">info@4seasonscleaning.be</a></p>
-                        <p class="small">Respons binnen 24 uur!</p>
-                    </div>
-
-                    <div class="info-box">
-                        <h3>📍 Locatie</h3>
-                        <p>Vlaanderen</p>
-                        <p class="small">We werken in heel Vlaanderen</p>
-                    </div>
-
-                    <div class="info-box">
-                        <h3>⏱ Openingstijden</h3>
-                        <p>Ma - Za: 8 tot 20 uur</p>
-                        <p>Zondag: Gesloten</p>
-                    </div>
-
-                    <div class="info-highlight">
-                        <h3>💡 Snelle Offerte?</h3>
-                        <p>Bel ons direct! Voor veel klussen kunnen we ter plaatse een vrijblijvend advies geven.</p>
-                    </div>
-                </div>
-
-                <!-- FORM -->
+                <!-- FORM (LEFT) -->
                 <div class="contact-form-wrapper">
                     <h2>Offerte Aanvragen</h2>
+                    <p class="form-intro">Vul het formulier in en we nemen gratis contact met u op!</p>
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
                             <label for="name">Voornaam & Achternaam *</label>
@@ -92,13 +59,65 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Wat heeft u nodig? *</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Beschrijf uw aanvraag..." required></textarea>
+                            <label for="phone">Telefoonnummer *</label>
+                            <input type="tel" id="phone" name="phone" required>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Verstuur Aanvraag</button>
+                        <div class="form-group">
+                            <label for="service">Welke service? *</label>
+                            <select id="service" name="service" required>
+                                <option value="">-- Selecteer een service --</option>
+                                <option value="glasbewassing">Glasbewassing</option>
+                                <option value="dakgoten">Dakgoten & Corniche</option>
+                                <option value="zonnepanelen">Zonnepanelen</option>
+                                <option value="gevels">Gevels & Voetpaden</option>
+                                <option value="koepels">Koepels</option>
+                                <option value="rolluiken">Rolluiken</option>
+                                <option value="ontmossen">Dak Ontmossen</option>
+                                <option value="overig">Overig</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Uw aanvraag *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Beschrijf wat u nodig heeft..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Verstuur aanvraag</button>
                         <p class="form-note">* We nemen contact op binnen 24 uur</p>
                     </form>
+                </div>
+
+                <!-- INFO (RIGHT) -->
+                <div class="contact-info-wrapper">
+                    <h2>Directe Contactgegevens</h2>
+
+                    <div class="info-box">
+                        <div class="info-icon">📞</div>
+                        <h3>Bel Ons</h3>
+                        <p><a href="tel:+3233200063">+32 3 332 00 63</a></p>
+                        <p class="small">Graag bereikbaar voor direct advies!</p>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-icon">📧</div>
+                        <h3>E-mail</h3>
+                        <p><a href="mailto:info@4seasonscleaning.be">info@4seasonscleaning.be</a></p>
+                        <p class="small">Respons binnen 24 uur!</p>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-icon">📍</div>
+                        <h3>Locatie</h3>
+                        <p>Hele Vlaanderen</p>
+                        <p class="small">We werken overal in Vlaanderen</p>
+                    </div>
+
+                    <div class="info-box info-box-highlight">
+                        <h3>Openingstijden</h3>
+                        <p>Ma - Za: 8:00 - 20:00</p>
+                        <p>Zondag: Gesloten</p>
+                    </div>
                 </div>
             </div>
         </div>

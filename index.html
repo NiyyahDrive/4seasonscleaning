@@ -364,12 +364,15 @@
 
         .team-photo {
             width: 100%;
-            height: 250px;
+            max-width: 400px;
+            aspect-ratio: 3/4;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
             background: #e0e0e0;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
             font-size: 3rem;
         }
 
@@ -377,6 +380,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center 20%;
         }
 
         .team-info {
@@ -545,11 +549,12 @@
         /* Promotional Banner */
         .promo-banner {
             background: #FFF5E6;
-            color: #FF6B35;
-            padding: 2rem;
-            padding-left: 2.5rem;
+            padding: 3rem 2rem;
             text-align: center;
-            border-left: 5px solid #FF6B35;
+            max-width: 900px;
+            margin: 2rem auto;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         .promo-banner h2 {
@@ -557,7 +562,7 @@
             font-weight: 700;
             margin-bottom: 1.5rem;
             line-height: 1.3;
-            color: #FF6B35;
+            color: #333;
         }
 
         .promo-content {
@@ -578,19 +583,19 @@
         .promo-pricing strong {
             display: block;
             font-size: 1.3rem;
-            color: #FF6B35;
+            color: #D2691E;
+            font-weight: 600;
         }
 
         .promo-contact {
-            font-size: 1.2rem;
-            font-weight: 600;
+            font-size: 1rem;
             color: #333;
         }
 
         .promo-contact a {
-            color: #FF6B35;
+            color: #D2691E;
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 600;
             display: inline-block;
             margin-top: 0.5rem;
         }
@@ -698,16 +703,7 @@
                 <div class="review-author">Frank Maes</div>
                 <div class="review-role">Bedrijfsleider, Gent</div>
             </div>
-            <div class="review">
-                <div class="review-text">"Mijn zonnepanelen leveren nu 28% meer op sinds ze ze schoonmaken. Echt indrukwekkend verschil!"</div>
-                <div class="review-author">Sofie Claes</div>
-                <div class="review-role">Huiseigenaar, Antwerpen</div>
-            </div>
-            <div class="review">
-                <div class="review-text">"Perfecte dakgotenreiniging. Ze waren echt zorgvuldig en hebben ook een paar kleine problemen opgemerkt voordat ze groot zouden worden."</div>
-                <div class="review-author">Pieter Verhulst</div>
-                <div class="review-role">Manager, Mechelen</div>
-            </div>
+
         </div>
     </section>
 

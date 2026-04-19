@@ -43,71 +43,358 @@
     <section class="portfolio">
         <div class="container">
             <p style="text-align: center; font-size: 0.95rem; color: var(--neutral-gray); margin-bottom: 1.5rem;">💡 Tip: Klik op een foto om uit te vergroten, gebruik pijlen of toetsenbord om te navigeren</p>
+            
+            <!-- Filter tabs -->
+            <div style="text-align: center; margin-bottom: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <button class="filter-tab active" data-filter="all" style="padding: 0.6rem 1.5rem; border: 2px solid #1a73e8; background: #1a73e8; color: white; border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Alle</button>
+                <button class="filter-tab" data-filter="zonnepanelen" style="padding: 0.6rem 1.5rem; border: 2px solid #1a73e8; background: white; color: #1a73e8; border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.3s;">☀️ Zonnepanelen</button>
+                <button class="filter-tab" data-filter="dakgoten" style="padding: 0.6rem 1.5rem; border: 2px solid #1a73e8; background: white; color: #1a73e8; border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.3s;">🌧️ Dakgoten</button>
+                <button class="filter-tab" data-filter="gevels" style="padding: 0.6rem 1.5rem; border: 2px solid #1a73e8; background: white; color: #1a73e8; border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.3s;">🏗️ Gevels</button>
+                <button class="filter-tab" data-filter="glasbewassing" style="padding: 0.6rem 1.5rem; border: 2px solid #1a73e8; background: white; color: #1a73e8; border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.3s;">🪟 Glasbewassing</button>
+            </div>
+            
             <div class="portfolio-grid">
-                <a href="../assets/images/realisaties23.jpeg" class="portfolio-item" data-lightbox="portfolio" data-title="Dakfolie schoonmaak">
-                    <img src="../assets/images/realisaties23.jpeg" alt="Realisatie 1" loading="lazy">
+                <a href="../assets/images/Dakgoten-2.jpg?v=3" class="portfolio-item" data-category="dakgoten" data-lightbox="portfolio" data-title="Dakgoten 2">
+                    <picture>
+                        <source srcset="../assets/images-optimized/Dakgoten-2-160w.avif 160w, ../assets/images-optimized/Dakgoten-2-280w.avif 280w, ../assets/images-optimized/Dakgoten-2-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/Dakgoten-2-160w.webp 160w, ../assets/images-optimized/Dakgoten-2-280w.webp 280w, ../assets/images-optimized/Dakgoten-2-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/Dakgoten-2-160w.jpg 160w, ../assets/images-optimized/Dakgoten-2-280w.jpg 280w, ../assets/images-optimized/Dakgoten-2-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/Dakgoten-2-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
                     <div class="overlay">
-                        <span>Dakfolie</span>
+                        <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/realisaties24.jpeg" class="portfolio-item" data-lightbox="portfolio" data-title="Kantoorgebouw ramen">
-                    <img src="../assets/images/realisaties24.jpeg" alt="Realisatie 2" loading="lazy">
+                <a href="../assets/images/Dakgoten.jpg?v=3" class="portfolio-item" data-category="dakgoten" data-lightbox="portfolio" data-title="Dakgoten">
+                    <picture>
+                        <source srcset="../assets/images-optimized/Dakgoten-160w.avif 160w, ../assets/images-optimized/Dakgoten-280w.avif 280w, ../assets/images-optimized/Dakgoten-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/Dakgoten-160w.webp 160w, ../assets/images-optimized/Dakgoten-280w.webp 280w, ../assets/images-optimized/Dakgoten-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/Dakgoten-160w.jpg 160w, ../assets/images-optimized/Dakgoten-280w.jpg 280w, ../assets/images-optimized/Dakgoten-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/Dakgoten-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
                     <div class="overlay">
-                        <span>Bedrijfsgebouw</span>
+                        <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/realisaties25.jpeg" class="portfolio-item" data-lightbox="portfolio" data-title="Modern gebouw glazen">
-                    <img src="../assets/images/realisaties25.jpeg" alt="Realisatie 3" loading="lazy">
+                <a href="../assets/images/Gevels-1.jpg?v=3" class="portfolio-item" data-category="gevels" data-lightbox="portfolio" data-title="Gevels 1">
+                    <picture>
+                        <source srcset="../assets/images-optimized/Gevels-1-160w.avif 160w, ../assets/images-optimized/Gevels-1-280w.avif 280w, ../assets/images-optimized/Gevels-1-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/Gevels-1-160w.webp 160w, ../assets/images-optimized/Gevels-1-280w.webp 280w, ../assets/images-optimized/Gevels-1-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/Gevels-1-160w.jpg 160w, ../assets/images-optimized/Gevels-1-280w.jpg 280w, ../assets/images-optimized/Gevels-1-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/Gevels-1-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
                     <div class="overlay">
-                        <span>Bedrijfsgebouw</span>
+                        <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/realisaties26.jpeg" class="portfolio-item" data-lightbox="portfolio" data-title="Toren kantoorgebouw">
-                    <img src="../assets/images/realisaties26.jpeg" alt="Realisatie 4" loading="lazy">
+                <a href="../assets/images/Gevels-2.jpg?v=3" class="portfolio-item" data-category="gevels" data-lightbox="portfolio" data-title="Gevels 2">
+                    <picture>
+                        <source srcset="../assets/images-optimized/Gevels-2-160w.avif 160w, ../assets/images-optimized/Gevels-2-280w.avif 280w, ../assets/images-optimized/Gevels-2-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/Gevels-2-160w.webp 160w, ../assets/images-optimized/Gevels-2-280w.webp 280w, ../assets/images-optimized/Gevels-2-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/Gevels-2-160w.jpg 160w, ../assets/images-optimized/Gevels-2-280w.jpg 280w, ../assets/images-optimized/Gevels-2-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/Gevels-2-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
                     <div class="overlay">
-                        <span>Bedrijfsgebouw</span>
+                        <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/realisaties27.jpeg" class="portfolio-item" data-lightbox="portfolio" data-title="Dakfolie witte reiniging">
-                    <img src="../assets/images/realisaties27.jpeg" alt="Realisatie 5" loading="lazy">
+                <a href="../assets/images/Gevels-Voetpaden.jpg?v=3" class="portfolio-item" data-category="gevels" data-lightbox="portfolio" data-title="Gevels Voetpaden">
+                    <picture>
+                        <source srcset="../assets/images-optimized/Gevels-Voetpaden-160w.avif 160w, ../assets/images-optimized/Gevels-Voetpaden-280w.avif 280w, ../assets/images-optimized/Gevels-Voetpaden-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/Gevels-Voetpaden-160w.webp 160w, ../assets/images-optimized/Gevels-Voetpaden-280w.webp 280w, ../assets/images-optimized/Gevels-Voetpaden-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/Gevels-Voetpaden-160w.jpg 160w, ../assets/images-optimized/Gevels-Voetpaden-280w.jpg 280w, ../assets/images-optimized/Gevels-Voetpaden-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/Gevels-Voetpaden-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
                     <div class="overlay">
-                        <span>Dakfolie</span>
+                        <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/realisaties28.jpeg" class="portfolio-item" data-lightbox="portfolio" data-title="Muurreiniging gebouw">
-                    <img src="../assets/images/realisaties28.jpeg" alt="Realisatie 6" loading="lazy">
+                <a href="../assets/images/Gevels.jpg?v=3" class="portfolio-item" data-category="gevels" data-lightbox="portfolio" data-title="Gevels">
+                    <picture>
+                        <source srcset="../assets/images-optimized/Gevels-160w.avif 160w, ../assets/images-optimized/Gevels-280w.avif 280w, ../assets/images-optimized/Gevels-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/Gevels-160w.webp 160w, ../assets/images-optimized/Gevels-280w.webp 280w, ../assets/images-optimized/Gevels-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/Gevels-160w.jpg 160w, ../assets/images-optimized/Gevels-280w.jpg 280w, ../assets/images-optimized/Gevels-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/Gevels-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
                     <div class="overlay">
-                        <span>Gevelreiniging</span>
+                        <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/realisaties29.jpeg" class="portfolio-item" data-lightbox="portfolio" data-title="Dakbeschot reiniging">
-                    <img src="../assets/images/realisaties29.jpeg" alt="Realisatie 7" loading="lazy">
+                <a href="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.50.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 1">
+                    <img src="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.50.jpeg?v=3" alt="Project 1" loading="lazy">
                     <div class="overlay">
-                        <span>Dakopbouw</span>
+                        <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/realisaties30.jpeg" class="portfolio-item" data-lightbox="portfolio" data-title="Zonnepanelen bedrijfsgebouw">
-                    <img src="../assets/images/realisaties30.jpeg" alt="Realisatie 8" loading="lazy">
+                <a href="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.51-3.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 2">
+                    <img src="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.51-3.jpeg?v=3" alt="Project 2" loading="lazy">
                     <div class="overlay">
-                        <span>Zonnepanelen</span>
+                        <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/realisaties31.jpeg" class="portfolio-item" data-lightbox="portfolio" data-title="Skylight dakraam reiniging">
-                    <img src="../assets/images/realisaties31.jpeg" alt="Realisatie 9" loading="lazy">
+                <a href="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.51.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 3">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.51-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.51-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.51-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.51-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.51-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.51-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.51-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.51-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.51-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.51-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
                     <div class="overlay">
-                        <span>Dakraam</span>
+                        <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/realisaties32.jpeg" class="portfolio-item" data-lightbox="portfolio" data-title="Moderne huisreiniging">
-                    <img src="../assets/images/realisaties32.jpeg" alt="Realisatie 10" loading="lazy">
+                <a href="../assets/images/WhatsApp-Image-2024-05-06-at-11.37.52-1.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 4">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.52-1-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.52-1-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.52-1-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.52-1-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.52-1-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.52-1-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.52-1-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.52-1-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.52-1-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2024-05-06-at-11.37.52-1-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
                     <div class="overlay">
-                        <span>Bedrijfsgebouw</span>
+                        <span>🔍 Bekijk</span>
                     </div>
                 </a>
-                <a href="../assets/images/realisaties33.jpeg" class="portfolio-item" data-lightbox="portfolio" data-title="Glazen veranda moderne woningen">
-                    <img src="../assets/images/realisaties33.jpeg" alt="Realisatie 11" loading="lazy">
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM10.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 5">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM10-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM10-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM10-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM10-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM10-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM10-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM10-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM10-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM10-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM10-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
                     <div class="overlay">
-                        <span>Glazenbouw</span>
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM12.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 6">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM12-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM12-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM12-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM12-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM12-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM12-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM12-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM12-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM12-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM12-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM13.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 7">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM13-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM13-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM13-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM13-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM13-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM13-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM13-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM13-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM13-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM13-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM14.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 8">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM14-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM14-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM14-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM14-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM14-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM14-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM14-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM14-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM14-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM14-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM15.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 9">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM15-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM15-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM15-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM15-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM15-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM15-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM15-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM15-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM15-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM15-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM16.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 10">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM16-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM16-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM16-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM16-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM16-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM16-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM16-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM16-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM16-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM16-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM2.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 11">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM2-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM2-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM2-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM2-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM2-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM2-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM2-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM2-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM2-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM2-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM4.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 12">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM4-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM4-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM4-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM4-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM4-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM4-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM4-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM4-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM4-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM4-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM5.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 13">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM5-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM5-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM5-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM5-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM5-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM5-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM5-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM5-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM5-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM5-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM6.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 14">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM6-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM6-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM6-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM6-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM6-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM6-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM6-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM6-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM6-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM6-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM7.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 15">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM7-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM7-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM7-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM7-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM7-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM7-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM7-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM7-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM7-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM7-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM8.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 16">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM8-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM8-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM8-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM8-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM8-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM8-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM8-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM8-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM8-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM8-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM9.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 17">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM9-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM9-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM9-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM9-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM9-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM9-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM9-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM9-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM9-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.17-PM9-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 18">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1).jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 19">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM1.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 20">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM1-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM2.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 21">
+                    <picture>
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM2-160w.avif 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM2-280w.avif 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM2-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM2-160w.webp 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM2-280w.webp 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM2-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM2-160w.jpg 160w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM2-280w.jpg 280w, ../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM2-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/WhatsApp-Image-2025-07-25-at-4.51.18-PM2-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM3.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 22">
+                    <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM3.jpeg?v=3" alt="Project 22" loading="lazy">
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM4.jpeg?v=3" class="portfolio-item" data-category="glasbewassing" data-lightbox="portfolio" data-title="Project 23">
+                    <img src="../assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM4.jpeg?v=3" alt="Project 23" loading="lazy">
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/Zonnepanelen-2.jpg?v=3" class="portfolio-item" data-category="zonnepanelen" data-lightbox="portfolio" data-title="Zonnepanelen 2">
+                    <picture>
+                        <source srcset="../assets/images-optimized/Zonnepanelen-2-160w.avif 160w, ../assets/images-optimized/Zonnepanelen-2-280w.avif 280w, ../assets/images-optimized/Zonnepanelen-2-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/Zonnepanelen-2-160w.webp 160w, ../assets/images-optimized/Zonnepanelen-2-280w.webp 280w, ../assets/images-optimized/Zonnepanelen-2-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/Zonnepanelen-2-160w.jpg 160w, ../assets/images-optimized/Zonnepanelen-2-280w.jpg 280w, ../assets/images-optimized/Zonnepanelen-2-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/Zonnepanelen-2-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/Zonnepanelen-3.jpg?v=3" class="portfolio-item" data-category="zonnepanelen" data-lightbox="portfolio" data-title="Zonnepanelen 3">
+                    <picture>
+                        <source srcset="../assets/images-optimized/Zonnepanelen-3-160w.avif 160w, ../assets/images-optimized/Zonnepanelen-3-280w.avif 280w, ../assets/images-optimized/Zonnepanelen-3-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/Zonnepanelen-3-160w.webp 160w, ../assets/images-optimized/Zonnepanelen-3-280w.webp 280w, ../assets/images-optimized/Zonnepanelen-3-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/Zonnepanelen-3-160w.jpg 160w, ../assets/images-optimized/Zonnepanelen-3-280w.jpg 280w, ../assets/images-optimized/Zonnepanelen-3-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/Zonnepanelen-3-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/Zonnepanelen-4.jpg?v=3" class="portfolio-item" data-category="zonnepanelen" data-lightbox="portfolio" data-title="Zonnepanelen 4">
+                    <picture>
+                        <source srcset="../assets/images-optimized/Zonnepanelen-4-160w.avif 160w, ../assets/images-optimized/Zonnepanelen-4-280w.avif 280w, ../assets/images-optimized/Zonnepanelen-4-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/Zonnepanelen-4-160w.webp 160w, ../assets/images-optimized/Zonnepanelen-4-280w.webp 280w, ../assets/images-optimized/Zonnepanelen-4-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/Zonnepanelen-4-160w.jpg 160w, ../assets/images-optimized/Zonnepanelen-4-280w.jpg 280w, ../assets/images-optimized/Zonnepanelen-4-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/Zonnepanelen-4-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
+                    </div>
+                </a>
+                <a href="../assets/images/Zonnepanelen.jpg?v=3" class="portfolio-item" data-category="zonnepanelen" data-lightbox="portfolio" data-title="Zonnepanelen">
+                    <picture>
+                        <source srcset="../assets/images-optimized/Zonnepanelen-160w.avif 160w, ../assets/images-optimized/Zonnepanelen-280w.avif 280w, ../assets/images-optimized/Zonnepanelen-380w.avif 380w" type="image/avif">
+                        <source srcset="../assets/images-optimized/Zonnepanelen-160w.webp 160w, ../assets/images-optimized/Zonnepanelen-280w.webp 280w, ../assets/images-optimized/Zonnepanelen-380w.webp 380w" type="image/webp">
+                        <source srcset="../assets/images-optimized/Zonnepanelen-160w.jpg 160w, ../assets/images-optimized/Zonnepanelen-280w.jpg 280w, ../assets/images-optimized/Zonnepanelen-380w.jpg 380w" type="image/jpeg">
+                        <img src="../assets/images-optimized/Zonnepanelen-380w.jpg" alt="" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                    </picture>
+                    <div class="overlay">
+                        <span>🔍 Bekijk</span>
                     </div>
                 </a>
             </div>
@@ -156,5 +443,32 @@
 
     <script src="../js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    
+    <!-- Portfolio Filter Script -->
+    <script>
+        document.querySelectorAll('.filter-tab').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filter = this.dataset.filter;
+                const items = document.querySelectorAll('.portfolio-item');
+                
+                // Update active button
+                document.querySelectorAll('.filter-tab').forEach(b => {
+                    b.style.background = b === this ? '#1a73e8' : 'white';
+                    b.style.color = b === this ? 'white' : '#1a73e8';
+                });
+                
+                // Filter items
+                items.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 50);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

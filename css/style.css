@@ -516,15 +516,16 @@ nav .logo img {
 
 .service-photo {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/3;
     display: block;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    border-radius: 12px 12px 0 0;
+    background-color: #e5e7eb;
 }
 
-.service-photo img,
-.service-photo picture {
+.service-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;

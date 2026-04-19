@@ -820,48 +820,59 @@ footer a:hover {
    ================================================ */
 
 .final-cta {
-    background-color: #f3f4f6;
-    padding: var(--space-2xl) var(--space-md);
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+    padding: 3rem 2rem;
     text-align: center;
-    margin: var(--space-2xl) 0;
-    border-radius: 12px;
+    margin: 2rem 0;
+    border-radius: 0;
 }
 
 .final-cta h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
-    color: var(--neutral-dark);
-    margin-bottom: 0.5rem;
+    color: white;
+    margin-bottom: 0.75rem;
 }
 
 .final-cta p {
-    color: var(--neutral-gray);
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
 }
 
 .cta-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .cta-link {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--primary-color);
-    color: white;
+    padding: 0.875rem 2rem;
+    background-color: white;
+    color: #1e40af;
     text-decoration: none;
     border-radius: 8px;
-    font-weight: 600;
+    font-weight: 700;
     transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.cta-link:first-child {
+    background-color: white;
+    color: #1e40af;
+}
+
+.cta-link:last-child {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
 }
 
 .cta-link:hover {
-    background-color: var(--primary-light);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* ================================================

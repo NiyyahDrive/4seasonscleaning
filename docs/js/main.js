@@ -92,12 +92,6 @@ function initMobileMenu() {
         }
     });
 }
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('.navbar')) {
-            navMenu.classList.remove('active');
-        }
-    });
-}
 
 /* ================================================
    CONTACT FORM HANDLING

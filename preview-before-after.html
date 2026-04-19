@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Seasons - Before/After Preview</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f5f5f5; padding: 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { text-align: center; margin-bottom: 3rem; color: #1f2937; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+        .service-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .service-title { padding: 1.5rem; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: white; font-size: 1.3rem; font-weight: 600; }
+        .before-after { position: relative; display: flex; height: 300px; }
+        .before-section, .after-section { flex: 1; position: relative; }
+        .before-section img, .after-section img { width: 100%; height: 100%; object-fit: cover; }
+        .label { position: absolute; bottom: 10px; padding: 0.5rem 1rem; border-radius: 4px; font-weight: 600; font-size: 0.85rem; }
+        .label-before { left: 10px; background: rgba(37, 99, 235, 0.9); color: white; }
+        .label-after { right: 10px; background: rgba(34, 197, 94, 0.9); color: white; }
+        .divider { position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; background: white; }
+        .note { padding: 1rem; background: #f9fafb; border-top: 1px solid #e5e7eb; font-size: 0.85rem; color: #666; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>4 Seasons - Before/After Gallery Preview</h1>
+    <div class="gallery-grid">
+        <div class="service-card">
+            <div class="service-title">🪟 Glasbewassing</div>
+            <div class="before-after">
+                <div class="before-section">
+                    <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM8.jpeg" alt="Before">
+                    <span class="label label-before">VOOR</span>
+                </div>
+                <div class="divider"></div>
+                <div class="after-section">
+                    <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM12.jpeg" alt="After">
+                    <span class="label label-after">NA</span>
+                </div>
+            </div>
+            <div class="note">Ramen binnen en buiten schoon.</div>
+        </div>
+        <div class="service-card">
+            <div class="service-title">☀️ Zonnepanelen</div>
+            <div class="before-after">
+                <div class="before-section">
+                    <img src="assets/images/WhatsApp-Image-2024-05-06-at-11.37.49.jpeg" alt="Before">
+                    <span class="label label-before">VOOR</span>
+                </div>
+                <div class="divider"></div>
+                <div class="after-section">
+                    <img src="assets/images/WhatsApp-Image-2024-05-06-at-11.37.50.jpeg" alt="After">
+                    <span class="label label-after">NA</span>
+                </div>
+            </div>
+            <div class="note">Schone panelen = meer opbrengst.</div>
+        </div>
+        <div class="service-card">
+            <div class="service-title">🏚️ Dakgoten</div>
+            <div class="before-after">
+                <div class="before-section">
+                    <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM14.jpeg" alt="Before">
+                    <span class="label label-before">VOOR</span>
+                </div>
+                <div class="divider"></div>
+                <div class="after-section">
+                    <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM15.jpeg" alt="After">
+                    <span class="label label-after">NA</span>
+                </div>
+            </div>
+            <div class="note">Water loopt weg waar het hoort.</div>
+        </div>
+        <div class="service-card">
+            <div class="service-title">🏗️ Gevels</div>
+            <div class="before-after">
+                <div class="before-section">
+                    <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.17-PM1.jpeg" alt="Before">
+                    <span class="label label-before">VOOR</span>
+                </div>
+                <div class="divider"></div>
+                <div class="after-section">
+                    <img src="assets/images/WhatsApp-Image-2025-07-25-at-4.51.18-PM6.jpeg" alt="After">
+                    <span class="label label-after">NA</span>
+                </div>
+            </div>
+            <div class="note">Groene aanslag weg. Schoon resultaat.</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

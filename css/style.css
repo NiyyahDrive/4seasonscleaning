@@ -2963,3 +2963,45 @@ footer a:hover {
     border-radius: 8px;
     font-size: 0.9rem;
 }
+
+/* ================================================
+   HERO TRUST BADGES
+   ================================================ */
+
+.hero-trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.trust-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+    .hero-trust-badges {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .trust-badge {
+        font-size: 0.85rem;
+    }
+}

@@ -2811,62 +2811,6 @@ footer a:hover {
 }
 
 /* ================================================
-   BEFORE/AFTER SHOWCASE
-   ================================================ */
-.before-after-section {
-    padding: 4rem 1rem;
-    background: #f9fafb;
-}
-
-.section-subtitle {
-    color: #666;
-}
-
-.before-after-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-@media (min-width: 768px) {
-    .before-after-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.ba-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.ba-card h3 {
-    padding: 1.25rem 1.5rem 0.75rem;
-    margin: 0;
-    color: #2563eb;
-}
-
-.ba-comparison {
-    aspect-ratio: 16/9;
-    overflow: hidden;
-}
-
-.ba-comparison img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.ba-result {
-    padding: 1rem 1.5rem 1.5rem;
-    color: #059669;
-    font-weight: 500;
-    margin: 0;
-}
-
-/* ================================================
    URGENCY INDICATOR
    ================================================ */
 .urgency-indicator {

@@ -29,3 +29,7 @@ build/
 
 # Temporary files
 .production
+
+*.bak
+assets/images-backup/
+Scripts/li-salaam-2026/

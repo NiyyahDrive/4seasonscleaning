@@ -75,13 +75,13 @@
 }
 
 /* ================================================
-   LOGO STYLING
+   LOGO STYLING & IMAGE OPTIMIZATION
    ================================================ */
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: center;
     text-decoration: none;
     color: var(--header-text);
     font-weight: var(--header-font-weight-bold);
@@ -93,15 +93,30 @@
     
     /* Logo never wraps */
     white-space: nowrap;
+    
+    /* Touch target minimum size */
+    min-height: 44px;
+}
+
+.logo picture {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .logo img {
     width: 100%;
     height: auto;
+    max-height: 42px;
     display: block;
+    object-fit: contain;
     
     /* Smooth image scaling */
     transition: transform 0.2s ease;
+    
+    /* Prevent image artifacts */
+    image-rendering: crisp-edges;
 }
 
 .logo:hover img {
@@ -352,6 +367,11 @@
     .logo {
         width: 200px;
     }
+    
+    /* Tablet: Optimize logo sharpness at 768w */
+    .logo img {
+        max-height: 48px;
+    }
 }
 
 /* ================================================
@@ -371,6 +391,11 @@
     
     .logo {
         width: 280px;
+    }
+    
+    /* Desktop: Optimize logo sharpness at 1440w */
+    .logo img {
+        max-height: 56px;
     }
     
     /* Desktop: Full navigation */

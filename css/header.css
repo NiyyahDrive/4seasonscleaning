@@ -88,8 +88,8 @@
     letter-spacing: -0.01em;
     flex-shrink: 0;
     
-    /* Logo width responsive (mobile: 90px) */
-    width: 90px;
+    /* Logo width responsive (mobile: 160px) */
+    width: 160px;
     
     /* Logo never wraps */
     white-space: nowrap;
@@ -350,7 +350,7 @@
     }
     
     .logo {
-        width: 100px;
+        width: 200px;
     }
 }
 
@@ -370,7 +370,7 @@
     }
     
     .logo {
-        width: 120px;
+        width: 280px;
     }
     
     /* Desktop: Full navigation */

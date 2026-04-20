@@ -2811,6 +2811,59 @@ footer a:hover {
 }
 
 /* ================================================
+   STATS SECTION (AFTER REVIEWS)
+   ================================================ */
+.stats-after-reviews {
+    padding: 3rem 1rem;
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+}
+
+.stat-card {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+}
+
+.stat-card .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2563eb;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-fraction {
+    font-size: 1rem;
+    color: #666;
+}
+
+.stat-card .stat-label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.75rem;
+    font-weight: 500;
+}
+
+/* ================================================
    BEFORE/AFTER SHOWCASE
    ================================================ */
 .before-after-section {

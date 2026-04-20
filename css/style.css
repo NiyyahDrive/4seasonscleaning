@@ -2691,3 +2691,261 @@ footer a:hover {
     object-position: center;
     display: block;
 }
+
+/* ================================================
+   REVIEW DATES & SERVICE TAGS
+   ================================================ */
+.review-date {
+    color: #888;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0.25rem;
+    font-style: italic;
+}
+
+.review-service {
+    display: inline-block;
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* ================================================
+   CERTIFICATIONS
+   ================================================ */
+.certifications {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #f9fafb;
+    border-radius: 12px;
+}
+
+.certifications h4 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+}
+
+.cert-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cert-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 30px;
+    border: 1px solid #e5e7eb;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.cert-icon {
+    font-size: 1.1rem;
+}
+
+/* ================================================
+   SOCIAL PROOF
+   ================================================ */
+.social-proof {
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    color: white;
+    padding: 3rem 1rem;
+}
+
+.social-proof-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .social-proof-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    line-height: 1;
+}
+
+.stat-small {
+    font-size: 1.25rem;
+    opacity: 0.8;
+}
+
+.stat-label {
+    color: rgba(255,255,255,0.9);
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+/* ================================================
+   BEFORE/AFTER SHOWCASE
+   ================================================ */
+.before-after-section {
+    padding: 4rem 1rem;
+    background: #f9fafb;
+}
+
+.section-subtitle {
+    color: #666;
+}
+
+.before-after-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .before-after-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.ba-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.ba-card h3 {
+    padding: 1.25rem 1.5rem 0.75rem;
+    margin: 0;
+    color: #2563eb;
+}
+
+.ba-comparison {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+.ba-comparison img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ba-result {
+    padding: 1rem 1.5rem 1.5rem;
+    color: #059669;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* ================================================
+   URGENCY INDICATOR
+   ================================================ */
+.urgency-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background: #fff7ed;
+    border-left: 3px solid #f97316;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #9a3412;
+}
+
+.urgency-dot {
+    width: 8px;
+    height: 8px;
+    background: #f97316;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+/* ================================================
+   SERVICE AREA MAP
+   ================================================ */
+.service-area {
+    padding: 4rem 1rem;
+    background: white;
+}
+
+.service-area h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.service-area > .container > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.service-area-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .service-area-content {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.service-area-map {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.service-area-list h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.region-list {
+    list-style: none;
+    padding: 0;
+}
+
+.region-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    color: #555;
+}
+
+.region-list li:last-child {
+    border-bottom: none;
+}
+
+.region-note {
+    font-style: italic;
+    color: #666;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #fef3c7;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}

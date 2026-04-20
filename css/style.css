@@ -129,7 +129,7 @@ picture img {
     letter-spacing: -0.01em;
 }
 
-.logo img { height: 42px; width: auto; }
+.logo img { height: 40px; width: auto; }
 
 .logo__text {
     font-size: 1.05rem;

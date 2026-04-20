@@ -17,17 +17,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <a href="../index.html" class="logo"><img src="../assets/images/logo.png" alt="4 Seasons Window Cleaning Logo"></a>
-        <ul class="nav-links">
-            <li><a href="../index.html#diensten">Diensten</a></li>
-            <li><a href="../index.html#waarom">Waarom ons</a></li>
-            <li><a href="over-ons.html">Over Ons</a></li>
-            <li><a href="../index.html#reviews">Reviews</a></li>
-            <li><a href="realisaties.html">Realisaties</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <header class="nav">
+        <div class="nav__inner">
+            <a href="../index.html" class="logo" aria-label="4 Seasons Cleaning">
+                <img src="../assets/images/logo.png" alt="4 Seasons Window Cleaning Logo">
+            </a>
+            <button class="hamburger" id="menuToggle" aria-label="Menu openen" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navMenu">
+                <li><a href="../index.html#diensten">Diensten</a></li>
+                <li><a href="../index.html#waarom">Waarom ons</a></li>
+                <li><a href="../index.html#reviews">Reviews</a></li>
+                <li><a href="realisaties.html">Realisaties</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="btn-nav">Offerte</a></li>
+            </ul>
+        </div>
+    </header>
 
     <div class="breadcrumb"><div class="container"><a href="../index.html">Home</a> / <span>Terms & Conditions</span></div></div>
 

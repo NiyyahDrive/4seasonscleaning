@@ -1,0 +1,39 @@
+<!-- ================================================
+   4 SEASONS - RESPONSIVE HEADER COMPONENT (Mobile-First)
+   Copy this to all pages inside <body> element
+   ================================================ -->
+
+<header class="nav">
+    <div class="nav__inner">
+        <!-- Logo: Always visible on all screen sizes -->
+        <a href="/" class="logo" aria-label="4 Seasons Cleaning - terug naar homepage">
+            <picture>
+                <source srcset="assets/images-optimized/logo-340w.webp 340w, assets/images-optimized/logo-768w.webp 768w, assets/images-optimized/logo-1440w.webp 1440w" type="image/webp" sizes="(min-width: 1024px) 120px, (min-width: 768px) 100px, 90px">
+                <img src="assets/images-optimized/logo-340w.jpg" alt="4 Seasons Cleaning logo" width="120" height="40" loading="eager">
+            </picture>
+        </a>
+
+        <!-- Hamburger Menu: Visible only on mobile (<768px) -->
+        <button class="hamburger" id="menuToggle" aria-label="Navigatiemenu openen" aria-expanded="false" aria-controls="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Navigation Links: Hidden on mobile, visible on tablet+ -->
+        <ul class="nav-links" id="navMenu">
+            <li><a href="#diensten">Diensten</a></li>
+            <li><a href="#waarom">Waarom ons</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="pages/realisaties.html">Realisaties</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+            <li><a href="pages/contact.html" class="btn-nav">Offerte</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- Note: Update the href="/" to match your page structure:
+     - On index.html: href="/"  or href="./"
+     - On pages/contact.html: href="../" or href="/"
+     - On pages/realisaties.html: href="../" or href="/"
+-->

@@ -4,41 +4,11 @@
    ================================================ */
 
 /* ================================================
-   LOGO RESPONSIVE SIZING
+   LOGO RESPONSIVE SIZING - MOVED TO css/header.css
+   ================================================
+   Logo sizing is now handled in header.css.
+   See header.css for complete responsive logo styles.
    ================================================ */
-
-/* Desktop: 1440px+ */
-@media (min-width: 1440px) {
-    .logo picture {
-        width: 120px;
-    }
-    
-    .logo img {
-        width: 100%;
-    }
-}
-
-/* Tablet: 768px - 1439px */
-@media (min-width: 768px) and (max-width: 1439px) {
-    .logo picture {
-        width: 100px;
-    }
-    
-    .logo img {
-        width: 100%;
-    }
-}
-
-/* Mobile: < 768px */
-@media (max-width: 767px) {
-    .logo picture {
-        width: 90px;
-    }
-    
-    .logo img {
-        width: 100%;
-    }
-}
 
 /* ================================================
    TABLET: 768px

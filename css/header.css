@@ -81,7 +81,9 @@ html, body {
 }
 
 /* ================================================
-   LOGO STYLING
+   LOGO STYLING - mobile first, hoogte-gestuurd
+   Ratio logo: 340×191 (1.78:1)
+   h=50px → b≈89px | h=55px → b≈98px | h=60px → b≈107px
    ================================================ */
 
 .logo {
@@ -91,6 +93,15 @@ html, body {
     line-height: 0;
 }
 
+/* picture.logo img is specifieker (0,1,2) dan enkel .logo img (0,1,1)
+   zodat het wint van eventuele overblijvende stijlen */
+picture.logo img {
+    display: block;
+    height: 50px;   /* Mobile: past in 75px header */
+    width: auto;
+    max-width: none;
+    max-height: none;
+}
 /* ================================================
    NAVIGATION LINKS (MOBILE - HIDDEN BY DEFAULT)
    ================================================ */
@@ -347,11 +358,12 @@ html, body {
         flex: 0 0 auto;
         order: -1;
     }
-}
 
-/* ================================================
-   DESKTOP BREAKPOINT (1024px+)
-   ================================================ */
+    picture.logo img {
+        height: 55px;   /* Tablet: past in 80px header */
+        width: auto;
+    }
+}
 
 @media (min-width: 1024px) {
     :root {
@@ -368,7 +380,12 @@ html, body {
         flex: 0 0 auto;
         order: -1;
     }
-    
+
+    picture.logo img {
+        height: 60px;   /* Desktop: past in 85px header */
+        width: auto;
+    }
+
     /* Desktop: Full navigation */
     .nav-links {
         gap: var(--header-gap-desktop);

@@ -33,3 +33,4 @@ build/
 *.bak
 assets/images-backup/
 Scripts/li-salaam-2026/
+audit-fixes.diff

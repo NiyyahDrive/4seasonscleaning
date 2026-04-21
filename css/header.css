@@ -3,6 +3,11 @@
    Professional, Consistent, Accessible Design
    ================================================ */
 
+/* iOS Rubber-Band Scroll Fix */
+html, body {
+    background-color: #ffffff;   /* voorkomt doorschijn bij rubber-band scroll iOS */
+}
+
 /* CSS Variables for Header Consistency Across All Pages */
 :root {
     /* Header Dimensions */
@@ -48,21 +53,17 @@
    ================================================ */
 
 .nav {
+    position: -webkit-sticky;    /* Safari-prefix */
     position: sticky;
     top: 0;
     z-index: 1000;
-    
-    /* Forceer witte achtergrond op alle browsers (iOS Safari, Chrome, etc.) */
-    background-color: #ffffff !important;
-    background: #ffffff !important;
-    
-    border-bottom: 1px solid var(--header-border);
-    box-shadow: var(--header-shadow);
-    font-family: var(--header-font);
-    
-    /* Vaste hoogte voor volledige logo visibility */
-    height: var(--header-height);
-    min-height: var(--header-height);
+    background: #ffffff !important;                 /* shorthand = dekt alle layers */
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    height: 75px;
+    min-height: 75px;
 }
 
 .nav__inner {

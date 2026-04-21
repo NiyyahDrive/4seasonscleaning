@@ -839,9 +839,10 @@
 
     <!-- Initialize GLightbox with enhanced options -->
     <script>
-        // Initialize GLightbox for portfolio gallery
-        const lightbox = GLightbox({
-            selector: '[data-lightbox="portfolio"]',
+        // Initialize GLightbox for portfolio gallery (global variable for filter script access)
+        // Use selector that excludes hidden items from filter navigation
+        window.lightbox = GLightbox({
+            selector: '.portfolio-item:not(.hidden)',
             openEffect: 'zoom',
             closeEffect: 'zoom',
             slideEffect: 'zoom',
@@ -877,16 +878,39 @@
                     b.style.color = b === this ? 'white' : '#1a73e8';
                 });
                 
+                // Destroy existing lightbox first
+                if (window.lightbox && window.lightbox.destroy) {
+                    lightbox.destroy();
+                }
+                
                 // Filter items
                 items.forEach(item => {
-                    if (filter === 'all' || item.dataset.category === filter) {
+                    const shouldShow = filter === 'all' || item.dataset.category === filter;
+                    if (shouldShow) {
                         item.style.display = 'block';
                         setTimeout(() => item.style.opacity = '1', 50);
+                        // Remove the hidden state so GLightbox includes them
+                        item.classList.remove('hidden');
                     } else {
                         item.style.opacity = '0';
                         setTimeout(() => item.style.display = 'none', 300);
+                        // Mark as hidden so GLightbox can skip them
+                        item.classList.add('hidden');
                     }
                 });
+                
+                // Recreate lightbox with ONLY visible items
+                setTimeout(() => {
+                    window.lightbox = GLightbox({
+                        selector: '.portfolio-item:not(.hidden)',
+                        openEffect: 'zoom',
+                        closeEffect: 'zoom',
+                        slideEffect: 'zoom',
+                        width: '90vw',
+                        height: '85vh',
+                        autoplayVideos: false,
+                    });
+                }, 350);
             });
         });
     </script>

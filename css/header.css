@@ -207,6 +207,25 @@
 }
 
 /* ================================================
+   BUTTON SPECIFICITY - Override .nav-links a styles
+   ================================================ */
+
+.nav-links a.btn-nav,
+.nav-links a.btn-nav:link,
+.nav-links a.btn-nav:visited,
+.nav-links a.btn-nav:hover,
+.nav-links a.btn-nav:active,
+.nav-links a.btn-nav:focus {
+    color: #ffffff !important;            /* wint van .nav-links a */
+    background-color: #0d47a1 !important;
+    -webkit-text-fill-color: #ffffff !important;  /* iOS Safari quirk */
+}
+
+.nav-links a.btn-nav:hover {
+    background-color: #0a3a7f !important;
+}
+
+/* ================================================
    HAMBURGER MENU (MOBILE)
    ================================================ */
 

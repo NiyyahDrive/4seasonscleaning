@@ -84,36 +84,33 @@
    ================================================ */
 
 .logo {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
     text-decoration: none;
     color: var(--header-text);
     font-weight: var(--header-font-weight-bold);
     letter-spacing: -0.01em;
+    
+    /* Logo sizing: Natural width based on image */
+    width: auto;
+    min-width: 280px;
+    
+    /* No shrinking allowed */
     flex-shrink: 0;
     
-    /* Logo width: AUTO to prevent horizontal crop */
-    width: auto;
+    /* Minimal padding - don't squeeze logo */
+    padding: 0 0.25rem;
     
-    /* Logo never wraps */
+    /* Ensure full visibility on all devices */
     white-space: nowrap;
-    
-    /* Spacious touch target minimum size */
-    min-height: 100%;
-    padding: 0 0.5rem;
-    
-    /* Ensure full visibility */
-    display: flex;
-    align-items: center;
 }
 
 .logo picture {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: auto;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
 }
+
 
 .logo img {
     height: 65px !important;

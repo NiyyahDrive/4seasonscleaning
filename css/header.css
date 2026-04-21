@@ -57,7 +57,7 @@ html, body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #ffffff;                 /* removed !important: html/body base handles fallback */
+    background: #ffffff !important;          /* FORCE white on ALL devices */
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
     border-bottom: 1px solid #e5e7eb;
@@ -81,30 +81,38 @@ html, body {
 }
 
 /* ================================================
-   LOGO STYLING - Mobile-First Responsive
-   New horizontal logo ratio: optimized for all screens
-   Strategy: height-driven, width scales naturally via aspect-ratio
-   Probleem: style.css zet picture { width: 100% } en picture img { width: 100% }
-   Fix: width: auto + explicit height make logo scale dynamically
+   LOGO BUTTON - Robust, Protected Container
+   Master CSS: Overrides ALL global picture/img rules
+   Strategy: flex container with width:auto + overflow:visible
    ================================================ */
 
-.logo {
-    flex-shrink: 0;
-    order: -1;
-    display: block;
-    line-height: 0;
-    width: auto;        /* Overschrijft picture { width: 100% } uit style.css */
-    min-width: 0;       /* Allow flex-shrink to work */
+.navbar-brand.logo-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px 12px !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    width: auto !important;                    /* Dwing width af op basis van logo */
+    max-width: none !important;                /* Geen verborgen restricties */
+    background-color: transparent !important;  /* Transparante knop op witte header */
+    overflow: visible !important;              /* Laat niets afsnijden */
+    border: none !important;                   /* Geen button borders */
+    text-decoration: none !important;
+    flex-shrink: 0;                            /* Niet krimpen in flex container */
+    order: -1;                                 /* Logo eerste element */
+    line-height: 0;                            /* Verwijder baseline spacing */
 }
 
-/* Hogere specificiteit (0,1,2) wint van picture img (0,0,2) uit style.css */
-picture.logo img {
-    display: block;
-    height: 54px;       /* Mobile (75px header): ~54px logo + padding */
-    width: auto;
-    max-width: none;    /* Overschrijft img { max-width: 100% } */
-    max-height: none;
-    object-fit: contain;
+/* Logo afbeelding binnen de knop */
+.navbar-brand.logo-button img {
+    height: 54px !important;                   /* Mobile (75px header) */
+    width: auto !important;                    /* Schaal automatisch */
+    max-width: 280px !important;               /* Ruimte voor volledige tekst op desktop */
+    max-height: none !important;
+    object-fit: contain !important;
+    display: block !important;
+    border: none !important;
 }
 /* ================================================
    NAVIGATION LINKS (MOBILE - HIDDEN BY DEFAULT)
@@ -358,18 +366,18 @@ picture.logo img {
         margin-left: auto;
     }
     
-    .logo {
-        flex: 0 0 auto;
+    .navbar-brand.logo-button {
+        flex: 0 0 auto !important;
         order: -1;
-        width: auto;
+        width: auto !important;
         min-width: 0;
     }
 
-    picture.logo img {
-        height: 60px;   /* Tablet (80px header): ~60px logo */
-        width: auto;
-        max-width: none;
-        object-fit: contain;
+    .navbar-brand.logo-button img {
+        height: 60px !important;   /* Tablet (80px header): ~60px logo */
+        width: auto !important;
+        max-width: 320px !important;
+        object-fit: contain !important;
     }
 }
 
@@ -384,18 +392,18 @@ picture.logo img {
         gap: var(--header-gap-desktop);
     }
     
-    .logo {
-        flex: 0 0 auto;
+    .navbar-brand.logo-button {
+        flex: 0 0 auto !important;
         order: -1;
-        width: auto;
+        width: auto !important;
         min-width: 0;
     }
 
-    picture.logo img {
-        height: 65px;   /* Desktop (85px header): ~65px logo */
-        width: auto;
-        max-width: none;
-        object-fit: contain;
+    .navbar-brand.logo-button img {
+        height: 65px !important;   /* Desktop (85px header): ~65px logo */
+        width: auto !important;
+        max-width: 360px !important;
+        object-fit: contain !important;
     }
 
     /* Desktop: Full navigation */

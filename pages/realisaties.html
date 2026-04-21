@@ -117,18 +117,16 @@
     </style>
 
     <!-- Mobile-First Responsive Header (loaded LAST for highest specificity) -->
-    <link rel="stylesheet" href="../css/header.css?v=6">
+    <link rel="stylesheet" href="../css/header.css?v=7">
 </head>
 <body>
     <!-- ========== NAVIGATION ========== -->
     <header class="nav">
         <div class="nav__inner">
-            <!-- Logo -->
-            <picture class="logo">
-                <source srcset="../assets/images-optimized/logo-340w.avif 340w, ../assets/images-optimized/logo-768w.avif 768w, ../assets/images-optimized/logo-1440w.avif 1440w" type="image/avif">
-                <source srcset="../assets/images-optimized/logo-340w.webp 340w, ../assets/images-optimized/logo-768w.webp 768w, ../assets/images-optimized/logo-1440w.webp 1440w" type="image/webp">
-                <img src="../assets/images-optimized/logo-340w.jpg" alt="4 Seasons Window Cleaning logo" loading="eager" width="340" height="191" style="display:block;">
-            </picture>
+            <!-- Logo Button -->
+            <a href="../" class="navbar-brand logo-button">
+                <img src="../assets/images-optimized/4seasonslogo_en.jpeg" alt="4 Seasons Window Cleaning - Professionele raam- en gevelreiniging" loading="eager">
+            </a>
 
             <!-- Hamburger Menu: Visible only on mobile (<768px) -->
             <button class="hamburger" id="menuToggle" aria-label="Navigatiemenu openen" aria-expanded="false" aria-controls="navMenu">

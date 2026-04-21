@@ -93,8 +93,8 @@
     letter-spacing: -0.01em;
     flex-shrink: 0;
     
-    /* Logo width responsive (mobile: 160px) */
-    width: 160px;
+    /* Logo width: AUTO to prevent horizontal crop */
+    width: auto;
     
     /* Logo never wraps */
     white-space: nowrap;
@@ -116,9 +116,9 @@
 }
 
 .logo img {
-    width: 100%;
-    height: auto;
-    max-height: 48px;
+    height: 65px !important;
+    width: auto !important;
+    max-width: 300px !important;
     display: block;
     object-fit: contain;
     
@@ -388,12 +388,12 @@
     }
     
     .logo {
-        width: 200px;
+        width: auto;
     }
     
     /* Tablet: Optimize logo sharpness at 768w */
     .logo img {
-        max-height: 52px;
+        height: 65px !important;
     }
 }
 
@@ -413,12 +413,12 @@
     }
     
     .logo {
-        width: 280px;
+        width: auto;
     }
     
     /* Desktop: Optimize logo sharpness at 1440w */
     .logo img {
-        max-height: 60px;
+        height: 65px !important;
     }
     
     /* Desktop: Full navigation */

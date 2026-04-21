@@ -6,14 +6,14 @@
 /* CSS Variables for Header Consistency Across All Pages */
 :root {
     /* Header Dimensions */
-    --header-height: 70px;
-    --header-height-tablet: 75px;
-    --header-height-desktop: 80px;
+    --header-height: 75px;
+    --header-height-tablet: 80px;
+    --header-height-desktop: 85px;
     
-    /* Colors - Navy Blue Branding */
+    /* Colors - Navy Blue Branding - WCAG AA Compliant */
     --header-bg: #ffffff;
     --header-border: #e5e7eb;
-    --header-text: #1f2937;
+    --header-text: #000000;
     --header-text-hover: #0d47a1;
     --button-primary: #0d47a1;
     --button-primary-hover: #0a3a7f;
@@ -118,7 +118,7 @@
 .logo img {
     width: 100%;
     height: auto;
-    max-height: 42px;
+    max-height: 48px;
     display: block;
     object-fit: contain;
     
@@ -163,6 +163,9 @@
     
     /* Prevent text selection while clicking */
     user-select: none;
+    
+    /* Forceer zwarte tekst op alle devices */
+    color: #000000 !important;
 }
 
 .nav-links a:hover {
@@ -338,7 +341,7 @@
     
     .nav-links a {
         display: block;
-        padding: 1.2rem var(--header-padding-x);
+        padding: 15px var(--header-padding-x);
         font-size: 15px;
         font-weight: 500;
     }
@@ -390,7 +393,7 @@
     
     /* Tablet: Optimize logo sharpness at 768w */
     .logo img {
-        max-height: 48px;
+        max-height: 52px;
     }
 }
 
@@ -415,7 +418,7 @@
     
     /* Desktop: Optimize logo sharpness at 1440w */
     .logo img {
-        max-height: 56px;
+        max-height: 60px;
     }
     
     /* Desktop: Full navigation */

@@ -758,11 +758,10 @@
         }
 
         .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            max-width: var(--maxw);
-            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            max-width: 500px;
+            margin: 0 auto 2rem;
             padding: 0 var(--gutter);
         }
 
@@ -1190,28 +1189,6 @@
           "author": {"@type": "Person", "name": "Philip Goedkoop"},
           "datePublished": "2025-09-15",
           "reviewBody": "Zeer professionele en eerlijke jongeman. Modernste osmose-technologie. Nu de schoonste ramen van de straat!"
-        },
-        {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "author": {"@type": "Person", "name": "Linda Verheyden"},
-          "datePublished": "2025-07-22",
-          "reviewBody": "Stipt, vakkundig en betaalbaar. Precies wat ze beloven. Al drie keer teruggekomen — geen reden om te wisselen."
-        },
-        {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "author": {"@type": "Person", "name": "Frank Maes"},
-          "datePublished": "2025-10-08",
-          "reviewBody": "Voor ons bedrijf zijn ze onmisbaar geworden. Altijd schoon, geen gedoe, correct gefactureerd. Aanraders."
         }
       ],
       "sameAs": [
@@ -1539,22 +1516,13 @@
                 <div class="review__author">Philip Goedkoop</div>
                 <div class="review__role">Local Guide — Antwerpen</div>
             </div>
-            <div class="review">
-                <div class="review__stars">★★★★★</div>
-                <time class="review-date" datetime="2025-07-22">Juli 2025</time>
-                <span class="review-service">Ramen + dakgoten</span>
-                <p class="review__text">"Stipt, vakkundig en betaalbaar. Precies wat ze beloven. Al drie keer teruggekomen — geen reden om te wisselen."</p>
-                <div class="review__author">Linda Verheyden</div>
-                <div class="review__role">Huiseigenaar — Antwerpen</div>
-            </div>
-            <div class="review">
-                <div class="review__stars">★★★★★</div>
-                <time class="review-date" datetime="2025-10-08">Oktober 2025</time>
-                <span class="review-service">Kantoorpand - onderhoudscontract</span>
-                <p class="review__text">"Voor ons bedrijf zijn ze onmisbaar geworden. Altijd schoon, geen gedoe, correct gefactureerd. Aanraders."</p>
-                <div class="review__author">Frank Maes</div>
-                <div class="review__role">Bedrijfsleider — Gent</div>
-            </div>
+        </div>
+
+        <!-- ========== CALL TO ACTION: WRITE REVIEW ========== -->
+        <div style="text-align: center; max-width: 700px; margin: 3rem auto 0; padding: 0 1rem;">
+            <h3 style="font-size: 1.5rem; color: var(--neutral-dark); margin-bottom: 1rem; font-weight: 700;">Tevreden over ons werk?</h3>
+            <p style="font-size: 1rem; color: var(--neutral-gray); margin-bottom: 2rem; line-height: 1.7;">Laat een review achter op Google en help ons groeien. Jouw feedback is goud waard voor ons team!</p>
+            <a href="https://g.page/4seasonscleaning/review" target="_blank" rel="noopener" class="btn btn-primary" style="display: inline-block; background-color: var(--primary-color); color: #ffffff; padding: 0.85rem 2.2rem; border-radius: 8px; font-weight: 600; font-size: 1rem; text-decoration: none; box-shadow: 0 2px 8px rgba(37, 99, 235, 0.12);">Schrijf een review ⭐</a>
         </div>
     </section>
 
@@ -1760,17 +1728,6 @@
             <div class="cta-group">
                 <a href="tel:+32495219921" class="btn btn-primary">📞 Bel: +32 495 21 99 21</a>
                 <a href="https://wa.me/32495219921" class="btn btn-secondary">💬 WhatsApp</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== REVIEW CTA SECTION ========== -->
-    <section class="review-cta">
-        <div class="container">
-            <div class="review-cta__inner">
-                <h2>Tevreden over ons werk?</h2>
-                <p>Laat een review achter op Google en help ons groeien. Jouw feedback is goud waard voor ons team!</p>
-                <a href="https://g.page/4seasonscleaning/review" target="_blank" rel="noopener" class="btn btn-primary">Schrijf een review ⭐</a>
             </div>
         </div>
     </section>

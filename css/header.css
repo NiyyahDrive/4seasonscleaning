@@ -81,10 +81,11 @@ html, body {
 }
 
 /* ================================================
-   LOGO STYLING - mobile first
-   Logo ratio: 340×191 (1.78:1)
+   LOGO STYLING - Mobile-First Responsive
+   New horizontal logo ratio: optimized for all screens
+   Strategy: height-driven, width scales naturally via aspect-ratio
    Probleem: style.css zet picture { width: 100% } en picture img { width: 100% }
-   Fix: width: auto op .logo overschrijft dit; height op img bepaalt de grootte
+   Fix: width: auto + explicit height make logo scale dynamically
    ================================================ */
 
 .logo {
@@ -93,16 +94,17 @@ html, body {
     display: block;
     line-height: 0;
     width: auto;        /* Overschrijft picture { width: 100% } uit style.css */
+    min-width: 0;       /* Allow flex-shrink to work */
 }
 
 /* Hogere specificiteit (0,1,2) wint van picture img (0,0,2) uit style.css */
 picture.logo img {
     display: block;
-    height: 48px;       /* Mobile: 75px header → logo 48px, ruimte voor padding */
+    height: 54px;       /* Mobile (75px header): ~54px logo + padding */
     width: auto;
     max-width: none;    /* Overschrijft img { max-width: 100% } */
     max-height: none;
-    object-fit: unset;
+    object-fit: contain;
 }
 /* ================================================
    NAVIGATION LINKS (MOBILE - HIDDEN BY DEFAULT)
@@ -360,12 +362,14 @@ picture.logo img {
         flex: 0 0 auto;
         order: -1;
         width: auto;
+        min-width: 0;
     }
 
     picture.logo img {
-        height: 54px;   /* Tablet: past in 80px header */
+        height: 60px;   /* Tablet (80px header): ~60px logo */
         width: auto;
         max-width: none;
+        object-fit: contain;
     }
 }
 
@@ -384,12 +388,14 @@ picture.logo img {
         flex: 0 0 auto;
         order: -1;
         width: auto;
+        min-width: 0;
     }
 
     picture.logo img {
-        height: 60px;   /* Desktop: past in 85px header */
+        height: 65px;   /* Desktop (85px header): ~65px logo */
         width: auto;
         max-width: none;
+        object-fit: contain;
     }
 
     /* Desktop: Full navigation */

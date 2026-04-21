@@ -85,17 +85,7 @@ html, body {
    ================================================ */
 
 .logo {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    color: #000000;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    flex: 0 1 auto;          /* kan groeien/krimpen binnen natuurlijke breedte */
-    min-width: 0;            /* verwijder min-width constraint die flex-gedrag blokkeerde */
-    padding: 0 0.25rem;
-    white-space: nowrap;
-    overflow: visible;       /* expliciet: niets afsnijden */
+    display: none !important;
 }
 
 .logo picture {
@@ -379,12 +369,7 @@ html, body {
     }
     
     .logo {
-        width: auto;
-    }
-    
-    /* Tablet: Optimize logo sharpness at 768w */
-    .logo img {
-        height: 65px !important;
+        display: none !important;
     }
 }
 
@@ -404,12 +389,7 @@ html, body {
     }
     
     .logo {
-        width: auto;
-    }
-    
-    /* Desktop: Optimize logo sharpness at 1440w */
-    .logo img {
-        height: 65px !important;
+        display: none !important;
     }
     
     /* Desktop: Full navigation */

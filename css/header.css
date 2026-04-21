@@ -57,7 +57,7 @@ html, body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #ffffff !important;                 /* shorthand = dekt alle layers */
+    background: #ffffff;                 /* removed !important: html/body base handles fallback */
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
     border-bottom: 1px solid #e5e7eb;
@@ -140,26 +140,21 @@ html, body {
     padding: 0;
 }
 
-.nav-links a {
-    color: var(--header-text);
+.nav-links a,
+.nav-links a:link,
+.nav-links a:visited {
+    color: #000000;
     text-decoration: none;
     font-size: var(--header-font-size);
     font-weight: var(--header-font-weight);
     transition: var(--header-transition);
     padding: 0.5rem 0;
-    
-    /* Prevent text selection while clicking */
     user-select: none;
-    
-    /* Forceer zwarte tekst op alle devices */
-    color: #000000 !important;
 }
 
-.nav-links a:hover {
-    color: var(--header-text-hover);
-}
-
+.nav-links a:hover,
 .nav-links a:focus {
+    color: var(--header-text-hover);
     outline: 2px solid var(--header-text-hover);
     outline-offset: 2px;
 }
@@ -169,36 +164,30 @@ html, body {
    ================================================ */
 
 .btn-nav {
-    background-color: var(--button-primary) !important;
-    color: #ffffff !important;
+    background-color: var(--button-primary);
+    color: #ffffff;
     padding: 0.6rem 1.2rem;
     border-radius: 8px;
     font-weight: var(--header-font-weight-bold);
     font-size: var(--header-font-size);
-    
     transition: var(--header-transition);
-    
-    /* Ensure button styling doesn't override link */
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border: none;
     cursor: pointer;
-    
-    /* Shadow lift effect */
     box-shadow: 0 2px 8px rgba(13, 71, 161, 0.15);
 }
 
-.btn-nav:hover {
-    background-color: var(--button-primary-hover) !important;
-    color: #ffffff !important;
+.btn-nav:hover,
+.btn-nav:focus {
+    background-color: var(--button-primary-hover);
     box-shadow: 0 4px 12px rgba(13, 71, 161, 0.25);
     transform: translateY(-2px);
 }
 
 .btn-nav:active {
-    background-color: var(--button-primary-active) !important;
-    color: #ffffff !important;
+    background-color: var(--button-primary-active);
     transform: translateY(0);
 }
 
@@ -209,21 +198,26 @@ html, body {
 
 /* ================================================
    BUTTON SPECIFICITY - Override .nav-links a styles
+   High-specificity selector ensures button appearance
    ================================================ */
 
 .nav-links a.btn-nav,
 .nav-links a.btn-nav:link,
-.nav-links a.btn-nav:visited,
-.nav-links a.btn-nav:hover,
-.nav-links a.btn-nav:active,
-.nav-links a.btn-nav:focus {
-    color: #ffffff !important;            /* wint van .nav-links a */
-    background-color: #0d47a1 !important;
-    -webkit-text-fill-color: #ffffff !important;  /* iOS Safari quirk */
+.nav-links a.btn-nav:visited {
+    color: #ffffff;
+    background-color: #0d47a1;
+    -webkit-text-fill-color: #ffffff !important;  /* iOS Safari quirk: KEEP */
 }
 
-.nav-links a.btn-nav:hover {
-    background-color: #0a3a7f !important;
+.nav-links a.btn-nav:hover,
+.nav-links a.btn-nav:focus {
+    background-color: #0a3a7f;
+    color: #ffffff;
+}
+
+.nav-links a.btn-nav:active {
+    background-color: #081e47;
+    color: #ffffff;
 }
 
 /* ================================================
@@ -237,36 +231,31 @@ html, body {
     align-items: center;
     width: 28px;
     height: 20px;
-    background: none !important;
+    background: none !important;  /* KEEP: utility class pattern */
     border: none;
     cursor: pointer;
     padding: 0;
     margin: 0;
-    
     flex-shrink: 0;
     z-index: 1001;
-    
-    /* Extra large touch target for thumbs on mobile */
     min-width: 48px;
     min-height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    /* Ensure always visible */
     position: relative;
+}
+
+.hamburger:focus {
+    outline: 2px solid var(--header-text-hover);
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 .hamburger span {
     display: block;
     width: 24px;
     height: 3px;
-    background-color: #000000 !important;
+    background-color: #000000;  /* removed !important: direct element style is specific enough */
     border-radius: 2px;
-    
-    /* Smooth animation */
     transition: var(--header-transition);
-    
     transform-origin: center center;
 }
 
@@ -283,11 +272,7 @@ html, body {
     transform: translateY(-8.75px) rotate(-45deg);
 }
 
-.hamburger:focus {
-    outline: 2px solid var(--header-text-hover);
-    outline-offset: 2px;
-    border-radius: 4px;
-}
+
 
 /* ================================================
    MOBILE MENU DROPDOWN (HIDDEN BY DEFAULT)
@@ -358,8 +343,8 @@ html, body {
     
     /* Button in mobile menu */
     .nav-links .btn-nav {
-        color: #ffffff !important;
-        background-color: var(--button-primary) !important;
+        color: #ffffff;  /* removed !important: specificity via .nav-links .btn-nav */
+        background-color: var(--button-primary);
         margin: 0.75rem var(--header-padding-x);
         padding: 0.75rem 1.5rem;
         width: calc(100% - 2rem);

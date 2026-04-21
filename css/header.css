@@ -52,15 +52,17 @@
     top: 0;
     z-index: 1000;
     
-    /* Glass-morphism effect */
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: var(--header-backdrop);
-    -webkit-backdrop-filter: var(--header-backdrop);
+    /* Forceer witte achtergrond op alle browsers (iOS Safari, Chrome, etc.) */
+    background-color: #ffffff !important;
+    background: #ffffff !important;
     
     border-bottom: 1px solid var(--header-border);
     box-shadow: var(--header-shadow);
     font-family: var(--header-font);
+    
+    /* Vaste hoogte voor volledige logo visibility */
     height: var(--header-height);
+    min-height: var(--header-height);
 }
 
 .nav__inner {
@@ -72,6 +74,9 @@
     padding: 0 var(--header-padding-x);
     height: 100%;
     gap: var(--header-gap);
+    
+    /* Ensure proper vertical centering on all devices */
+    min-height: var(--header-height);
 }
 
 /* ================================================
@@ -94,15 +99,20 @@
     /* Logo never wraps */
     white-space: nowrap;
     
-    /* Touch target minimum size */
-    min-height: 44px;
+    /* Spacious touch target minimum size */
+    min-height: 100%;
+    padding: 0 0.5rem;
+    
+    /* Ensure full visibility */
+    display: flex;
+    align-items: center;
 }
 
 .logo picture {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .logo img {
@@ -218,7 +228,7 @@
     align-items: center;
     width: 28px;
     height: 20px;
-    background: none;
+    background: none !important;
     border: none;
     cursor: pointer;
     padding: 0;
@@ -227,19 +237,22 @@
     flex-shrink: 0;
     z-index: 1001;
     
-    /* Better touch target */
-    min-width: 44px;
-    min-height: 44px;
+    /* Extra large touch target for thumbs on mobile */
+    min-width: 48px;
+    min-height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    /* Ensure always visible */
+    position: relative;
 }
 
 .hamburger span {
     display: block;
     width: 24px;
-    height: 2.5px;
-    background-color: var(--header-text);
+    height: 3px;
+    background-color: #000000 !important;
     border-radius: 2px;
     
     /* Smooth animation */
@@ -282,9 +295,11 @@
         align-items: stretch;
         gap: 0;
         
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: var(--header-backdrop);
-        -webkit-backdrop-filter: var(--header-backdrop);
+        /* Force white background on all mobile browsers */
+        background-color: #ffffff !important;
+        background: #ffffff !important;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
         
         border-bottom: 1px solid var(--header-border);
         padding: 0;
@@ -323,8 +338,9 @@
     
     .nav-links a {
         display: block;
-        padding: 1rem var(--header-padding-x);
+        padding: 1.2rem var(--header-padding-x);
         font-size: 15px;
+        font-weight: 500;
     }
     
     .nav-links a:active {

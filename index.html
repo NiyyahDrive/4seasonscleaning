@@ -841,8 +841,45 @@
             color: var(--color-ink);
         }
 
+        .team__benefits {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+
+        .team__benefit {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 500;
+            color: var(--color-body);
+            font-size: 1rem;
+        }
+
+        .team__benefit::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: var(--color-accent);
+            border-radius: 50%;
+        }
+
         @media (max-width: 760px) {
             .team { grid-template-columns: 1fr; }
+            
+            .team__benefits {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team__benefits {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* ============================================
@@ -1267,7 +1304,7 @@
             </div>
 
             <div class="hero__trust">
-                <span>✓ 5 jaar ervaring</span>
+                <span>✓ 12+ jaar ervaring</span>
                 <span>✓ Gratis plaatsbezoek</span>
             </div>
         </div>
@@ -1509,7 +1546,7 @@
                 <div style="font-size: 0.9rem; color: #666;">Tevreden klanten</div>
             </div>
             <div>
-                <div style="font-size: 2rem; font-weight: bold; color: #2563eb;">5+</div>
+                <div style="font-size: 2rem; font-weight: bold; color: #2563eb;">12+</div>
                 <div style="font-size: 0.9rem; color: #666;">Jaar ervaring</div>
             </div>
             <div>
@@ -1524,7 +1561,7 @@
     </section>
 
     <!-- ========== TEAM ========== -->
-    <section>
+    <section style="padding: 4rem 0;">
         <div class="team">
             <div class="team__photo">
                 <picture class="team-photo">
@@ -1534,12 +1571,21 @@
                 </picture>
             </div>
             <div>
-                <span class="team__role">Oprichter & Specialist sinds 2020</span>
-                <h2>Nabil — de man achter 4 Seasons</h2>
-                <p>Vijf jaar geleden startte ik met één doel: klanten een glazenwasser geven die <strong>doet wat hij zegt</strong>. Geen loze beloftes, geen halve facturen. Vandaag werk ik met een vast team, alle certificaten, en de modernste osmose-installatie in Vlaanderen.</p>
-                <p>Specialisaties: osmose-glasbewassing, zonnepaneelreiniging, gevel- en dakonderhoud. Werk in heel Antwerpen, Oost- en West-Vlaanderen.</p>
-                <blockquote class="team__quote">
-                    "Ik behandel elk pand alsof het van mezelf is. Dat is geen slogan — dat is gewoon de enige manier die werkt."
+                <span class="team__role">Oprichter & Expert — 12+ jaren ervaring</span>
+                <h2>Nabil — de man achter 4 Seasons Windowcleaning</h2>
+                
+                <p>In 2022 zette ik de stap naar zelfstandigheid, na meer dan 12 jaar ervaring in de sector. Een keuze waar ik tot vandaag geen seconde spijt van heb. Wat mij drijft? Rechtstreeks contact met de klant, duidelijke afspraken en werk afleveren waar ik zelf trots op ben. Geen tussenpersonen, geen gedoe — gewoon correct en eerlijk werk.</p>
+                
+                <p style="margin-top: 1.5rem; margin-bottom: 1.5rem;">Doorheen de jaren heb ik geleerd dat vertrouwen niet komt door mooie woorden, maar door consistent kwaliteit te leveren. Daarom behandel ik elke woning of zaak alsof het mijn eigen is.</p>
+
+                <div class="team__benefits">
+                    <div class="team__benefit">✔ Streeploze resultaten</div>
+                    <div class="team__benefit">✔ Correcte communicatie</div>
+                    <div class="team__benefit">✔ Afspraken die nagekomen worden</div>
+                </div>
+
+                <blockquote class="team__quote" style="margin-top: 2rem;">
+                    "Ik doe mijn werk niet om snel klaar te zijn, maar om het goed te doen. Dat verschil ziet u meteen."
                 </blockquote>
             </div>
         </div>

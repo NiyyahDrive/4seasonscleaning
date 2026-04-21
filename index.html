@@ -189,7 +189,14 @@
             letter-spacing: -0.01em;
         }
 
-        .logo img { height: 42px; width: auto; }
+        /* Logo styling controlled by header.css (STRICT override) */
+        .logo img {
+            height: 65px !important;
+            width: auto !important;
+            max-width: 300px !important;
+            display: block !important;
+            object-fit: contain !important;
+        }
 
         .nav-links {
             display: flex;

@@ -87,14 +87,9 @@ html, body {
 .logo {
     display: inline-flex;
     align-items: center;
+    flex-shrink: 0;
     text-decoration: none;
-    color: #000000;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    flex: 0 0 auto;
-    min-width: 0;
     padding: 0;
-    white-space: nowrap;
     overflow: visible;
     order: -1;
 }
@@ -102,20 +97,22 @@ html, body {
 .logo picture {
     display: inline-flex;
     align-items: center;
-    margin: 0;
-    padding: 0;
-    overflow: visible;
+    line-height: 0;
 }
 
 .logo img {
-    height: auto;
-    width: auto;
-    max-width: 100%;
-    max-height: 60px;
     display: block;
+    width: auto;
+    height: auto;
+    max-height: 50px;    /* Mobile default */
+    max-width: 160px;
     object-fit: contain;
-    image-rendering: crisp-edges;
-    transition: transform 0.2s ease;
+    object-position: left center;
+    transition: opacity 0.2s ease;
+}
+
+.logo:hover img {
+    opacity: 0.85;
 }
 
 .logo:hover img {
@@ -386,7 +383,8 @@ html, body {
     }
     
     .logo img {
-        max-height: 60px;
+        max-height: 55px;
+        max-width: 180px;
     }
 }
 
@@ -412,6 +410,7 @@ html, body {
     
     .logo img {
         max-height: 65px;
+        max-width: 220px;
     }
     
     /* Desktop: Full navigation */

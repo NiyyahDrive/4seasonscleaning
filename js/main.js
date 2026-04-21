@@ -121,26 +121,6 @@ function initContactForm() {
 
         // Get form data
         const formData = new FormData(form);
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            phone: formData.get('phone'),
-            service: formData.get('service'),
-            message: formData.get('message'),
-            timestamp: new Date().toISOString()
-        };
-
-        // Basic validation
-        if (!data.name || !data.email || !data.service || !data.message) {
-            showNotification('Vul alstublieft alle verplichte velden in', 'error');
-            return;
-        }
-
-        // Email validation
-        if (!isValidEmail(data.email)) {
-            showNotification('Voer alstublieft een geldig e-mailadres in', 'error');
-            return;
-        }
 
         // Show loading state
         const submitBtn = form.querySelector('button[type="submit"]');
@@ -148,26 +128,31 @@ function initContactForm() {
         submitBtn.textContent = 'Verzenden...';
         submitBtn.disabled = true;
 
-        // Simulate form submission (in production, send to backend)
         try {
-            await new Promise(resolve => setTimeout(resolve, 1500));
+            // Send form data to PHP backend
+            const response = await fetch(form.action || 'contact.php', {
+                method: 'POST',
+                body: formData
+            });
 
-            // Log data (in production, send to API)
-            console.log('Form submitted:', data);
+            const result = await response.json();
 
-            // Show success message
-            showNotification('Bedankt! We nemen snel contact met je op.', 'success');
+            if (response.ok) {
+                // Show success message
+                showNotification(result.message || 'Bedankt! We nemen snel contact met je op.', 'success');
 
-            // Reset form
-            form.reset();
-
-            // Restore button
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
+                // Reset form
+                form.reset();
+            } else {
+                // Show error message from server
+                showNotification(result.message || 'Er is iets misgegaan. Probeer later opnieuw.', 'error');
+            }
 
         } catch (error) {
-            console.error('Error:', error);
-            showNotification('Er is iets misgegaan. Probeer later opnieuw.', 'error');
+            console.error('Form submission error:', error);
+            showNotification('Er is iets misgegaan. Controleer je internetverbinding en probeer opnieuw.', 'error');
+        } finally {
+            // Restore button
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
         }

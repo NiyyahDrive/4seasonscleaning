@@ -81,9 +81,10 @@ html, body {
 }
 
 /* ================================================
-   LOGO STYLING - mobile first, hoogte-gestuurd
-   Ratio logo: 340×191 (1.78:1)
-   h=50px → b≈89px | h=55px → b≈98px | h=60px → b≈107px
+   LOGO STYLING - mobile first
+   Logo ratio: 340×191 (1.78:1)
+   Probleem: style.css zet picture { width: 100% } en picture img { width: 100% }
+   Fix: width: auto op .logo overschrijft dit; height op img bepaalt de grootte
    ================================================ */
 
 .logo {
@@ -91,16 +92,17 @@ html, body {
     order: -1;
     display: block;
     line-height: 0;
+    width: auto;        /* Overschrijft picture { width: 100% } uit style.css */
 }
 
-/* picture.logo img is specifieker (0,1,2) dan enkel .logo img (0,1,1)
-   zodat het wint van eventuele overblijvende stijlen */
+/* Hogere specificiteit (0,1,2) wint van picture img (0,0,2) uit style.css */
 picture.logo img {
     display: block;
-    height: 50px;   /* Mobile: past in 75px header */
+    height: 48px;       /* Mobile: 75px header → logo 48px, ruimte voor padding */
     width: auto;
-    max-width: none;
+    max-width: none;    /* Overschrijft img { max-width: 100% } */
     max-height: none;
+    object-fit: unset;
 }
 /* ================================================
    NAVIGATION LINKS (MOBILE - HIDDEN BY DEFAULT)
@@ -357,11 +359,13 @@ picture.logo img {
     .logo {
         flex: 0 0 auto;
         order: -1;
+        width: auto;
     }
 
     picture.logo img {
-        height: 55px;   /* Tablet: past in 80px header */
+        height: 54px;   /* Tablet: past in 80px header */
         width: auto;
+        max-width: none;
     }
 }
 
@@ -379,11 +383,13 @@ picture.logo img {
     .logo {
         flex: 0 0 auto;
         order: -1;
+        width: auto;
     }
 
     picture.logo img {
         height: 60px;   /* Desktop: past in 85px header */
         width: auto;
+        max-width: none;
     }
 
     /* Desktop: Full navigation */

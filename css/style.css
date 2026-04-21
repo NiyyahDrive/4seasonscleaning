@@ -146,6 +146,17 @@ picture img {
     box-shadow: var(--shadow-lg);
 }
 
+/* ================================================
+   ANCHOR BUTTON PRIMARY - Ensure white text
+   ================================================ */
+
+a.btn.btn-primary,
+a.btn-primary {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background-color: #2563eb !important;
+}
+
 .btn-secondary {
     display: inline-block;
     background-color: var(--accent-color);

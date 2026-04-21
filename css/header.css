@@ -101,13 +101,14 @@ html, body {
     overflow: visible;
 }
 
-/* Logo: height-driven scaling, width always auto — never cropped */
+/* Logo: width-driven scaling — volledige breedte altijd zichtbaar, hoogte schaalt mee */
 .logo img {
     display: block;
-    height: 50px;
-    width: auto;
+    width: 120px;
+    height: auto;
     max-width: none;
-    object-fit: contain;
+    max-height: none;
+    object-fit: unset;
     transition: opacity 0.2s ease;
 }
 
@@ -379,9 +380,10 @@ html, body {
     }
     
     .logo img {
-        height: 55px;
-        width: auto;
+        width: 130px;
+        height: auto;
         max-width: none;
+        max-height: none;
     }
 }
 
@@ -406,9 +408,10 @@ html, body {
     }
     
     .logo img {
-        height: 62px;
-        width: auto;
+        width: 140px;
+        height: auto;
         max-width: none;
+        max-height: none;
     }
     
     /* Desktop: Full navigation */

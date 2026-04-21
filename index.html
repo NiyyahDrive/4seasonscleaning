@@ -1135,6 +1135,17 @@
             }
             html { scroll-behavior: auto; }
         }
+
+        /* Review button - Enhanced contrast & hover */
+        a[href*="g.page/4seasonscleaning/review"]:hover {
+            background-color: #153a8a !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(30, 64, 175, 0.4) !important;
+        }
+
+        a[href*="g.page/4seasonscleaning/review"]:active {
+            transform: translateY(0);
+        }
     </style>
 
     <!-- Stylesheets loaded in order (header.css LAST for highest specificity) -->
@@ -1522,7 +1533,7 @@
         <div style="text-align: center; max-width: 700px; margin: 3rem auto 0; padding: 0 1rem;">
             <h3 style="font-size: 1.5rem; color: var(--neutral-dark); margin-bottom: 1rem; font-weight: 700;">Tevreden over ons werk?</h3>
             <p style="font-size: 1rem; color: var(--neutral-gray); margin-bottom: 2rem; line-height: 1.7;">Laat een review achter op Google en help ons groeien. Jouw feedback is goud waard voor ons team!</p>
-            <a href="https://g.page/4seasonscleaning/review" target="_blank" rel="noopener" class="btn btn-primary" style="display: inline-block; background-color: var(--primary-color); color: #ffffff; padding: 0.85rem 2.2rem; border-radius: 8px; font-weight: 600; font-size: 1rem; text-decoration: none; box-shadow: 0 2px 8px rgba(37, 99, 235, 0.12);">Schrijf een review ⭐</a>
+            <a href="https://g.page/4seasonscleaning/review" target="_blank" rel="noopener" class="btn btn-primary" style="display: inline-block; background-color: #1e40af; color: #ffffff; padding: 0.85rem 2.2rem; border-radius: 8px; font-weight: 700; font-size: 1.05rem; text-decoration: none; box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3); transition: all 0.3s ease; border: 2px solid #1e40af;">Schrijf een review ⭐</a>
         </div>
     </section>
 

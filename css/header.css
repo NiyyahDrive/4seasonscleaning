@@ -81,45 +81,14 @@ html, body {
 }
 
 /* ================================================
-   LOGO STYLING & IMAGE OPTIMIZATION
+   LOGO STYLING
    ================================================ */
 
 .logo {
-    display: flex;
-    align-items: center;
     flex-shrink: 0;
-    text-decoration: none;
-    padding: 0;
-    overflow: visible;
     order: -1;
-}
-
-.logo picture {
-    display: flex;
-    align-items: center;
-    line-height: 0;
-    overflow: visible;
-}
-
-/* Logo: width-driven scaling — volledige breedte altijd zichtbaar, hoogte schaalt mee */
-.logo img {
     display: block;
-    width: 120px;
-    height: auto;
-    max-width: none;
-    max-height: none;
-    object-fit: unset;
-    transition: opacity 0.2s ease;
-}
-
-.logo:hover img {
-    opacity: 0.85;
-}
-
-.logo:focus {
-    outline: 2px solid var(--header-text-hover);
-    outline-offset: 2px;
-    border-radius: 4px;
+    line-height: 0;
 }
 
 /* ================================================
@@ -378,13 +347,6 @@ html, body {
         flex: 0 0 auto;
         order: -1;
     }
-    
-    .logo img {
-        width: 130px;
-        height: auto;
-        max-width: none;
-        max-height: none;
-    }
 }
 
 /* ================================================
@@ -405,13 +367,6 @@ html, body {
     .logo {
         flex: 0 0 auto;
         order: -1;
-    }
-    
-    .logo img {
-        width: 140px;
-        height: auto;
-        max-width: none;
-        max-height: none;
     }
     
     /* Desktop: Full navigation */

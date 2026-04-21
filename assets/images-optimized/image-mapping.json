@@ -225,6 +225,56 @@
     ]
   },
   {
+    "filename": "Koepels-3.jpg",
+    "baseName": "Koepels-3",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepels-3-340w.jpg",
+        "webp": "Koepels-3-340w.webp",
+        "avif": "Koepels-3-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepels-3-768w.jpg",
+        "webp": "Koepels-3-768w.webp",
+        "avif": "Koepels-3-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepels-3-1440w.jpg",
+        "webp": "Koepels-3-1440w.webp",
+        "avif": "Koepels-3-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Koepels-4.jpg",
+    "baseName": "Koepels-4",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepels-4-340w.jpg",
+        "webp": "Koepels-4-340w.webp",
+        "avif": "Koepels-4-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepels-4-768w.jpg",
+        "webp": "Koepels-4-768w.webp",
+        "avif": "Koepels-4-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepels-4-1440w.jpg",
+        "webp": "Koepels-4-1440w.webp",
+        "avif": "Koepels-4-1440w.avif"
+      }
+    ]
+  },
+  {
     "filename": "Koepels.jpg",
     "baseName": "Koepels",
     "type": "default",
@@ -284,6 +334,50 @@
         "jpg": "Nabil-team-350w.jpg",
         "webp": "Nabil-team-350w.webp",
         "avif": "Nabil-team-350w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Nabil-working.jpg",
+    "baseName": "Nabil-working",
+    "type": "team",
+    "variants": [
+      {
+        "width": 280,
+        "jpg": "Nabil-working-280w.jpg",
+        "webp": "Nabil-working-280w.webp",
+        "avif": "Nabil-working-280w.avif"
+      },
+      {
+        "width": 350,
+        "jpg": "Nabil-working-350w.jpg",
+        "webp": "Nabil-working-350w.webp",
+        "avif": "Nabil-working-350w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "PoolCover-Aerial.jpg",
+    "baseName": "PoolCover-Aerial",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "PoolCover-Aerial-340w.jpg",
+        "webp": "PoolCover-Aerial-340w.webp",
+        "avif": "PoolCover-Aerial-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "PoolCover-Aerial-768w.jpg",
+        "webp": "PoolCover-Aerial-768w.webp",
+        "avif": "PoolCover-Aerial-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "PoolCover-Aerial-1440w.jpg",
+        "webp": "PoolCover-Aerial-1440w.webp",
+        "avif": "PoolCover-Aerial-1440w.avif"
       }
     ]
   },

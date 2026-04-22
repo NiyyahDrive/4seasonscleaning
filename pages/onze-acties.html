@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Speciale acties van 4 Seasons Cleaning — 50% korting voor nieuwe klanten op uw eerste wasbeurt bij periodiek onderhoud.">
+    <meta name="theme-color" content="#0d47a1">
+    <title>Onze Acties | 50% Korting | 4 Seasons Cleaning</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="../assets/favicons/site.webmanifest">
+
+    <!-- Preconnect voor performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_BE">
+    <meta property="og:site_name" content="4 Seasons Cleaning">
+    <meta property="og:title" content="Onze Acties | 50% Korting | 4 Seasons Cleaning">
+    <meta property="og:description" content="50% korting voor nieuwe klanten op uw eerste wasbeurt bij periodiek onderhoud.">
+    <meta property="og:image" content="https://4seasonscleaning.be/assets/images-optimized/4seasonslogo_en.jpeg">
+    <meta property="og:url" content="https://4seasonscleaning.be/pages/onze-acties.html">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Onze Acties | 50% Korting | 4 Seasons Cleaning">
+    <meta name="twitter:description" content="50% korting voor nieuwe klanten op uw eerste wasbeurt bij periodiek onderhoud.">
+    <meta name="twitter:image" content="https://4seasonscleaning.be/assets/images-optimized/4seasonslogo_en.jpeg">
+
+    <style>
+        /* ============================================
+           DESIGN TOKENS (CSS Custom Properties)
+           ============================================ */
+        :root {
+            --color-primary: #0d47a1;
+            --color-primary-light: #1a73e8;
+            --color-accent: #FF6B35;
+            --color-accent-dark: #E55A25;
+            --color-ink: #1a1a2e;
+            --color-body: #334155;
+            --color-muted: #64748b;
+            --color-line: #e2e8f0;
+            --color-soft: #f8fafc;
+            --color-bg: #ffffff;
+
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+
+            --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+            --shadow-md: 0 6px 18px rgba(15, 23, 42, 0.08);
+            --shadow-lg: 0 18px 40px rgba(15, 23, 42, 0.12);
+
+            --maxw: 1200px;
+            --gutter: clamp(1rem, 3vw, 2rem);
+
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            font-size: 17px;
+            line-height: 1.65;
+            color: var(--color-body);
+            background: var(--color-bg);
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-ink);
+            font-weight: 700;
+            line-height: 1.3;
+            letter-spacing: -0.02em;
+        }
+
+        h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1rem; }
+        h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: 0.75rem; }
+        h3 { font-size: clamp(1.1rem, 2vw, 1.5rem); margin-bottom: 0.5rem; }
+
+        p { margin-bottom: 1rem; }
+
+        .eyebrow {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.6rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: none;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #0b3d91;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-accent {
+            background: var(--color-accent);
+            color: #fff;
+        }
+
+        .btn-accent:hover {
+            background: var(--color-accent-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ============================================
+           SECTION HEADER
+           ============================================ */
+        .section-head {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto clamp(2rem, 6vw, 4rem);
+            padding: 0 var(--gutter);
+        }
+
+        .section-head h2 {
+            margin-bottom: 1rem;
+        }
+
+        /* ============================================
+           PAGE SECTIONS
+           ============================================ */
+        section {
+            padding: clamp(2rem, 8vw, 4rem) var(--gutter);
+        }
+
+        /* ============================================
+           HERO / INTRO SECTION
+           ============================================ */
+        .intro {
+            background: linear-gradient(135deg, #0b3d91, #1a73e8);
+            color: #fff;
+            text-align: center;
+        }
+
+        .intro__content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .intro h1 {
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro p {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            line-height: 1.7;
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 1.5rem;
+        }
+
+        .intro .highlight {
+            display: inline-block;
+            background: var(--color-accent);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        /* ============================================
+           PRICING CARDS GRID
+           ============================================ */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border: 2px solid var(--color-line);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--color-accent);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pricing-card__image {
+            width: 100%;
+            height: 300px;
+            display: block;
+            background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+        }
+        
+        .pricing-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .pricing-card__content {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card__heading {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--color-ink);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pricing-card__prices {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--color-line);
+        }
+
+        .pricing-card__original {
+            font-size: 0.95rem;
+            color: var(--color-muted);
+            text-decoration: line-through;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .pricing-card__discount {
+            font-size: 0.85rem;
+            color: var(--color-accent);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .pricing-card__price {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 800;
+            color: var(--color-accent);
+            line-height: 1;
+        }
+
+        .pricing-card__price-label {
+            font-size: 0.9rem;
+            color: var(--color-muted);
+            font-weight: 400;
+        }
+
+        .pricing-card__description {
+            font-size: 0.95rem;
+            color: var(--color-body);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .pricing-card__cta {
+            align-self: flex-start;
+        }
+
+        /* ============================================
+           EXTRA INFO SECTION
+           ============================================ */
+        .info-section {
+            background: var(--color-soft);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: var(--maxw);
+            margin: 0 auto;
+        }
+
+        .info-item {
+            padding: 2rem;
+            background: #fff;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .info-item h3 {
+            color: var(--color-ink);
+            margin-bottom: 0.75rem;
+        }
+
+        .info-item p {
+            color: var(--color-body);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* ============================================
+           CTA SECTION
+           ============================================ */
+        .cta-section {
+            background: linear-gradient(135deg, #0b3d91, #1a73e8);
+            color: #fff;
+            text-align: center;
+            border-radius: var(--radius-lg);
+            margin-top: 3rem;
+            padding: 3rem 2rem;
+        }
+
+        .cta-section h2 {
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.95);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .pricing-card__image {
+                height: 250px;
+            }
+
+            .pricing-card__content {
+                padding: 1.5rem;
+            }
+
+            .pricing-card__heading {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+
+            h1 {
+                font-size: clamp(1.5rem, 5vw, 2rem);
+            }
+
+            .intro p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+        }
+
+        /* ============================================
+           FLOATING BUTTON FOR 50% Korting
+           ============================================ */
+        .float-promo {
+            position: fixed;
+            bottom: 1.25rem;
+            right: 1.25rem;
+            background: var(--color-accent);
+            color: #fff;
+            padding: 0.75rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 8px 24px rgba(255, 107, 53, 0.4);
+            z-index: 90;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        .float-promo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 32px rgba(255, 107, 53, 0.5);
+        }
+
+        @media (max-width: 640px) {
+            .float-promo {
+                bottom: 1rem;
+                right: 1rem;
+                padding: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="../css/header.css?v=7">
+    <link rel="stylesheet" href="../css/floating-button.css?v=1">
+</head>
+<body>
+
+    <!-- ========== NAVIGATION ========== -->
+    <header class="nav">
+        <div class="nav__inner">
+            <!-- Logo Button -->
+            <a href="../index.html" class="navbar-brand logo-button">
+                <img src="../assets/images-optimized/4seasonslogo_en.jpeg" alt="4 Seasons Window Cleaning - Professionele raam- en gevelreiniging" loading="eager">
+            </a>
+
+            <!-- Hamburger Menu: Visible only on mobile (<768px) -->
+            <button class="hamburger" id="menuToggle" aria-label="Navigatiemenu openen" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <!-- Navigation Links: Hidden on mobile, visible on tablet+ -->
+            <ul class="nav-links" id="navMenu">
+                <li><a href="../index.html#diensten">Diensten</a></li>
+                <li><a href="../index.html#waarom">Waarom ons</a></li>
+                <li><a href="../index.html#reviews">Reviews</a></li>
+                <li class="nav-highlight"><a href="onze-acties.html">Onze Acties <span class="floating-label">50% Korting</span></a></li>
+                <li><a href="realisaties.html">Realisaties</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="btn-nav">Gratis offerte</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ========== INTRO SECTION ========== -->
+    <section class="intro">
+        <div class="intro__content">
+            <span class="eyebrow" style="color: #fff; text-transform: none; font-size: 1rem; margin-bottom: 0.5rem;">🎉 Beperkte tijd</span>
+            <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem; margin-bottom: 1.5rem; font-weight: 500;">Geldig t/m 31 juli 2026!</p>
+            <h1>Onze Acties</h1>
+            <p style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 1rem;">
+                <strong>Een woning die weer blinkt?</strong>
+            </p>
+            <p style="font-size: 1rem; color: rgba(255,255,255,0.95); margin-bottom: 1.5rem; line-height: 1.75;">
+                Bij 4 Seasons lappen we niet alleen uw ramen. We maken standaard ook uw omlijstingen en dorpels mee proper. Geen half werk — maar een resultaat waar u trots op bent.
+            </p>
+            <p style="font-size: 1.05rem; color: rgba(255,255,255,0.9); font-weight: 600;">
+                Als nieuwe klant geniet u van <span class="highlight">50% korting</span> op uw eerste wasbeurt bij periodiek onderhoud.
+            </p>
+            <p style="font-size: 0.95rem; color: rgba(255,255,255,0.85); margin-top: 1.5rem;">
+                ✓ Ramen • Omlijstingen • Dorpels — STANDAARD inbegrepen! • ✓ Geen verborgen kosten • ✓ Gratis plaatsbezoek
+            </p>
+        </div>
+    </section>
+
+    <!-- ========== PRICING CARDS ========== -->
+    <section>
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--color-ink);">Professionele ruitenwassen in Vlaanderen</h2>
+            <p style="font-size: 1.05rem; color: var(--color-body); max-width: 800px; margin: 0 auto;">Onze 50% korting is beschikbaar voor ramen, dorpels, omlijstingen en alle bereikbare onderdelen. Met traditionele methodes en modern osmose-technologie.</p>
+        </div>
+        <div class="pricing-grid">
+            <!-- Rijstshuis Card -->
+            <div class="pricing-card">
+                <picture class="pricing-card__image">
+                    <source srcset="../assets/images-optimized/Rijtjeshuis_Promo.avif" type="image/avif">
+                    <source srcset="../assets/images-optimized/Rijtjeshuis_Promo.webp" type="image/webp">
+                    <img src="../assets/images-optimized/Rijtjeshuis_Promo.jpeg" 
+                         alt="Professionele ruitenwassen Antwerpen — Rijtjeshuis reiniging door 4 Seasons" 
+                         loading="lazy">
+                </picture>
+                <div class="pricing-card__content">
+                    <h3 class="pricing-card__heading">🏠 Rijwoning</h3>
+                    <div class="pricing-card__prices">
+                        <span class="pricing-card__original">Normale prijs: €48</span>
+                        <span class="pricing-card__discount">Na 50% korting:</span>
+                        <div>
+                            <span class="pricing-card__price">€24</span>
+                            <span class="pricing-card__price-label">eerste wasbeurt</span>
+                        </div>
+                    </div>
+                    <p class="pricing-card__description">
+                        Volledige ruitenwassen (binnen en buiten) voor een typische rijwoning. 
+                        Inclusief kozijnen, dorpels, omlijstingen en bereikbare ramen. Op de traditionele manier ramenreiniging of werken met osmose-technologie 
+                        voor een resultaat dat langer schoon blijft. Ramen, dorpels en omlijstingen worden grondige gereinigd.
+                    </p>
+                    <a href="contact.html" class="btn btn-accent pricing-card__cta">Maak een afspraak</a>
+                </div>
+            </div>
+
+            <!-- Vrijstaand Huis Card -->
+            <div class="pricing-card">
+                <picture class="pricing-card__image">
+                    <source srcset="../assets/images-optimized/Vrijstaand_Promo.avif" type="image/avif">
+                    <source srcset="../assets/images-optimized/Vrijstaand_Promo.webp" type="image/webp">
+                    <img src="../assets/images-optimized/Vrijstaand_Promo.jpeg" 
+                         alt="Professionele ramen- en dakgoten reiniging Vlaanderen — Vrijstaande woning door 4 Seasons" 
+                         loading="lazy">
+                </picture>
+                <div class="pricing-card__content">
+                    <h3 class="pricing-card__heading">🏡 Vrijstaande woning</h3>
+                    <div class="pricing-card__prices">
+                        <span class="pricing-card__original">Normale prijs: €68</span>
+                        <span class="pricing-card__discount">Na 50% korting:</span>
+                        <div>
+                            <span class="pricing-card__price">€34</span>
+                            <span class="pricing-card__price-label">eerste wasbeurt</span>
+                        </div>
+                    </div>
+                    <p class="pricing-card__description">
+                        Volledige ruitenwassen voor een vrijstaande woning met meer ramen 
+                        en bereikbare delen. Inclusief dorpels, omlijstingen, dakvensters en alle zijkanten. 
+                        Op de traditionele manier ramenreiniging of werken met osmose-technologie. Dakgoten, omlijstingen en dorpels krijgen speciale aandacht voor maximale duurzaamheid en helderheid.
+                    </p>
+                    <a href="contact.html" class="btn btn-accent pricing-card__cta">Maak een afspraak</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHAT'S INCLUDED CHECKLIST ========== -->
+    <section style="background: var(--color-soft); padding: 3rem var(--gutter); margin: 3rem 0;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--color-ink);">Wat zit in uw ruitenwassen?</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div style="background: #fff; padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-left: 4px solid var(--color-primary);">
+                    <h3 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: 0.75rem;">✓ Professionele ruitenwassen</h3>
+                    <p style="color: var(--color-body); font-size: 0.95rem;">Traditioneel of met osmose-technologie — het resultaat is altijd helder, schoon én duurzaam.</p>
+                </div>
+                <div style="background: #fff; padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-left: 4px solid var(--color-primary);">
+                    <h3 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: 0.75rem;">✓ Omlijstingen & dorpels</h3>
+                    <p style="color: var(--color-body); font-size: 0.95rem;"><strong>STANDAARD inbegrepen!</strong> Geen half werk — alles wordt proper gemaakt.</p>
+                </div>
+                <div style="background: #fff; padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-left: 4px solid var(--color-primary);">
+                    <h3 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: 0.75rem;">✓ Kwalitatief vakwerk gegarandeerd</h3>
+                    <p style="color: var(--color-body); font-size: 0.95rem;">Ons team werkt stipt en zorgvuldig. Uw glimlach is onze beste reclame.</p>
+                </div>
+                <div style="background: #fff; padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-left: 4px solid var(--color-accent);">
+                    <h3 style="color: var(--color-accent); font-size: 1.1rem; margin-bottom: 0.75rem;">✓ Gratis plaatsbezoek & heldere offerte</h3>
+                    <p style="color: var(--color-body); font-size: 0.95rem;">We inventariseren alles zonder verplichtingen. Transparant van begin tot eind.</p>
+                </div>
+                <div style="background: #fff; padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-left: 4px solid var(--color-accent);">
+                    <h3 style="color: var(--color-accent); font-size: 1.1rem; margin-bottom: 0.75rem;">✓ Geen verrassingsfactuur</h3>
+                    <p style="color: var(--color-body); font-size: 0.95rem;">Wat u ziet in de offerte is wat u betaalt. Geen meerwerk zonder medeweten.</p>
+                </div>
+                <div style="background: #fff; padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border-left: 4px solid var(--color-accent);">
+                    <h3 style="color: var(--color-accent); font-size: 1.1rem; margin-bottom: 0.75rem;">✓ Periodiek onderhoud</h3>
+                    <p style="color: var(--color-body); font-size: 0.95rem;">Met regelmatig onderhoud blijft alles jaren langer in topconditie.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EXTRA DIENSTEN SECTION ========== -->
+    <section style="padding: 3rem var(--gutter); margin: 3rem 0;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="color: var(--color-ink); margin-bottom: 1rem;">U kunt bij ons ook terecht voor:</h2>
+                <p style="color: var(--color-body); font-size: 1.05rem; max-width: 700px; margin: 0 auto;">Wij zijn gespecialiseerd in veel meer dan ramen. Kies voor een compleet onderhoudspakket en geniet van dezelfde kwaliteit en professionalism.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+                <div style="background: #fff; padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-md); text-align: center; border-top: 3px solid var(--color-primary);">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--color-ink);">🌧️ Dakgoten & corniches</h3>
+                    <p style="color: var(--color-body); font-size: 0.95rem;">Voorkom waterschade. Goed onderhouden goten blijven langer intact en beschermen uw woning.</p>
+                </div>
+                <div style="background: #fff; padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-md); text-align: center; border-top: 3px solid var(--color-primary);">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--color-ink);">🪟 Rolluiken & koepels</h3>
+                    <p style="color: var(--color-body); font-size: 0.95rem;">Compleet raamonderhoud — alle details buiten en binnenaf. Alles wordt proper en schoon.</p>
+                </div>
+                <div style="background: #fff; padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-md); text-align: center; border-top: 3px solid var(--color-primary);">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--color-ink);">🏢 Gevel- & voetpadreiniging</h3>
+                    <p style="color: var(--color-body); font-size: 0.95rem;">Grondige reiniging van uw hele buitenkant. Uw woning ziet er weer uit als nieuw.</p>
+                </div>
+                <div style="background: #fff; padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-md); text-align: center; border-top: 3px solid var(--color-accent);">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--color-ink);">☀️ Zonnepanelen & dakontmossing</h3>
+                    <p style="color: var(--color-body); font-size: 0.95rem;">Sterke bescherming tegen erosie en waterschade. Laat uw dak proper en veilig!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EXTRA INFO SECTION ========== -->
+    <section class="info-section">
+        <div class="section-head">
+            <span class="eyebrow">Wat is inbegrepen?</span>
+            <h2>Alles wat u moet weten over deze aanbieding</h2>
+        </div>
+        <div class="info-grid">
+            <div class="info-item">
+                <h3>Voorwaarden</h3>
+                <p>50% korting geldt voor nieuwe klanten bij periodiek onderhoud (minimaal 2 bezoeken per jaar). Geen verborgen kosten — wat u ziet is wat u betaalt.</p>
+            </div>
+            <div class="info-item">
+                <h3>Hoe werkt het?</h3>
+                <p>Bel ons of vraag een gratis offerte aan. Wij bespreken uw volledige schoonmaakpakket: ramen, dorpels, omlijstingen en eventuele extra diensten. Daarna maken we een heldere offerte. Akkoord? Dan plannen we uw eerste beurt in!</p>
+            </div>
+            <div class="info-item">
+                <h3>Geen verborgen kosten</h3>
+                <p>De prijs in uw offerte is de prijs die u betaalt. Geen verrassingen. Geen meerwerk zonder medeweten. Dat is onze belofte.</p>
+            </div>
+            <div class="info-item">
+                <h3>Gratis Plaatsbezoek</h3>
+                <p>Ons eerste bezoek is gratis en vrijblijvend. Wij inventariseren uw ramen, kozijnen, dorpels en omlijstingen zonder verplichtingen. Inspecteren we ook dakgoten? Absoluut, als die bereikbaar zijn.</p>
+            </div>
+            <div class="info-item">
+                <h3>Wanneer kan het?</h3>
+                <p>Maandag tot zaterdag van 08:00 tot 20:00 uur. Bij extreme vorst (onder -2°C) verschuiven we de afspraak automatisch.</p>
+            </div>
+            <div class="info-item">
+                <h3>Waarom periodiek onderhoud?</h3>
+                <p>Ramen en zonnepanelen verouderen sneller zonder onderhoud. Met periodiek onderhoud bespaart u op kostelijke herstellingen en blijft alles jarenlang in topconditie.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA SECTION ========== -->
+    <section class="cta-section">
+        <h2>Klaar voor een propere en schone omgeving?</h2>
+        <p style="font-size: 1.05rem; margin-bottom: 1.5rem;">Geen verplichtingen. Gratis offerte in 24 uur.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center;">
+            <a href="contact.html" class="btn btn-primary" style="margin-top: 0;">Vraag uw gratis offerte aan</a>
+            <a href="tel:+32495219921" class="btn btn-accent" style="margin-top: 0;">📞 Bel +32 495 21 99 21</a>
+            <a href="https://wa.me/32495219921?text=Hallo%204%20Seasons%20-%20Ik%20ben%20geïnteresseerd%20in%20de%2050%25%20korting" class="btn" style="background: #25D366; color: #fff; margin-top: 0;">💬 WhatsApp ons</a>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer style="background: #0b1220; color: #cbd5e1; padding: 3rem var(--gutter) 1.5rem; margin-top: 4rem;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <div>
+                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">4 Seasons Cleaning</h3>
+                    <p style="color: #94a3b8; font-size: 0.9rem;">Professionele ramen- en gevelreiniging in Vlaanderen sinds 2011.</p>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 0.9rem;">Diensten</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 0.45rem; font-size: 0.9rem;"><a href="../index.html#diensten" style="color: #94a3b8; text-decoration: none;">Ruitenwassen</a></li>
+                        <li style="margin-bottom: 0.45rem; font-size: 0.9rem;"><a href="../index.html#diensten" style="color: #94a3b8; text-decoration: none;">Zonnepanelen</a></li>
+                        <li style="margin-bottom: 0.45rem; font-size: 0.9rem;"><a href="../index.html#diensten" style="color: #94a3b8; text-decoration: none;">Gevelreiniging</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 0.9rem;">Informatie</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 0.45rem; font-size: 0.9rem;"><a href="realisaties.html" style="color: #94a3b8; text-decoration: none;">Realisaties</a></li>
+                        <li style="margin-bottom: 0.45rem; font-size: 0.9rem;"><a href="privacy.html" style="color: #94a3b8; text-decoration: none;">Privacybeleid</a></li>
+                        <li style="margin-bottom: 0.45rem; font-size: 0.9rem;"><a href="contact.html" style="color: #94a3b8; text-decoration: none;">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 0.9rem;">Contact</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 0.45rem; font-size: 0.9rem;"><a href="tel:+32495219921" style="color: #94a3b8; text-decoration: none;">📞 +32 (0)495 21 99 21</a></li>
+                        <li style="margin-bottom: 0.45rem; font-size: 0.9rem;"><a href="mailto:info@4seasonscleaning.be" style="color: #94a3b8; text-decoration: none;">info@4seasonscleaning.be</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding-top: 1.25rem; font-size: 0.82rem; color: var(--color-muted); flex-wrap: wrap;">
+                <p>&copy; 2026 4 Seasons Cleaning. Alle rechten voorbehouden.</p>
+                <a href="terms.html" style="color: #94a3b8; text-decoration: none;">Algemene Voorwaarden</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/32495219921?text=Hallo%204%20Seasons%20-%20Ik%20ben%20geïnteresseerd%20in%20de%20speciale%20aanbieding" 
+       class="float-wa" 
+       style="position: fixed; bottom: 90px; right: 1.25rem; width: 56px; height: 56px; background: #25D366; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 8px 24px rgba(37,211,102,0.4); z-index: 89; text-decoration: none; transition: transform 0.2s ease;"
+       title="Chat op WhatsApp">
+        💬
+    </a>
+
+    <!-- Header Script -->
+    <script src="../js/floating-button.js"></script>
+    <script src="../js/main.js"></script>
+    
+    <!-- Initialize Floating Promo Button -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.floatingPromoButton = new FloatingPromoButto({
+                text: '50% Korting',
+                subtext: 'Nieuwe klanten',
+                link: 'onze-acties.html',
+                showOnScroll: false
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onze Acties - Nav Menu Design Options</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            padding: 3rem 2rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+            font-size: 0.95rem;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .option {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .option:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        .option-label {
+            background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+            color: white;
+            padding: 1rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .option-demo {
+            padding: 2rem;
+            background: #f9f9f9;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-demo {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .nav-item {
+            font-size: 0.9rem;
+            color: #333;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .option-description {
+            padding: 1rem;
+            border-top: 1px solid #eee;
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* ========== OPTION 1: Badge with Percentage ========== */
+        .option1 .nav-item.active {
+            font-weight: 600;
+            color: #0d47a1;
+        }
+
+        .option1 .badge {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.25rem 0.5rem;
+            border-radius: 3px;
+            margin-left: 0.5rem;
+            vertical-align: super;
+        }
+
+        /* ========== OPTION 2: Pulsing Highlight ========== */
+        .option2 .nav-item.active {
+            font-weight: 600;
+            color: white;
+            background: #ff6b35;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(255, 107, 53, 0);
+            }
+        }
+
+        /* ========== OPTION 3: Gradient Background ========== */
+        .option3 .nav-item.active {
+            font-weight: 600;
+            background: linear-gradient(90deg, #ff6b35 0%, #ffa940 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+
+        /* ========== OPTION 4: Star Accent ========== */
+        .option4 .nav-item.active {
+            font-weight: 600;
+            color: #ff6b35;
+        }
+
+        .option4 .nav-item.active::before {
+            content: '★';
+            margin-right: 0.5rem;
+            color: #ff6b35;
+        }
+
+        /* ========== OPTION 5: Underline + Color ========== */
+        .option5 .nav-item.active {
+            font-weight: 600;
+            color: #0d47a1;
+            border-bottom: 3px solid #ff6b35;
+            padding-bottom: 0.25rem;
+        }
+
+        /* ========== OPTION 6: Arrow + Bold ========== */
+        .option6 .nav-item.active {
+            font-weight: 700;
+            color: #0d47a1;
+            font-size: 1rem;
+        }
+
+        .option6 .nav-item.active::after {
+            content: '→';
+            margin-left: 0.5rem;
+            color: #ff6b35;
+            font-weight: bold;
+        }
+
+        /* ========== OPTION 7: Floating Label ========== */
+        .option7 .nav-item.active {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .option7 .floating-label {
+            position: absolute;
+            top: -12px;
+            right: -8px;
+            background: #ff6b35;
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 0.3rem 0.6rem;
+            border-radius: 12px;
+            white-space: nowrap;
+        }
+
+        /* ========== OPTION 8: Subtle Shadow + Scale ========== */
+        .option8 .nav-item.active {
+            font-weight: 600;
+            color: #0d47a1;
+            transform: scale(1.1);
+            text-shadow: 0 2px 4px rgba(13, 71, 161, 0.15);
+        }
+
+        /* ========== OPTION 9: Dot Indicator ========== */
+        .option9 .nav-item.active {
+            font-weight: 600;
+            color: #0d47a1;
+        }
+
+        .option9 .nav-item.active::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #ff6b35;
+            border-radius: 50%;
+            margin-right: 0.6rem;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        /* ========== OPTION 10: Minimalist Tag ========== */
+        .option10 .nav-item.active {
+            font-weight: 600;
+            color: #0d47a1;
+            background: rgba(13, 71, 161, 0.08);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            border-left: 3px solid #ff6b35;
+        }
+
+        .pros-cons {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .pros-cons h2 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .pros-cons-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .pros, .cons {
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .pros {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+        }
+
+        .cons {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+        }
+
+        .pros h3, .cons h3 {
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .pros ul, .cons ul {
+            margin-left: 1.2rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .pros li, .cons li {
+            margin-bottom: 0.5rem;
+        }
+
+        .recommendation {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            border-left: 4px solid #0d47a1;
+            border-radius: 8px;
+        }
+
+        .recommendation h3 {
+            color: #0d47a1;
+            margin-bottom: 0.5rem;
+        }
+
+        .recommendation p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Onze Acties — Nav Menu Design Opties</h1>
+        <p class="subtitle">10 verschillende manieren om het menu item meer aandacht te geven</p>
+
+        <div class="options-grid">
+            <!-- OPTION 1 -->
+            <div class="option option1">
+                <div class="option-label">1. Badge met Percentage</div>
+                <div class="option-demo">
+                    <div class="nav-demo">
+                        <div class="nav-item">Diensten</div>
+                        <div class="nav-item active">Onze Acties <span class="badge">50%</span></div>
+                        <div class="nav-item">Contact</div>
+                    </div>
+                </div>
+                <div class="option-description">
+                    Klein badgje naast de tekst met het kortingspercentage. Heel duidelijk en direct.
+                </div>
+            </div>
+
+            <!-- OPTION 2 -->
+            <div class="option option2">
+                <div class="option-label">2. Pulsing Highlight</div>
+                <div class="option-demo">
+                    <div class="nav-demo">
+                        <div class="nav-item">Diensten</div>
+                        <div class="nav-item active">Onze Acties</div>
+                        <div class="nav-item">Contact</div>
+                    </div>
+                </div>
+                <div class="option-description">
+                    Animatie die pulsed — trekt aandacht zonder opdringerig te zijn. Aandacht voor premium offers.
+                </div>
+            </div>
+
+            <!-- OPTION 3 -->
+            <div class="option option3">
+                <div class="option-label">3. Gradient Background</div>
+                <div class="option-demo">
+                    <div class="nav-demo">
+                        <div class="nav-item">Diensten</div>
+                        <div class="nav-item active">Onze Acties</div>
+                        <div class="nav-item">Contact</div>
+                    </div>
+                </div>
+                <div class="option-description">
+                    Warme gradient achtergrond. Zeer visueel en energetisch. Communiceert "special offer".
+                </div>
+            </div>
+
+            <!-- OPTION 4 -->
+            <div class="option option4">
+                <div class="option-label">4. Star Accent</div>
+                <div class="option-demo">
+                    <div class="nav-demo">
+                        <div class="nav-item">Diensten</div>
+                        <div class="nav-item active">Onze Acties</div>
+                        <div class="nav-item">Contact</div>
+                    </div>
+                </div>
+                <div class="option-description">
+                    Ster emoji/icon voor primaire aandacht. Universeel, speels, signaleert premium/aanbieding.
+                </div>
+            </div>
+
+            <!-- OPTION 5 -->
+            <div class="option option5">
+                <div class="option-label">5. Underline + Color</div>
+                <div class="option-demo">
+                    <div class="nav-demo">
+                        <div class="nav-item">Diensten</div>
+                        <div class="nav-item active">Onze Acties</div>
+                        <div class="nav-item">Contact</div>
+                    </div>
+                </div>
+                <div class="option-description">
+                    Klassieke underline met accent kleur. Elegant, subtiel, beroepsmatig.
+                </div>
+            </div>
+
+            <!-- OPTION 6 -->
+            <div class="option option6">
+                <div class="option-label">6. Arrow + Bold</div>
+                <div class="option-demo">
+                    <div class="nav-demo">
+                        <div class="nav-item">Diensten</div>
+                        <div class="nav-item active">Onze Acties</div>
+                        <div class="nav-item">Contact</div>
+                    </div>
+                </div>
+                <div class="option-description">
+                    Pijl die aanwijst. Creëert beweging en momentum. "Kijk hier, dit is belangrijk".
+                </div>
+            </div>
+
+            <!-- OPTION 7 -->
+            <div class="option option7">
+                <div class="option-label">7. Floating Label</div>
+                <div class="option-demo">
+                    <div class="nav-demo">
+                        <div class="nav-item">Diensten</div>
+                        <div class="nav-item active">Onze Acties <span class="floating-label">50% Korting</span></div>
+                        <div class="nav-item">Contact</div>
+                    </div>
+                </div>
+                <div class="option-description">
+                    Label zweeft boven het menu item. Opvallend maar speels. Perfect voor limited-time offers.
+                </div>
+            </div>
+
+            <!-- OPTION 8 -->
+            <div class="option option8">
+                <div class="option-label">8. Subtle Shadow + Scale</div>
+                <div class="option-demo">
+                    <div class="nav-demo">
+                        <div class="nav-item">Diensten</div>
+                        <div class="nav-item active">Onze Acties</div>
+                        <div class="nav-item">Contact</div>
+                    </div>
+                </div>
+                <div class="option-description">
+                    Licht vergrootd met schaduw. Minimalistisch maar effectief. Geen extra elementen nodig.
+                </div>
+            </div>
+
+            <!-- OPTION 9 -->
+            <div class="option option9">
+                <div class="option-label">9. Blinking Dot</div>
+                <div class="option-demo">
+                    <div class="nav-demo">
+                        <div class="nav-item">Diensten</div>
+                        <div class="nav-item active">Onze Acties</div>
+                        <div class="nav-item">Contact</div>
+                    </div>
+                </div>
+                <div class="option-description">
+                    Knipperend puntje. Klassiek (oud design), maar zeer effectief voor aandacht. "Breaking news" effect.
+                </div>
+            </div>
+
+            <!-- OPTION 10 -->
+            <div class="option option10">
+                <div class="option-label">10. Minimalist Tag</div>
+                <div class="option-demo">
+                    <div class="nav-demo">
+                        <div class="nav-item">Diensten</div>
+                        <div class="nav-item active">Onze Acties</div>
+                        <div class="nav-item">Contact</div>
+                    </div>
+                </div>
+                <div class="option-description">
+                    Subtiel label met links accent. Modern, clean, professioneel. Elegante implementatie.
+                </div>
+            </div>
+        </div>
+
+        <!-- RECOMMENDATIONS -->
+        <div class="pros-cons">
+            <h2>Aanbevelingen per Use Case</h2>
+
+            <div class="recommendation">
+                <h3>🏆 Mijn Favoriet: Option 2 (Pulsing Highlight) + Option 7 (Floating Label)</h3>
+                <p>
+                    <strong>Combinatie:</strong> Gebruik de <em>pulsing animation</em> voor subtiele beweging op het menu item,
+                    en voeg de <em>floating "50% Korting" label</em> toe. Dit geeft maximale aandacht zonder opdringerig te zijn.
+                    Mobile-friendly en het communiceert meteen "speciale aanbieding".
+                </p>
+            </div>
+
+            <div class="pros-cons-grid">
+                <div class="pros">
+                    <h3>✅ Meest Effectief</h3>
+                    <ul>
+                        <li><strong>Option 2 (Pulse):</strong> Subtle animatie</li>
+                        <li><strong>Option 7 (Label):</strong> Direct "50% Korting"</li>
+                        <li><strong>Option 3 (Gradient):</strong> Warm & energetisch</li>
+                        <li><strong>Option 6 (Arrow):</strong> Creëert momentum</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>⚠️ Voorzichtig Mee</h3>
+                    <ul>
+                        <li><strong>Option 9 (Blink):</strong> Erg retro, kan irriteren</li>
+                        <li><strong>Option 1 (Badge):</strong> Kan overkill zijn</li>
+                        <li><strong>Option 4 (Star):</strong> Kan goedkoop voelen</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="recommendation" style="margin-top: 1.5rem;">
+                <h3>💡 Implementation Tip</h3>
+                <p>
+                    Je hoeft maar <strong>één</strong> optie te kiezen. Het meest impactvolle is een combinatie van:
+                    <br><strong>1. Kleur/achtergrond accent</strong> + <strong>2. Een klein badge of label</strong>.
+                    <br>Dit geeft maximale aandacht met minimale visuele ruis. Test op mobile!
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

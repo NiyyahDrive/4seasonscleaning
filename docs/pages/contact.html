@@ -16,6 +16,44 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ========== ONZE ACTIES HIGHLIGHT ========== */
+        .nav-highlight a {
+            position: relative;
+            font-weight: 600;
+            color: white;
+            background: #ff6b35;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            animation: pulse-nav 2s ease-in-out infinite;
+            transition: all 0.3s ease;
+        }
+        .nav-highlight a:hover {
+            background: #e55a25;
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        }
+        @keyframes pulse-nav {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7); }
+            50% { box-shadow: 0 0 0 8px rgba(255, 107, 53, 0); }
+        }
+        .floating-label {
+            position: absolute;
+            top: -14px;
+            right: -28px;
+            background: #ff6b35;
+            color: white;
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 0.25rem 0.5rem;
+            border-radius: 10px;
+            white-space: nowrap;
+            box-shadow: 0 2px 6px rgba(255, 107, 53, 0.3);
+        }
+        @media (max-width: 768px) {
+            .nav-highlight a { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; padding: 0.35rem 0.7rem; font-size: 0.85rem; }
+            .floating-label { position: static; font-size: 0.5rem; padding: 0.15rem 0.3rem; background: rgba(255, 107, 53, 0.9); border-radius: 8px; }
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -70,7 +108,7 @@
                             <label for="service">Welke service? *</label>
                             <select id="service" name="service" required>
                                 <option value="">-- Selecteer een service --</option>
-                                <option value="glasbewassing">Glasbewassing</option>
+                                <option value="ruitenwassen">Ruitenwassen</option>
                                 <option value="dakgoten">Dakgoten & Corniche</option>
                                 <option value="zonnepanelen">Zonnepanelen</option>
                                 <option value="gevels">Gevels & Voetpaden</option>
@@ -154,7 +192,7 @@
 
                 <div class="faq-box">
                     <h3>❓ Kan ik online een afspraak inboeken?</h3>
-                    <p>Offerte aanvragen via het formulier → wij nemen contact op met je.</p>
+                    <p>Gratis offerte aanvragen via het formulier → wij nemen contact op met je.</p>
                 </div>
 
                 <div class="faq-box">

@@ -44,7 +44,7 @@
     <meta name="twitter:image" content="https://4seasonscleaning.be/assets/images-optimized/4seasonslogo_en.jpeg">
 
     <!-- Additional Meta Tags -->
-    <meta name="keywords" content="ruitenwasser vlaanderen, ramen wassen antwerpen, ramen wassen leuven, ruitenwassen, zonnepanelen reinigen, osmose technologie, dakgoten reinigen">
+    <meta name="keywords" content="ruitenwasser vlaanderen, ramen wassen antwerpen, ruitenwassen, zonnepanelen reinigen, osmose technologie, dakgoten reinigen">
     <meta name="author" content="4 Seasons Cleaning">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://4seasonscleaning.be/">
@@ -1147,67 +1147,6 @@
         a[href*="g.page/4seasonscleaning/review"]:active {
             transform: translateY(0);
         }
-
-        /* ========== ONZE ACTIES HIGHLIGHT ========== */
-        .nav-highlight a {
-            position: relative;
-            font-weight: 600;
-            color: white;
-            background: #ff6b35;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            animation: pulse-nav 2s ease-in-out infinite;
-            transition: all 0.3s ease;
-        }
-
-        .nav-highlight a:hover {
-            background: #e55a25;
-            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
-        }
-
-        @keyframes pulse-nav {
-            0%, 100% {
-                box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7);
-            }
-            50% {
-                box-shadow: 0 0 0 8px rgba(255, 107, 53, 0);
-            }
-        }
-
-        /* Floating Label */
-        .floating-label {
-            position: absolute;
-            top: -14px;
-            right: -28px;
-            background: #ff6b35;
-            color: white;
-            font-size: 0.6rem;
-            font-weight: 700;
-            padding: 0.25rem 0.5rem;
-            border-radius: 10px;
-            white-space: nowrap;
-            box-shadow: 0 2px 6px rgba(255, 107, 53, 0.3);
-        }
-
-        /* Mobile responsivity */
-        @media (max-width: 768px) {
-            .nav-highlight a {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 0.25rem;
-                padding: 0.35rem 0.7rem;
-                font-size: 0.85rem;
-            }
-
-            .floating-label {
-                position: static;
-                font-size: 0.5rem;
-                padding: 0.15rem 0.3rem;
-                background: rgba(255, 107, 53, 0.9);
-                border-radius: 8px;
-            }
-        }
     </style>
 
     <!-- Stylesheets loaded in order (header.css LAST for highest specificity) -->
@@ -1335,10 +1274,10 @@
                 <li><a href="#diensten">Diensten</a></li>
                 <li><a href="#waarom">Waarom ons</a></li>
                 <li><a href="#reviews">Reviews</a></li>
-                <li class="nav-highlight"><a href="pages/onze-acties.html">Onze Acties <span class="floating-label">50% Korting</span></a></li>
+                <li><a href="pages/aanbiedingen.html">Onze Acties</a></li>
                 <li><a href="pages/realisaties.html">Realisaties</a></li>
                 <li><a href="pages/contact.html">Contact</a></li>
-                <li><a href="pages/contact.html" class="btn-nav">Gratis offerte</a></li>
+                <li><a href="pages/contact.html" class="btn-nav">Offerte</a></li>
             </ul>
         </div>
     </header>
@@ -1355,7 +1294,7 @@
             </div>
 
             <div class="cta-group">
-                <a href="pages/contact.html" class="btn btn-primary">Vraag uw gratis offerte aan</a>
+                <a href="pages/contact.html" class="btn btn-primary">Vraag uw offerte aan</a>
                 <a href="https://wa.me/32495219921?text=Hallo%204%20Seasons" class="btn btn-secondary">💬 WhatsApp ons</a>
             </div>
 
@@ -1371,7 +1310,7 @@
         <div class="section-head">
             <span class="eyebrow">Waarom 4 Seasons</span>
             <h2>Vakmanschap zonder gezever</h2>
-            <p>We beloven niets dat we niet waarmaken. Drie pijlers waar u op kan rekenen.</p>
+            <p>We beloven niets dat we niet waarmaken. Vier pijlers waar u op kan rekenen.</p>
         </div>
         <div class="benefits">
             <div class="benefit">
@@ -1399,7 +1338,7 @@
                 <span class="eyebrow">Traditioneel vakmanschap & Osmose-technologie</span>
                 <h2>De perfecte mix van traditioneel vakmanschap en osmose-technologie</h2>
                 <p>Bij 4 Seasons Cleaning geloven we niet in een 'one-size-fits-all' aanpak. Elk raam en elke gevel is anders. Daarom combineren wij het beste van twee werelden. Voor het verfijnde handwerk, zoals bij binnenreiniging of bereikbare ramen, vertrouwen we op ons traditioneel vakmanschap met de wisser. Voor grote oppervlakken, kozijnen en ramen op hoogte zetten we onze moderne osmose-technologie in voor een diepe, milieuvriendelijke reiniging. Wij adviseren u altijd de methode die het meest duurzame resultaat garandeert.</p>
-                <a href="pages/contact.html" class="btn btn-solid">Vraag een gratis offerte aan</a>
+                <a href="pages/contact.html" class="btn btn-solid">Vraag een offerte aan</a>
             </div>
             <div class="explainer__visual">
                 <h3>Twee Krachtige Methodes, Één Doel</h3>
@@ -1447,7 +1386,7 @@
                 <div class="service-content">
                     <h3><span class="service-icon">🪟</span> Ruitenwassen met osmose</h3>
                     <p>Ramen, kaders, dorpels binnen en buiten. Demineraal water verwijdert kalk permanent. Uw ramen blijven merkbaar langer strepenvrij.</p>
-                    <a href="pages/contact.html" class="service-cta">Gratis offerte aanvragen →</a>
+                    <a href="pages/contact.html" class="service-cta">Offerte aanvragen →</a>
                 </div>
             </div>
 
@@ -1460,7 +1399,7 @@
                 <div class="service-content">
                     <h3><span class="service-icon">☀️</span> Zonnepaneelreiniging</h3>
                     <p>Stof, pollen en vogelvuil kunnen uw opbrengst met 15–30% verminderen. Wij reinigen met zacht demineraal water — geen krassen, maximale opbrengst.</p>
-                    <a href="pages/contact.html" class="service-cta">Gratis offerte aanvragen →</a>
+                    <a href="pages/contact.html" class="service-cta">Offerte aanvragen →</a>
                 </div>
             </div>
 
@@ -1473,7 +1412,7 @@
                 <div class="service-content">
                     <h3><span class="service-icon">🌧️</span> Dakgoten & corniche</h3>
                     <p>Verstopte goten veroorzaken lekken en gevelschade. Wij spoelen, ontstoppen en controleren afvoeren. Preventie is goedkoper dan herstel.</p>
-                    <a href="pages/contact.html" class="service-cta">Gratis offerte aanvragen →</a>
+                    <a href="pages/contact.html" class="service-cta">Offerte aanvragen →</a>
                 </div>
             </div>
 
@@ -1486,7 +1425,7 @@
                 <div class="service-content">
                     <h3><span class="service-icon">🏗️</span> Gevelreiniging</h3>
                     <p>Groene aanslag, algen en roetvervuiling. Met lagedrukreiniging en biologisch afbreekbare middelen krijgt uw gevel haar originele uitstraling terug.</p>
-                    <a href="pages/contact.html" class="service-cta">Gratis offerte aanvragen →</a>
+                    <a href="pages/contact.html" class="service-cta">Offerte aanvragen →</a>
                 </div>
             </div>
 
@@ -1499,7 +1438,7 @@
                 <div class="service-content">
                     <h3><span class="service-icon">🍀</span> Dakontmossing</h3>
                     <p>Mos houdt vocht vast en tast dakpannen aan. Wij verwijderen voorzichtig en behandelen preventief. Uw dak blijft jaren langer in topconditie.</p>
-                    <a href="pages/contact.html" class="service-cta">Gratis offerte aanvragen →</a>
+                    <a href="pages/contact.html" class="service-cta">Offerte aanvragen →</a>
                 </div>
             </div>
 
@@ -1517,7 +1456,7 @@
                 <div class="service-content">
                     <h3><span class="service-icon">🎚️</span> Rolluiken & koepels</h3>
                     <p>Vuil blokkeert mechaniek en vreet aan rubbers. Grondige reiniging + controle. Uw rolluiken lopen weer vlot, uw koepels laten weer licht door.</p>
-                    <a href="pages/contact.html" class="service-cta">Gratis offerte aanvragen →</a>
+                    <a href="pages/contact.html" class="service-cta">Offerte aanvragen →</a>
                 </div>
             </div>
         </div>
@@ -1838,9 +1777,9 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             window.floatingPromoButton = new FloatingPromoButto({
-                text: '50% Korting',
+                text: '50% OFF',
                 subtext: 'Nieuwe klanten',
-                link: 'pages/onze-acties.html',
+                link: 'pages/aanbiedingen.html',
                 showOnScroll: true,
                 scrollThreshold: 400
             });
